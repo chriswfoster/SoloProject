@@ -23,6 +23,7 @@ class Yourpage extends Component {
   render() {
     console.log(this.props)
     const list = this.props.allyourposts.map((dream, i) => (
+    
       <div key={i}> {dream.story_title} </div>
     ))
     return (
@@ -44,7 +45,9 @@ class Yourpage extends Component {
             <Link to="/newpost">NEW POST</Link>
           </div>
         </div>
+        
         <div>{list}</div>
+       
       </div>
     )
   }

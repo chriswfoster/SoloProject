@@ -13,7 +13,7 @@ const TYPE_STORY = "TYPE_STORY"
 
 const initialState = {
   user: {},
-  allposts: {},
+  allposts: [],
   allyourposts: [],
   type_title: "",
   type_dreamaid: "",

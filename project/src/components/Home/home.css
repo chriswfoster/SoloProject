@@ -75,3 +75,23 @@ position: absolute;
 width: 100vw;
 height: 100vh;
 }
+
+.centerposts{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-items: center;
+        align-content: stretch;
+        margin-bottom: 25px;
+        color:white;
+    }
+
+.postboxes{
+    background-color: rgb(53, 53, 53);
+    width: 60vw;
+    height: 20vh;
+    color: rgb(41, 187, 255);
+    border-radius: 15px;
+    padding: 5px;
+}
