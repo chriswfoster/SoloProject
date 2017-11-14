@@ -90,8 +90,8 @@ height: 100vh;
 .postboxes{
     background-color: rgb(53, 53, 53);
     width: 60vw;
-    height: 20vh;
+    height: auto;
     color: rgb(41, 187, 255);
     border-radius: 15px;
-    padding: 5px;
+    padding: 10px;
 }

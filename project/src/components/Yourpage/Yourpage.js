@@ -5,11 +5,7 @@ import { getUserInfo, getAllYourPosts } from "../../ducks/reducer"
 import { Link } from "react-router-dom"
 
 class Yourpage extends Component {
-  constructor(props) {
-    super(props)
 
-  
-  }
 
   componentDidMount() {
     this.props
