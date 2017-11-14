@@ -28,7 +28,7 @@ class Home extends Component {
         </div>
     ))
     return (
-      <div className="homeflex">
+      <div className="homeflex bodybackground">
         {/*nav bar */}
         <div className="navz">
           <div />
@@ -45,7 +45,7 @@ class Home extends Component {
         </div>
 
         {/* main body */}
-        <div className="bodybackground">
+        <div>
           <div>{list}</div>
         </div>
       </div>
