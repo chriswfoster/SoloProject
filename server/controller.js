@@ -4,6 +4,7 @@
 module.exports ={
     createPost: (req, res, next) => {
         const dbInstance = req.app.get('db')
+        console.log(req.body)
         const{story_title, story_text, influence, back_story, user_id} = req.body;
 
         dbInstance.create_post(story_title, story_text, influence, back_story, user_id)
@@ -13,9 +14,10 @@ module.exports ={
 
     getAllYourPosts: (req, res, next) => {
         const dbInstance = req.app.get('db')
+        const {params} = req;
 
-        dbInstance.read_your_posts()
-        .then( products => res.status(200).send(products))
+        dbInstance.read_your_posts(params.id)
+        .then( response => res.status(200).send(response))
         .catch (() => res.status(500).send())
     },
 

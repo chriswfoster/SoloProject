@@ -80,3 +80,7 @@ text-decoration-color: white;
   padding: 15px;
   cursor:pointer;
 }
+
+.whitetext{
+  color: white;
+}

@@ -101,7 +101,7 @@ app.get(
 
 //will check if there's a req.user. If there wasn't, send 404, if there was, send back user.
 app.get('/api/me', function (req, res) {
-    console.log(req.user)
+    
     if (!req.user) return res.status(401);
     res.status(200).json(req.user);
 })
@@ -109,7 +109,7 @@ app.get('/api/me', function (req, res) {
 
 app.post('/api/post',   controller.createPost);
 app.get('/api/getallposts', controller.getAllPosts)
-app.get('/api/getyourposts', controller.getAllYourPosts)
+app.get('/api/getyourposts/:id', controller.getAllYourPosts)
 
 //5. Test to see if it's functioning properly. If server is live, should see "Success" on localhost/api/test
 //can test it in app.js within react too, in the componentDidMount feature

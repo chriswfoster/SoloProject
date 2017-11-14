@@ -1,54 +1,55 @@
-import React, {Component} from 'react'
-import {connect} from 'react-redux'
-import './yourpage.css'
-import {getUserInfo} from '../../ducks/reducer'
-import {Link} from 'react-router-dom'
+import React, { Component } from "react"
+import { connect } from "react-redux"
+import "./yourpage.css"
+import { getUserInfo, getAllYourPosts } from "../../ducks/reducer"
+import { Link } from "react-router-dom"
 
-class Yourpage extends Component{
+class Yourpage extends Component {
+  constructor(props) {
+    super(props)
 
+  
+  }
 
-componentDidMount(){
-    // axios.get('/api/me')
-    // .then(response => {
-    // })
- this.props.getUserInfo()
-
-
-}
-
-
-
-render(){
-    console.log(this.props)
-    return(
-       
-              <div>
-              <div className="navz">
-          <div className="yourdreamfont">
-              <u>{this.props.user.nickname}'s <br></br>PAGE</u>
-          </div>
-           <Link className="dreamnotesfont" to="/"> DREAM NOTES </Link>
-        <div className="filler">
-            </div>
-          </div>
-<div className="bodybackground">
+  componentDidMount() {
+    this.props
+      .getUserInfo()
+      .then(id => this.props.getAllYourPosts(id.value.user_id))
    
-    <div className="newpost">
-            <Link  to="/newpost">
-                NEW POST
-                </Link>
-            </div>
-                </div>
+  }
 
 
 
-            </div>
+  render() {
+    console.log(this.props)
+    const list = this.props.allyourposts.map((dream, i) => (
+      <div key={i}> {dream.story_title} </div>
+    ))
+    return (
+      <div>
+        <div className="navz">
+          <div className="yourdreamfont">
+            <u>
+              {this.props.user.nickname}'s <br />PAGE
+            </u>
+          </div>
+          <Link className="dreamnotesfont" to="/">
+            {" "}
+            DREAM NOTES{" "}
+          </Link>
+          <div className="filler" />
+        </div>
+        <div className="bodybackground">
+          <div className="newpost">
+            <Link to="/newpost">NEW POST</Link>
+          </div>
+        </div>
+        <div>{list}</div>
+      </div>
     )
-}
+  }
 }
 
 
 const mapStateToProps= state => state;
-
-
-export default connect(mapStateToProps, {getUserInfo})(Yourpage)
+export default connect(mapStateToProps, {getUserInfo, getAllYourPosts})(Yourpage)

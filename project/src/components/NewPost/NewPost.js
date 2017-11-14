@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
-import {getUserInfo, typeTitle, typeAid, typeInfluence, typeStory, createPost} from '../../ducks/reducer'
+import {getUserInfo, typeTitle, typeAid, typeInfluence, typeStory} from '../../ducks/reducer'
 import axios from 'axios'
 
 
@@ -9,6 +9,13 @@ import axios from 'axios'
 import './NewPost.css'
 
 class NewPost extends Component {
+constructor(props){
+    super(props)
+
+
+
+this.createPost = this.createPost.bind(this)
+}
 
     componentDidMount(){
         // axios.get('/api/me')
@@ -19,6 +26,18 @@ class NewPost extends Component {
 
 
 
+    createPost(){
+        axios.post('/api/post', {
+                    story_title: this.props.type_title,
+                    story_text: this.props.type_story,
+                    influence: this.props.type_dreamaid,
+                    back_story: this.props.type_life,
+                    user_id: this.props.user.user_id
+                }).then(response => {
+                   return response.data
+                })
+            }
+
 
     
 
@@ -28,7 +47,7 @@ class NewPost extends Component {
         console.log(this.props)
         return(
 
-            <div>
+            <div className ="bodybackground">
 
 
             <div className="navz">
@@ -40,11 +59,10 @@ class NewPost extends Component {
           </div>
         </div>
 
+        
 
+            <div className="flexorganizer">
 
-
-
-<div className="bodybackground">
 
 <div className="spantext">
     <span>Title the dream:</span><br></br>
@@ -69,11 +87,11 @@ class NewPost extends Component {
      </textarea>
     </div>
 
-<button onClick={createPost()}>
+<button onClick={this.createPost}>
     CLICK ME </button>
-              </div>
+              
 
-
+</div>
 
          
          
@@ -88,4 +106,4 @@ class NewPost extends Component {
 
 const mapStateToProps= state => state;
 
-export default connect(mapStateToProps, {getUserInfo, typeTitle, typeAid, typeInfluence, typeStory, createPost})(NewPost)
+export default connect(mapStateToProps, {getUserInfo, typeTitle, typeAid, typeInfluence, typeStory})(NewPost)
