@@ -53,7 +53,11 @@ align-content: stretch;
     margin-bottom: 10px;
     padding: 7px;
     color: white;
+    cursor:pointer;
 }
+
+
+
 
 .bodybackground{
     background-image: url(background.jpg);
@@ -64,7 +68,8 @@ align-content: stretch;
     width: 100vw;
     height: 100vh;
 }
-backgroundcolor{
+
+.backgroundcolor{
 background-color: rgb(255, 0, 0);
 position: absolute;
 width: 100vw;

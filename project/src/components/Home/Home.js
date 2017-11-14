@@ -1,15 +1,33 @@
 import React, {Component} from 'react'
 import './home.css'
-import {Link} from 'react-router-dom'
+import {getAllPosts} from '../../ducks/reducer'
+import {connect} from 'react-redux'
+
+class Home extends Component{
+    constructor(props){
+        super(props)
+        this.state = {
+       
+            
+        }
+
+this.handleLogin = this.handleLogin.bind(this);
+    }
 
 
 
-export default class Home extends Component{
+componentDidMount(){
+        this.props.getAllPosts()
+}
 
+handleLogin(){
+window.location.href = "http://localhost:3001/login"
+}
 
 
 
 render(){
+    console.log(this.props.allposts)
     return(
         <div className="homeflex">
 
@@ -21,19 +39,20 @@ render(){
          <p className="dreamnotesfont"> DREAM NOTES </p>
         
         <div className="loginbuttons">
-        <Link to="Login" className="loginbutton">
+        <button onClick={this.handleLogin} className="loginbutton">
         LOGIN
-        </Link>
-        <Link to="Login" className="loginbutton">
+        </button>
+        <button onClick={this.handleLogin} className="loginbutton">
         REGISTER
-        </Link>
+        </button>
             </div>
         </div>
 
         {/* main body */}
         <div className="bodybackground" >
 
-<div className="backgroundcolor"> blah 
+<div className="backgroundcolor"> 
+
     </div>
 
 
@@ -48,6 +67,8 @@ render(){
             </div>
     )
 }
-
-
 }
+const mapStateToProps= state => state;
+
+
+export default connect(mapStateToProps, {getAllPosts})(Home)

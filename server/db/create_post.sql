@@ -1,0 +1,2 @@
+INSERT INTO dream_posts (story_title, story_text, influence, back_story, user_id)
+VALUES ($1, $2, $3, $4, $5)
