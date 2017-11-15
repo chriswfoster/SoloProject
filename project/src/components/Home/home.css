@@ -1,97 +1,104 @@
-
-
-.homeflex{
-    display: flex;
-	flex-direction: column;
-	flex-wrap: nowrap;
-	justify-content: flex-start;
-	align-items: stretch;
-	align-content: stretch;
-}
-
-@import url('https://fonts.googleapis.com/css?family=Cabin+Sketch:700');
+@import url("https://fonts.googleapis.com/css?family=Cabin+Sketch:700");
 
 .navz {
-    height: 120px;
-    background-image: url(banner.jpg);
-    background-repeat: no-repeat;
-    background-size: 110vw;
-    background-position-y: -580px;
-    background-position-x: -7px;
-    color: rgb(200, 185, 253);
+  height: 120px;
+  background-image: url(banner.jpg);
+  background-repeat: no-repeat;
+  background-size: 110vw;
+  background-position-y: -580px;
+  background-position-x: -7px;
+  color: rgb(200, 185, 253);
+  width: 100vw;
+  top: 0px;
+  left: 0px;
+  position: static;
+  border-width: 6px;
+  border-bottom-style: outset;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: stretch;
+}
+
+.dreamnotesfont {
+  font-family: "Cabin Sketch", cursive;
+  font-size: 60px;
+}
+
+.loginbuttons {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: stretch;
+}
+.loginbutton {
+  background-color: rgb(0, 54, 146);
+  border-radius: 530px;
+  margin-bottom: 10px;
+  padding: 7px;
+  color: white;
+  cursor: pointer;
+}
+
+.bodybackground {
+  background-image: url(background.jpg);
+  background-repeat: no-repeat;
+  background-attachment: sticky;
+  background-size: 100% 100%;
+}
+
+.centerposts {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: stretch;
+  margin-top: 25px;
+  color: white;
+}
+
+.homeflex {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+  height: auto;
+}
+
+.postboxes {
+  background-color: rgb(53, 53, 53);
+  width: 60vw;
+  height: auto;
+  color: rgb(41, 187, 255);
+  border-radius: 15px;
+  padding: 5px;
+}
+.maxheight {
+  height: 100vh;
+}
+
+.bottombar{
+    bottom: 0px;
+    position: fixed;
+    left: 0%;
+    border-top: outset;
+    height: 90px;
     width: 100vw;
-    top: 0px;
-    left: 0px;
-    position: static;
-    border-width: 6px;
-    border-bottom-style: outset;
+    margin-top: 20px;
+    background-color: rgb(0, 0, 0);
+    border-color: rgb(77, 77, 77);
     display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	align-items: center;
-	align-content: stretch;
-}
-
-.dreamnotesfont{
-    font-family: 'Cabin Sketch', cursive;
-    font-size: 60px;
-}
-
-.loginbuttons{
-padding: 10px;
-display: flex;
-flex-direction: column;
-flex-wrap: nowrap;
-justify-content: space-between;
-align-items: center;
-align-content: stretch;
-}
-.loginbutton{
-    background-color: rgb(0, 54, 146);
-    border-radius: 530px;
-    margin-bottom: 10px;
-    padding: 7px;
-    color: white;
-    cursor:pointer;
-}
-
-
-
-
-.bodybackground{
-    background-image: url(background.jpg);
-    background-repeat: no-repeat;
-        position:relative;
-    position: sticky;
-    background-size: 100vw 100vh;
-    width: 100vw;
-    height: 100vh;
-}
-
-.backgroundcolor{
-background-color: rgb(255, 0, 0);
-position: absolute;
-width: 100vw;
-height: 100vh;
-}
-
-.centerposts{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        justify-content: space-around;
-        align-items: center;
-        align-content: stretch;
-        margin-bottom: 25px;
-        color:white;
-    }
-
-.postboxes{
-    background-color: rgb(53, 53, 53);
-    width: 60vw;
-    height: auto;
-    color: rgb(41, 187, 255);
-    border-radius: 15px;
-    padding: 10px;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: baseline;
+      align-content: stretch;
 }

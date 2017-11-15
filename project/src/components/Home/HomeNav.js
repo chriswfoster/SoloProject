@@ -3,7 +3,6 @@ import "./home.css"
 import { getAllPosts } from "../../ducks/reducer"
 import { connect } from "react-redux"
 import Poster from './Poster'
-import HomeNav from './HomeNav'
 
 class Home extends Component {
   constructor(props) {
@@ -22,23 +21,22 @@ class Home extends Component {
   }
 
   render() {
-    console.log(this.props.allposts)
-    const list = this.props.allposts.map((dream, i) => (
-        <div key={i} className="centerposts">
-         <div>{dream.story_title}</div>
-         <div className="postboxes">{dream.story_text} </div>
-        </div>
-    ))
+    
     return (
-      <div className="bodybackground">
-        
-        <HomeNav />
-        {/* main body */}
       <div>
-        <Poster/>
-    </div>
-        <div className="bottombar">
-            </div>
+        <div className="navz ">
+          
+          <p className="dreamnotesfont"> DREAM NOTES </p>
+
+          <div className="loginbuttons">
+            <button onClick={this.handleLogin} className="loginbutton">
+              LOGIN
+            </button>
+            <button onClick={this.handleLogin} className="loginbutton">
+              REGISTER
+            </button>
+          </div>
+        </div>
 
       </div>
     )
