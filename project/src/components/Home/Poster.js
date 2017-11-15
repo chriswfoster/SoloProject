@@ -29,10 +29,10 @@ class Poster extends Component {
     ))
     return (
       
-        <div className="maxheight">
+        <div className="bodybackground">
         {list}
         </div>
-      
+  
     )
   }
 }

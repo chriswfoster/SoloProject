@@ -49,8 +49,11 @@
   background-image: url(background.jpg);
   background-repeat: no-repeat;
   background-attachment: sticky;
-  background-size: 100% 100%;
+  width: 100vw;
+  height: 100vh;
 }
+
+
 
 .centerposts {
   display: flex;
@@ -83,22 +86,4 @@
 }
 .maxheight {
   height: 100vh;
-}
-
-.bottombar{
-    bottom: 0px;
-    position: fixed;
-    left: 0%;
-    border-top: outset;
-    height: 90px;
-    width: 100vw;
-    margin-top: 20px;
-    background-color: rgb(0, 0, 0);
-    border-color: rgb(77, 77, 77);
-    display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: baseline;
-      align-content: stretch;
 }

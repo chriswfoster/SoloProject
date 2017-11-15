@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import "./home.css"
 import { getAllPosts } from "../../ducks/reducer"
 import { connect } from "react-redux"
-import Poster from './Poster'
+
 
 class Home extends Component {
   constructor(props) {
