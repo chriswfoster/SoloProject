@@ -96,13 +96,16 @@
   color: rgb(41, 187, 255);
   border-radius: 15px;
   padding: 5px;
+  box-shadow: 10px 10px 55px rgb(41, 187, 255);
+}
+
+.wrapsharebuttons {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   align-content: stretch;
-  box-shadow: 10px 10px 55px rgb(41, 187, 255);
 }
 
 .sharebutton {
@@ -119,74 +122,12 @@
   box-shadow: 15px 15px 55px rgb(41, 187, 255);
 }
 
-.popup2 {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-}
-
-/* The actual popup (appears on top) */
-.popup2 .popuptext {
-  visibility: hidden;
-  width: 400px;
-  background-color: rgb(0, 0, 0);
-  border-style: outset;
-  border-color: silver;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 8px 0;
-  position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  left: -125%;
-  margin-left: -80px;
-  box-shadow: 10px 10px 10px #000000;
-}
-
-/* Popup arrow */
-.popup2 .popuptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
-}
-
-/* Toggle this class when clicking on the popup container (hide and show the popup) */
-.popup2 .show {
-  visibility: visible;
-  -webkit-animation: fadeIn 1s;
-  animation: fadeIn 1s;
-}
-
-/* Add animation (fade in the popup) */
-@-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 
 /* ----------   EDIT POPUP BOX --------------       */
 
 .trigger {
   text-transform: uppercase;
- 
+
   display: block;
 }
 
@@ -294,6 +235,7 @@
   -webkit-animation-fill-mode: forwards;
   border-style: outset;
   border-color: silver;
+  border-radius: 33px;
 }
 
 .popup__textbox {
@@ -322,7 +264,7 @@
   z-index: 10;
   text-align: right;
   cursor: pointer;
-  color: rgb(41, 187, 255)
+  color: rgb(41, 187, 255);
 }
 
 .poptextboxes {
@@ -332,7 +274,54 @@
   width: 100%;
 }
 
-.savebutton{
-  color:white;
+.poptextboxes2 {
   background-color: black;
+  color: white;
+  height: 25%;
+  width: 100%;
+}
+.poptextboxes3 {
+  background-color: black;
+  color: white;
+  height: 35%;
+  width: 100%;
+}
+
+.savebuttonstory {
+  color: white;
+  background-color: black;
+  border-style: solid;
+  padding: 5px;
+  width: auto;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.savebutton {
+  color: white;
+  background-color: black;
+  border-style: solid;
+  padding: 5px;
+  width: auto;
+  cursor: pointer;
+  margin-bottom: 10px;
+  margin-top: -50px;
+}
+
+pre {
+  white-space: pre-wrap; /* Since CSS 2.1 */
+  white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+  white-space: -pre-wrap; /* Opera 4-6 */
+  white-space: -o-pre-wrap; /* Opera 7 */
+  word-wrap: break-word;
+}
+
+.savebuttonalignment {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: flex-end;
+  align-content: stretch;
+
 }

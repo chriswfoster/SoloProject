@@ -27,15 +27,16 @@ class Home extends Component {
         <div className="navz ">
           
           <p className="dreamnotesfont"> DREAM NOTES </p>
-
-          <div className="loginbuttons">
+<div>{!this.props.user.user_id ? <div className="loginbuttons">
             <button onClick={this.handleLogin} className="loginbutton">
               LOGIN
             </button>
             <button onClick={this.handleLogin} className="loginbutton">
               REGISTER
             </button>
-          </div>
+          </div> : <p>LOGOUT</p>}
+          
+</div>
         </div>
 
       </div>

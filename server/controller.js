@@ -49,5 +49,27 @@ module.exports = {
       .update_story(post_id, story_text)
       .then(() => res.status(200).send())
       .catch(() => res.status(500).send())
+  },
+
+  editInfluence: (req, res, next) => {
+    console.log(req.body)
+    const dbInstance = req.app.get("db")
+    const { post_id, influence } = req.body
+
+    dbInstance
+      .update_influence(post_id, influence)
+      .then(() => res.status(200).send())
+      .catch(() => res.status(500).send())
+  },
+
+  editBackstory: (req, res, next) => {
+    console.log(req.body)
+    const dbInstance = req.app.get("db")
+    const { post_id, back_story } = req.body
+
+    dbInstance
+      .update_backstory(post_id, back_story)
+      .then(() => res.status(200).send())
+      .catch(() => res.status(500).send())
   }
 }
