@@ -109,7 +109,7 @@ app.post('/api/share', controller.sharePost)
 app.post('/api/post',   controller.createPost);
 app.get('/api/getallposts', controller.getAllPosts)
 app.get('/api/getyourposts/:id', controller.getAllYourPosts)
-app.put('/api/edit', controller.editPost)
+app.put('/api/editStory', controller.editStory)
 
 
 //5. Test to see if it's functioning properly. If server is live, should see "Success" on localhost/api/test

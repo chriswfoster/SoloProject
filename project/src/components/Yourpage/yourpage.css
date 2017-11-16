@@ -182,12 +182,11 @@
   }
 }
 
-/* ----------   TEST ZONE BELOW --------------       */
+/* ----------   EDIT POPUP BOX --------------       */
 
 .trigger {
-  font-size: 2em;
   text-transform: uppercase;
-  margin-top: 10%;
+ 
   display: block;
 }
 

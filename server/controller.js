@@ -40,13 +40,13 @@ module.exports = {
       .catch(() => res.status(500).send())
   },
 
-  editPost: (req, res, next) => {
+  editStory: (req, res, next) => {
     console.log(req.body)
     const dbInstance = req.app.get("db")
-    const { post_id, story_title, story_text, influence, back_story } = req.body
+    const { post_id, story_text } = req.body
 
     dbInstance
-      .update_post(post_id, story_title, story_text, influence, back_story)
+      .update_story(post_id, story_text)
       .then(() => res.status(200).send())
       .catch(() => res.status(500).send())
   }
