@@ -8,6 +8,8 @@ const TYPE_TITLE = "TYPE_TITLE"
 const TYPE_DREAMAID = "TYPE_DREAMAID"
 const TYPE_LIFE = "TYPE_LIFE"
 const TYPE_STORY = "TYPE_STORY"
+const EDIT_POST = "EDIT_POST"
+
 
 //Initial State
 
@@ -21,7 +23,8 @@ const initialState = {
   type_story: "",
   story_text: "",
   influence: "",
-  back_story: ""
+  back_story: "",
+  edit_me: {}
 
   //or can give it null as a starter value
 }
@@ -61,6 +64,8 @@ export default function reducer(state = initialState, action) {
     case TYPE_STORY:
       return Object.assign({}, state, { type_story: action.payload })
 
+    case EDIT_POST:
+      return Object.assign({}, state, { edit_me: action.payload })
     default:
       return state
   }
@@ -119,3 +124,12 @@ export function typeStory(story) {
     payload: story
   }
 }
+
+export function toEdit(postid) {
+  console.log(postid)
+  return {
+    type: EDIT_POST,
+    payload: postid
+  }
+}
+
