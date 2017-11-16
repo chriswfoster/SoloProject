@@ -33,6 +33,11 @@ class Yourpage extends Component {
     popup.classList.toggle("show")
   }
 
+  editPopup(i) {
+    var editPopup = document.getElementById(`editPopup${i}`)
+    editPopup.classList.toggle('show')
+  }
+
   blah() {
     console.log(this.props)
   }
@@ -54,15 +59,12 @@ class Yourpage extends Component {
           </div>
 
           <div className="sharebutton">
-            <Link
-              to="/Editor"
-              onClick={() => {
-                toEdit(dream.post_id)
-              }}
-              style={{ textDecoration: "none", color: "white" }}
-            >
+            <div className="popup" onClick={() => this.editPopup(i)}>
               Edit
-            </Link>
+              <textarea className="popuptext" id={`editPopup${i}`}>
+                blah
+              </textarea>
+            </div>
           </div>
 
           <div className="sharebutton">
