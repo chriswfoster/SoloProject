@@ -33,10 +33,6 @@ class Yourpage extends Component {
     popup.classList.toggle("show")
   }
 
-  editPopup(i) {
-    var editPopup = document.getElementById(`editPopup${i}`)
-    editPopup.classList.toggle('show')
-  }
 
   blah() {
     console.log(this.props)
@@ -58,17 +54,34 @@ class Yourpage extends Component {
             Share
           </div>
 
-          <div className="sharebutton">
-            <div className="popup" onClick={() => this.editPopup(i)}>
-              Edit
-              <textarea className="popuptext" id={`editPopup${i}`}>
-                blah
-              </textarea>
+          <div >
+      
+		<input type="checkbox" id={`popup__${i}`} class="popup__check" />
+		<div class="popup__base">
+			<label htmlFor={`popup__${i}`} className="popup__bg"></label>
+			<div className="popup__inner">
+				<div className="popup__calign">
+					<label htmlFor={`popup__${i}`} className="popup__close">+</label>
+				</div>
+				<div class="popup__textbox">
+					<h1>{(dream.story_title)}</h1>
+					<textarea className="poptextboxes">
+						{(dream.story_text)}
+					</textarea>
+          <button className="savebutton"> Save </button>
+				</div>
+			</div>
+      
+		</div>
+
+		<label class="trigger" htmlFor={`popup__${i}`} className="sharebutton">Edit</label>
+            
             </div>
-          </div>
+
+          
 
           <div className="sharebutton">
-            <div className="popup" onClick={() => this.myPopup(i)}>
+            <div className="popup2" onClick={() => this.myPopup(i)}>
               Influence
               <span className="popuptext" id={`myPopup${i}`}>
                 <div>Dream/sleep aid: {dream.influence}</div>
