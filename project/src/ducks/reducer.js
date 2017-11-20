@@ -2,6 +2,7 @@ import axios from "axios"
 // Action Constants
 const REQ_USER = "REQ_USER"
 const GET_ALL_YOUR_POSTS = "GET_ALL_YOUR_POSTS"
+const GET_COMMENTS = "GET_COMMENTS"
 
 const GET_ALL = "GET_ALL"
 const TYPE_TITLE = "TYPE_TITLE"
@@ -16,6 +17,7 @@ const EDIT_POST = "EDIT_POST"
 const initialState = {
   user: {},
   allposts: [],
+  allcomments: [],
   allyourposts: [],
   type_title: "",
   type_dreamaid: "",
@@ -25,7 +27,6 @@ const initialState = {
   influence: "",
   back_story: "",
   edit_me: {}
-
   //or can give it null as a starter value
 }
 
@@ -54,6 +55,14 @@ export default function reducer(state = initialState, action) {
         isLoading: false,
         allyourposts: action.payload
       })
+    case GET_COMMENTS + "_PENDING":
+      return Object.assign({}, state, { isLoading: true })
+    case GET_COMMENTS + "_FULFILLED":
+      return Object.assign({}, state, {
+        isLoading: false,
+        allcomments: action.payload
+      })
+   
 
     case TYPE_TITLE:
       return Object.assign({}, state, { type_title: action.payload })
@@ -94,6 +103,13 @@ export function getAllPosts() {
   return {
     type: GET_ALL,
     payload: axios.get(`/api/getallposts/`).then(response => response.data)
+  }
+}
+
+export function getAllComments(postid) {
+  return {
+    type: GET_COMMENTS,
+    payload: axios.get(`/api/getallcomments/${postid}`).then(response => console.log(response.data))
   }
 }
 

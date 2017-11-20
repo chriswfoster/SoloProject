@@ -116,22 +116,22 @@ class Yourpage extends Component {
                       defaultValue={dream.story_text}
                     />
                     <div className="savebuttonalignment">
-                    <div
-                      className="savebuttonstory"
-                      onClick={() => this.editStory(dream.post_id)}
-                      value="Refresh Page"
-                    >
-                      {" "}
-                      Save{" "}
-                    </div>
-                    <label
-                      htmlFor={`popup__${i}`}
-                      className="savebutton"
-                      onClick={() => window.location.reload()}
-                    >
-                      {" "}
-                      CLOSE{" "}
-                    </label>
+                      <div
+                        className="savebuttonstory"
+                        onClick={() => this.editStory(dream.post_id)}
+                        value="Refresh Page"
+                      >
+                        {" "}
+                        Save{" "}
+                      </div>
+                      <label
+                        htmlFor={`popup__${i}`}
+                        className="savebutton"
+                        onClick={() => window.location.reload()}
+                      >
+                        {" "}
+                        CLOSE{" "}
+                      </label>
                     </div>
                   </div>
                 </div>
@@ -178,21 +178,21 @@ class Yourpage extends Component {
                       defaultValue={dream.back_story}
                     />
                     <div className="savebuttonalignment">
-                    <div
-                      className="savebutton"
-                      onClick={() => this.editBackstory(dream.post_id)}
-                    >
-                      SAVE BACKSTORY
-                    </div>
+                      <div
+                        className="savebutton"
+                        onClick={() => this.editBackstory(dream.post_id)}
+                      >
+                        SAVE BACKSTORY
+                      </div>
                     </div>
                     <div>
-                    <label
-                      htmlFor={`popup2__${i}`}
-                      className="savebutton"
-                      onClick={() => window.location.reload()}
-                    >
-                      CLOSE
-                    </label>
+                      <label
+                        htmlFor={`popup2__${i}`}
+                        className="savebutton"
+                        onClick={() => window.location.reload()}
+                      >
+                        CLOSE
+                      </label>
                     </div>
                   </div>
                 </div>

@@ -71,5 +71,18 @@ module.exports = {
       .update_backstory(post_id, back_story)
       .then(() => res.status(200).send())
       .catch(() => res.status(500).send())
-  }
+  },
+
+  getAllComments: (req, res, next) => {
+    const dbInstance = req.app.get("db")
+    const { params } = req
+
+    dbInstance
+      .get_all_comments(params.id)
+      .then(response => res.status(200).send(response))
+      .catch(() => res.status(500).send())
+  },
+
+
+
 }
