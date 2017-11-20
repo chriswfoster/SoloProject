@@ -26,12 +26,11 @@ class Home extends Component {
 
     return (
       <div>
-       
           <HomeNav />
           {/* main body */}
-          <div>
+          
             <Poster />
-          </div>
+          
       </div>
     )
   }

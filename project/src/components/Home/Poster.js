@@ -32,7 +32,7 @@ class Poster extends Component {
     const {getAllComments, toEdit} = this.props
     console.log(this.props.allposts)
     const list = this.props.allposts.map((dream, i) => (
-        <div key={i} className="centerposts">
+        <div key={i} className="centerposts bodybackground">
          <div>NUMBER OF LIKES: {dream.likes},,,{dream.displayname}, {dream.story_title}, {dream.post_date}</div>
          <div className="postboxes"><pre>{dream.story_text} </pre>
          
@@ -93,9 +93,7 @@ class Poster extends Component {
                 COMMENTS
               </label>
             </div>
-         
-         
-         
+               
          
          
          </div>
@@ -106,7 +104,7 @@ class Poster extends Component {
     ))
     return (
       
-        <div className="bodybackground">
+        <div>
         <button onClick={() => this.test()}></button>
         {list}
         </div>
