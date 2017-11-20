@@ -9,17 +9,16 @@ constructor(props){
     super(props)
 }
 
-shouldComponentUpdate(nextProps, nextState){
-    console.log(this.props.dream_id)
-    console.log(nextProps.edit_me)
-if(nextProps.edit_me===this.props.dream_id){
-    return true
-} else return false
-
-}
+// shouldComponentUpdate(nextProps, nextState){
+//     console.log(this.props.dream_id)
+//     console.log(nextProps.edit_me)
+// if(nextProps.edit_me===this.props.dream_id){
+//     return true
+// } else return false
+// }
 
 componentDidMount(){
-    // getAllComments(this.props.edit_me)
+    getAllComments(this.props.edit_me)
     
 }
 

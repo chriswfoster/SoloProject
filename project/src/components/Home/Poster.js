@@ -9,7 +9,7 @@ class Poster extends Component {
   constructor(props) {
     super(props)
     this.state = {
-    
+    showComments: false
     }
 
   }
@@ -32,7 +32,8 @@ class Poster extends Component {
     const {getAllComments, toEdit} = this.props
     console.log(this.props.allposts)
     const list = this.props.allposts.map((dream, i) => (
-        <div key={i} className="centerposts bodybackground">
+    
+        <div key={i} className="centerposts">
          <div>NUMBER OF LIKES: {dream.likes},,,{dream.displayname}, {dream.story_title}, {dream.post_date}</div>
          <div className="postboxes"><pre>{dream.story_text} </pre>
          
@@ -53,7 +54,7 @@ class Poster extends Component {
                   <div className="popup__textbox">
                     <h3>Title: {dream.story_title}</h3>
                     
-                    <Comments dream_id={dream.post_id} />
+                    { this.state.showComments ? <Comments /> : ''} />
                     
                     
                     
@@ -104,7 +105,7 @@ class Poster extends Component {
     ))
     return (
       
-        <div>
+        <div className="bodybackground">
         <button onClick={() => this.test()}></button>
         {list}
         </div>
