@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import "./home.css"
-import { getAllPosts, toEdit } from "../../ducks/reducer"
+import { getAllPosts, toDisplay } from "../../ducks/reducer"
 import { connect } from "react-redux"
 
 import Comments from '../Comments/Comments'
@@ -31,7 +31,7 @@ class Poster extends Component {
 
 
   render() {
-    const {getAllComments, toEdit} = this.props
+    const {getAllComments, toDisplay} = this.props
     console.log(this.props.allposts)
     const list = this.props.allposts.map((dream, i) => (
     
@@ -56,7 +56,7 @@ class Poster extends Component {
                   <div className="popup__textbox">
                     <h3>Title: {dream.story_title}</h3>
                     
-                    {this.props.edit_me===dream.post_id ? <Comments dreamid={dream.post_id} /> : 'No comments here yet...'}
+                    {this.props.display_post===dream.post_id ? <Comments dreamid={dream.post_id} /> : 'No comments here yet...'}
                     
                     
                     
@@ -92,7 +92,7 @@ class Poster extends Component {
                 className="trigger sharebutton"
                 htmlFor={`popup__${i}`}
                 onClick={() => {
-                  toEdit(dream.post_id)
+                  toDisplay(dream.post_id)
                 }}
               >
                 COMMENTS
@@ -119,4 +119,4 @@ class Poster extends Component {
 }
 const mapStateToProps = state => state
 
-export default connect(mapStateToProps, { getAllPosts, toEdit, })(Poster)
+export default connect(mapStateToProps, { getAllPosts, toDisplay })(Poster)

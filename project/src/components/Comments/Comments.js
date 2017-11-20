@@ -28,7 +28,7 @@ constructor(props){
 // }
 
 componentDidMount(dreamid){
-    axios.get(`/api/getallcomments/${this.props.edit_me}`).then(response => {
+    axios.get(`/api/getallcomments/${this.props.display_post}`).then(response => {
         console.log(response.data)
         this.setState({allcomments: response.data})})
     // getAllComments(this.props.edit_me)
@@ -45,7 +45,7 @@ render(){
     const commentlist = this.state.allcomments.length > 0 ? 
     this.state.allcomments.map((comment, i) => (
         <div key={i} className="whitetext">
-        
+
            <div> {comment.comment_text} </div>
 
 
