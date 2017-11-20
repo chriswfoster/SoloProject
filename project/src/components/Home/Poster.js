@@ -11,7 +11,7 @@ class Poster extends Component {
     this.state = {
     showComments: false
     }
-
+    this.test=this.test.bind(this)
   }
 
   componentDidMount() {
@@ -23,7 +23,9 @@ class Poster extends Component {
 
 
   test(){
-    console.log(this.props.edit_me)
+    console.log('props editme:' + this.props.edit_me)
+    this.setState({showComments: true})
+    console.log('props allcomments:' + this.props.allcomments)
   }
 
 
@@ -54,7 +56,7 @@ class Poster extends Component {
                   <div className="popup__textbox">
                     <h3>Title: {dream.story_title}</h3>
                     
-                    { this.state.showComments ? <Comments /> : ''} />
+                    {this.props.edit_me===dream.post_id ? <Comments dreamid={dream.post_id} /> : 'No comments here yet...'}
                     
                     
                     
@@ -89,7 +91,9 @@ class Poster extends Component {
               <label
                 className="trigger sharebutton"
                 htmlFor={`popup__${i}`}
-                onClick={() => toEdit(dream.post_id)}
+                onClick={() => {
+                  toEdit(dream.post_id)
+                }}
               >
                 COMMENTS
               </label>

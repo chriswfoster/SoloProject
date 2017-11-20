@@ -1,12 +1,16 @@
 import React, {Component} from 'react'
 import { connect } from "react-redux"
-import { getAllComments } from "../../ducks/reducer"
+
+import axios from 'axios'
 
 import '../Home/home.css'
 
 class Comments extends Component{
 constructor(props){
     super(props)
+    this.state = {
+        allcomments: []
+    }
 }
 
 // shouldComponentUpdate(nextProps, nextState){
@@ -17,22 +21,40 @@ constructor(props){
 // } else return false
 // }
 
-componentDidMount(){
-    getAllComments(this.props.edit_me)
-    
+// componentWillReceiveProps(dreamid){
+//     console.log(dreamid)  
+
+//     getAllComments(dreamid)
+// }
+
+componentDidMount(dreamid){
+    axios.get(`/api/getallcomments/${this.props.edit_me}`).then(response => {
+        console.log(response.data)
+        this.setState({allcomments: response.data})})
+    // getAllComments(this.props.edit_me)
+     console.log(this.state.allcomments)
 }
 
-render(){
+test (){
+    console.log(this.state.allcomments)
+}
 
-    const commentlist = this.props.allcomments.map((comment, i) => (
+
+
+render(){
+    const commentlist = this.state.allcomments.length > 0 ? 
+    this.state.allcomments.map((comment, i) => (
         <div key={i} className="whitetext">
-            {comment.comment_text}
-            
-            </div>
-    ))
+        
+           <div> {comment.comment_text} </div>
+
+
+
+
+            </div> 
+    )) : <div>'No comments here'</div>
     return(
         <div>
-            BLAH
             {commentlist}
             </div>
 
@@ -45,4 +67,4 @@ render(){
 
 const mapStateToProps = state => state
 
-export default connect(mapStateToProps, { getAllComments })(Comments)
+export default connect(mapStateToProps, { })(Comments)
