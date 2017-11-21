@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import "./home.css"
-import { getAllPosts } from "../../ducks/reducer"
+import { getAllPosts, getUserInfo } from "../../ducks/reducer"
 import { connect } from "react-redux"
 import Poster from "./Poster"
 import HomeNav from "./HomeNav"
@@ -17,6 +17,7 @@ class Home extends Component {
 
   componentDidMount() {
     this.props.getAllPosts()
+    this.props.getUserInfo()
   }
 
   handleLogin() {
@@ -31,7 +32,9 @@ class Home extends Component {
           <HomeNav />
           {/* main body */}
           
+          
             <Poster />
+          
           
       </div>
     )
@@ -39,4 +42,4 @@ class Home extends Component {
 }
 const mapStateToProps = state => state
 
-export default connect(mapStateToProps, { getAllPosts })(Home)
+export default connect(mapStateToProps, { getAllPosts, getUserInfo })(Home)

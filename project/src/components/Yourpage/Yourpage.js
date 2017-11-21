@@ -10,6 +10,7 @@ import {
 } from "../../ducks/reducer"
 import { Link } from "react-router-dom"
 import axios from "axios"
+import Moment from 'react-moment'
 
 class Yourpage extends Component {
   constructor(props) {
@@ -83,7 +84,7 @@ class Yourpage extends Component {
     console.log(this.props)
     const list = this.props.allyourposts.map((dream, i) => (
       <div key={i} className="centerposts">
-        <div>{dream.story_title} </div>
+        <div>"{dream.story_title}" posted on <Moment format="MM/DD/YYYY" subtract={{hours:6}}>{dream.post_date}</Moment></div>
         <div className="postboxes">
           <pre>{dream.story_text}</pre>
           <div className="wrapsharebuttons">

@@ -1,7 +1,9 @@
 import React, {Component} from 'react'
 import { connect } from "react-redux"
-
+import {typeComment} from '../../ducks/reducer'
 import axios from 'axios'
+import Moment from 'react-moment'
+
 
 import './comments.css'
 
@@ -35,21 +37,24 @@ componentDidMount(dreamid){
      console.log(this.state.allcomments)
 }
 
+
+
 render(){
+    const {typeComment} = this.props
     const commentlist = this.state.allcomments.length > 0 ? 
     this.state.allcomments.map((comment, i) => (
         <div key={i} className="centerposts">
-            <div> Comment by: {comment.nickname} at {comment.comment_date} </div>
+            <div> Comment by: {comment.nickname} <Moment subtract={{hours:6}} fromNow>{comment.comment_date}</Moment> </div>
            <div className="commentboxes"> {comment.comment_text} </div>
             </div> 
     )) : <div>'No comments here'</div>
     return(
         <div>
             {commentlist}
-            <textarea defaultValue="Type your comment">
+            <div className="centerposts">
+            <textarea className="postboxes" defaultValue="Type your comment" onChange={(e) => typeComment(e.target.value)}>
                         </textarea>
-            
-                    
+</div>
             </div>
 
 
@@ -61,4 +66,4 @@ render(){
 
 const mapStateToProps = state => state
 
-export default connect(mapStateToProps, { })(Comments)
+export default connect(mapStateToProps, { typeComment })(Comments)

@@ -313,9 +313,21 @@ pre {
   justify-content: flex-end;
   align-items: flex-end;
   align-content: stretch;
+  margin-top: 10px;
 }
 
 .whitetext{
   color: white;
+}
+
+.postboxes {
+  background-color: rgb(53, 53, 53);
+  width: 75vw;
+  min-height: 150px;
+  height: auto;
+  color: rgb(41, 187, 255);
+  border-radius: 15px;
+  padding: 5px;
+  box-shadow: 10px 10px 55px rgb(129, 129, 129);
 }
 

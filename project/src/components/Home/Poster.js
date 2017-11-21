@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import "./home.css"
 import { getAllPosts, toDisplay } from "../../ducks/reducer"
 import { connect } from "react-redux"
-
+import Moment from 'react-moment'
 import axios from 'axios'
 
 import Comments from '../Comments/Comments'
@@ -13,6 +13,7 @@ class Poster extends Component {
     this.state = {
     }
     this.addLike=this.addLike.bind(this)
+    this.postComment=this.postComment.bind(this)
   }
 
   componentDidMount() {
@@ -31,6 +32,16 @@ class Poster extends Component {
     })
     }
 
+    postComment(postid){
+      axios.post('/api/postcomment', {
+          comment_text: this.props.type_comment,
+          user_id: this.props.user.user_id,
+          post_id: postid
+      
+      }).then(response => {
+         return response.data
+      })
+  }
 
 
 
@@ -41,7 +52,7 @@ class Poster extends Component {
     const list = this.props.allposts.map((dream, i) => (
     
         <div key={i} className="centerposts">
-         <div>NUMBER OF LIKES: {dream.likes},,,{dream.displayname}, {dream.story_title}, {dream.post_date}</div>
+         <div>NUMBER OF LIKES: {dream.likes},,,{dream.displayname}, {dream.story_title}, <Moment subtract={{hours:6}} fromNow>{dream.post_date}</Moment></div>
          <div className="postboxes"><pre>{dream.story_text} </pre>
          
          <div className="wrapsharebuttons">
@@ -63,15 +74,31 @@ class Poster extends Component {
                     
                     {this.props.display_post===dream.post_id ? <Comments dreamid={dream.post_id} /> : 'No comments here yet...'}
 
+
+
+                  <div className="savebuttonalignment">
                     <div>
                       <label
                         htmlFor={`popup__${i}`}
                         className="savebutton"
+                        onClick={() => window.location.reload()}
                       >
                         CLOSE
                       </label>
                     </div>
-                    
+                    <div>
+                      <label
+                        
+                        className="savebutton"
+                        onClick={() => this.postComment(dream.post_id) & window.location.reload()}
+                      >
+                        SAVE
+                      </label>
+                    </div>
+                  </div>
+
+
+
                   </div>
                 </div>
               </div>

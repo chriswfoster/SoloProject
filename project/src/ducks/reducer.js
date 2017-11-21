@@ -10,6 +10,7 @@ const TYPE_DREAMAID = "TYPE_DREAMAID"
 const TYPE_LIFE = "TYPE_LIFE"
 const TYPE_STORY = "TYPE_STORY"
 const DISPLAY_POST = "DISPLAY_POST"
+const TYPE_COMMENT = "TYPE_COMMENT"
 
 
 //Initial State
@@ -22,6 +23,7 @@ const initialState = {
   type_dreamaid: "",
   type_life: "",
   type_story: "",
+  type_comment: "",
   story_text: "",
   influence: "",
   back_story: "",
@@ -65,6 +67,8 @@ export default function reducer(state = initialState, action) {
       return Object.assign({}, state, { type_life: action.payload })
     case TYPE_STORY:
       return Object.assign({}, state, { type_story: action.payload })
+    case TYPE_COMMENT:
+      return Object.assign({}, state, { type_comment: action.payload })
 
     case DISPLAY_POST:
       return Object.assign({}, state, { display_post: action.payload })
@@ -137,3 +141,10 @@ export function toDisplay(postid) {
   }
 }
 
+export function typeComment(comment){
+  console.log(comment)
+  return{
+    type: TYPE_COMMENT,
+    payload: comment
+  }
+}

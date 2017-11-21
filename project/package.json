@@ -5,8 +5,11 @@
   "dependencies": {
     "axios": "^0.17.0",
     "git": "^0.1.5",
+    "moment": "^2.19.2",
+    "moment-timezone": "^0.5.14",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
+    "react-moment": "^0.6.8",
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.17",
