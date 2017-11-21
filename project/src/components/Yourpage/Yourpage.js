@@ -87,12 +87,7 @@ class Yourpage extends Component {
         <div className="postboxes">
           <pre>{dream.story_text}</pre>
           <div className="wrapsharebuttons">
-            <span
-              className="sharebutton"
-              onClick={() => this.storyToShare(dream.post_id)}
-            >
-              SHARE
-            </span>
+            
 
             <div>
               <input

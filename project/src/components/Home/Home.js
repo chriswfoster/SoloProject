@@ -24,7 +24,7 @@ class Home extends Component {
   }
 
   render() {
-    console.log(this.props.allposts)
+  
 
     return (
       <div>

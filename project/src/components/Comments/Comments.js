@@ -3,7 +3,7 @@ import { connect } from "react-redux"
 
 import axios from 'axios'
 
-import '../Home/home.css'
+import './comments.css'
 
 class Comments extends Component{
 constructor(props){
@@ -35,27 +35,21 @@ componentDidMount(dreamid){
      console.log(this.state.allcomments)
 }
 
-test (){
-    console.log(this.state.allcomments)
-}
-
-
-
 render(){
     const commentlist = this.state.allcomments.length > 0 ? 
     this.state.allcomments.map((comment, i) => (
-        <div key={i} className="whitetext">
-
-           <div> {comment.comment_text} </div>
-
-
-
-
+        <div key={i} className="centerposts">
+            <div> Comment by: {comment.nickname} at {comment.comment_date} </div>
+           <div className="commentboxes"> {comment.comment_text} </div>
             </div> 
     )) : <div>'No comments here'</div>
     return(
         <div>
             {commentlist}
+            <textarea defaultValue="Type your comment">
+                        </textarea>
+            
+                    
             </div>
 
 

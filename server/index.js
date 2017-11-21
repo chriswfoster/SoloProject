@@ -108,6 +108,7 @@ app.get("/api/me", function(req, res) {
   res.status(200).json(req.user)
 })
 
+app.post("/api/like", controller.likePost)
 app.post("/api/share", controller.sharePost)
 app.post("/api/post", controller.createPost)
 app.get("/api/getallposts", controller.getAllPosts)
@@ -116,6 +117,7 @@ app.get("/api/getallcomments/:id", controller.getAllComments)
 app.put("/api/editStory", controller.editStory)
 app.put("/api/editInfluence", controller.editInfluence)
 app.put("/api/editBackstory", controller.editBackstory)
+
 
 //5. Test to see if it's functioning properly. If server is live, should see "Success" on localhost/api/test
 //can test it in app.js within react too, in the componentDidMount feature

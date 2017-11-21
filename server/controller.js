@@ -83,6 +83,15 @@ module.exports = {
       .catch(() => res.status(500).send())
   },
 
+  likePost: (req, res, next) => {
+    const dbInstance = req.app.get("db")
+    console.log(req.body)
+    const { post_id, user_id } = req.body
 
+    dbInstance
+      .add_like(post_id, user_id)
+      .then(() => res.status(200).send())
+      .catch(() => res.status(500).send())
+  }
 
 }
