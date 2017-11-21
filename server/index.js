@@ -108,6 +108,7 @@ app.get("/api/me", function(req, res) {
   res.status(200).json(req.user)
 })
 
+app.post("/api/postcomment", controller.postComment)
 app.post("/api/like", controller.likePost)
 app.post("/api/share", controller.sharePost)
 app.post("/api/post", controller.createPost)

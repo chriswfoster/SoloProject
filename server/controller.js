@@ -92,6 +92,17 @@ module.exports = {
       .add_like(post_id, user_id)
       .then(() => res.status(200).send())
       .catch(() => res.status(500).send())
+  },
+
+  postComment: (req, res, next) => {
+    const dbInstance = req.app.get("db")
+    console.log(req.body)
+    const { comment_text, user_id, post_id } = req.body
+
+    dbInstance
+      .post_comment(comment_text, user_id, post_id)
+      .then(() => res.status(200).send())
+      .catch(() => res.status(500).send())
   }
 
 }
