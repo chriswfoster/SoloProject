@@ -52,8 +52,21 @@ render(){
         <div>
             {commentlist}
             <div className="centerposts">
-            <textarea className="postboxes" defaultValue="Type your comment" onChange={(e) => typeComment(e.target.value)}>
-                        </textarea>
+
+{!this.props.user.user_id ? (
+    <div className="loginbuttons">
+      <button onClick={this.handleLogin} className="loginbutton">
+        LOGIN TO COMMENT
+      </button>
+    </div>
+  ) : (
+    <textarea className="postboxes" defaultValue="Type your comment" onChange={(e) => typeComment(e.target.value)}>
+    </textarea>
+  )}
+
+
+
+            
 </div>
             </div>
 

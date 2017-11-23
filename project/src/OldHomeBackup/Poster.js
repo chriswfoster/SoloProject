@@ -1,12 +1,11 @@
 import React, { Component } from "react"
-
-import { getAllPosts, toDisplay } from "../../ducks/reducer"
+import "./home.css"
+import { getAllPosts, toDisplay } from "../ducks/reducer"
 import { connect } from "react-redux"
 import Moment from 'react-moment'
 import axios from 'axios'
 
-import Comments from '../Comments/Comments'
-import "./home.css"
+import Comments from '../components/Comments/Comments'
 
 class Poster extends Component {
   constructor(props) {
@@ -52,56 +51,70 @@ class Poster extends Component {
     console.log(this.props.allposts)
     const list = this.props.allposts.map((dream, i) => (
     
-        <div key={i} className="mainlefttitles">
-
-
+        <div key={i} className="centerposts">
+         <div>NUMBER OF LIKES: {dream.likes},,,{dream.displayname}, {dream.story_title}, <Moment subtract={{hours:6}} fromNow>{dream.post_date}</Moment></div>
+         <div className="postboxes"><pre>{dream.story_text} </pre>
+         
          <div className="wrapsharebuttons">
               <input
                 type="checkbox"
-                id={`slide__${i}`}
-                className="slide__check"
+                id={`popup__${i}`}
+                className="popup__check"
               />
-              <div className="slide__base">
-                <label htmlFor={`slide__${i}`} className="slide__bg" />
-                <div className="slide__inner">
-                  <div className="slide__calign">
-                    <label htmlFor={`slide__${i}`} className="slide__close">
+              <div className="popup__base">
+                <label htmlFor={`popup__${i}`} className="popup__bg" />
+                <div className="popup__inner">
+                  <div className="popup__calign">
+                    <label htmlFor={`popup__${i}`} className="popup__close">
                       +
                     </label>
                   </div>
-                  <div className="slide__textbox">
+                  <div className="popup__textbox">
                     <h3>Title: {dream.story_title}</h3>
                     
-                    {dream.story_text}
+                    {this.props.display_post===dream.post_id ? <Comments dreamid={dream.post_id} /> : 'No comments here yet...'}
 
 
 
-                  <div className="wrapstorybuttons">
-                   
+                  <div className="savebuttonalignment">
+                    <div>
                       <label
                         htmlFor={`popup__${i}`}
-                        className="storybuttons"
+                        className="savebutton"
+                        onClick={() => window.location.reload()}
                       >
-                        COMMENTS
+                        CLOSE
                       </label>
-                   
-                    <label
-                className="storybuttons"
-                htmlFor={`popup2__${i}`}
-                >
-               INFLUENCE
-               </label>
-
-               
                     </div>
-                 
+                    <div>
+                      <label
+                        
+                        className="savebutton"
+                        onClick={() => this.postComment(dream.post_id) & window.location.reload()}
+                      >
+                        SAVE
+                      </label>
+                    </div>
+                  </div>
 
 
 
                   </div>
                 </div>
               </div>
-          
+              <span
+              className="sharebutton"
+              onClick={() => this.addLike(dream.post_id)}
+            >
+              LIKE
+            </span>
+
+
+
+
+
+
+
             <div>
               <input
                 type="checkbox"
@@ -127,7 +140,7 @@ class Poster extends Component {
                     <div>
                       <label
                         htmlFor={`popup2__${i}`}
-                        className="storybuttons"
+                        className="savebutton"
                       >
                         CLOSE
                       </label>
@@ -135,80 +148,37 @@ class Poster extends Component {
                   </div>
                 </div>
               </div>
-            </div>
 
-            <div>
-              <input
-                type="checkbox"
-                id={`popup__${i}`}
-                className="popup__check"
-              />
-              <div className="popup__base">
-                <label htmlFor={`popup__${i}`} className="popup__bg" />
-                <div className="popup__inner">
-                  <div className="popup__calign">
-                    <label htmlFor={`popup__${i}`} className="popup__close">
-                      +
-                    </label>
-                  </div>
-                  <div className="popup__textbox">
-                  <h3>Title: {dream.story_title}</h3>
-                  
-                  {this.props.display_post===dream.post_id ? <Comments dreamid={dream.post_id} /> : 'No comments here yet...'}
-
-
-
-                <div className="savebuttonalignment">
-                  <div>
-                    <label
-                      htmlFor={`popup__${i}`}
-                      className="savebutton"
-                      onClick={() => window.location.reload()}
-                    >
-                      CLOSE
-                    </label>
-                  </div>
-
-{!this.props.user.user_id ? (
-  ''
-) : (
-  <div>
-  <label 
-    className="savebutton"
-    onClick={() => this.postComment(dream.post_id) & window.location.reload()}
-  >
-    SAVE
-  </label>
-</div>)}
-
-                </div>
-
-
-
-                </div>
-                </div>
-              </div>
-            </div>
-
-
-               <label
+              <label
                 className="trigger sharebutton"
-                htmlFor={`slide__${i}`}
+                htmlFor={`popup2__${i}`}
+               
+              >
+                INFLUENCE
+              </label>
+            </div>
+
+
+
+
+
+
+            
+            
+              <label
+                className="trigger sharebutton"
+                htmlFor={`popup__${i}`}
                 onClick={() => {
                   toDisplay(dream.post_id)
                 }}
               >
-               <div>
-                 <div>{dream.story_title} </div>
-        <div>Posted by: {dream.displayname}, <Moment subtract={{hours:6}} fromNow>{dream.post_date}</Moment>.</div>
-         <div>{dream.likes} Likes </div>
-                  </div>
+                COMMENTS
               </label>
             </div>
                
          
          
-         
+         </div>
 
 
 
@@ -216,14 +186,10 @@ class Poster extends Component {
     ))
     return (
       
-        <div>
-
-
-        <div className="leftsidebox">
+        <div className="bodybackgroundold">
+        <div className="fixscroll">
         {list}
         </div>
-
-
         </div>
   
     )
@@ -231,4 +197,4 @@ class Poster extends Component {
 }
 const mapStateToProps = state => state
 
-export default connect(mapStateToProps, { getAllPosts, toDisplay})(Poster)
+export default connect(mapStateToProps, { getAllPosts, toDisplay })(Poster)

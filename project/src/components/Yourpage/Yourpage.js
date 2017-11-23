@@ -211,9 +211,15 @@ class Yourpage extends Component {
       <div>
         <div className="navz">
           <div className="yourdreamfont">
-            <u>
+
+{!this.props.user.user_id ? (
+  ''
+) : (
+  <u>
               {this.props.user.nickname}'s <br />PAGE
             </u>
+)}
+
           </div>
           <Link className="dreamnotesfont" to="/">
             {" "}

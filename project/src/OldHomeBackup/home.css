@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Cabin+Sketch:700");
 
 .navz {
-  height: 120px;
+  height: 13vh;
   background-image: url(banner.jpg);
   background-repeat: no-repeat;
   background-size: 110vw;
@@ -45,13 +45,12 @@
   cursor: pointer;
 }
 
-.bodybackground {
-  background-image: url(background.jpg);
+.bodybackgroundold {
+  background-image: url(./background.jpg);
   background-repeat: no-repeat;
-  background-attachment: sticky;
+  background-size: 100vw 86vh;
   width: 100vw;
-  height: 100vh;
-  background-color: black;
+  height:86vh;
 }
 
 .homeflex {
@@ -71,7 +70,16 @@
 
 /*  ---------- HERE IS THE POPUP CSS ----------*/
 
+.centerposts {
+  display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;
 
+  color: red;
+}
 
 .postboxes {
   background-color: rgb(53, 53, 53);
@@ -83,14 +91,13 @@
   box-shadow: 10px 10px 55px rgb(41, 187, 255);
 }
 
-.wrapstorybuttons {
+.wrapsharebuttons {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   align-content: stretch;
-  
 }
 
 .sharebutton {
@@ -107,7 +114,11 @@
   box-shadow: 15px 15px 55px rgb(41, 187, 255);
 }
 
+.trigger {
+  text-transform: uppercase;
 
+  display: block;
+}
 
 .popup__textbox {
   color: #b43d54;
@@ -275,7 +286,7 @@
   margin-bottom: 10px;
 }
 
-.storybuttons {
+.savebutton {
   color: white;
   background-color: black;
   border-style: solid;
@@ -294,160 +305,21 @@ pre {
   word-wrap: break-word;
 }
 
+.savebuttonalignment {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: flex-end;
+  align-content: stretch;
+}
+
 .whitetext{
   color: white;
 }
 
+.fixscroll{
+overflow-y: scroll;
 
-
-
-/* ----------------------------- NEW HOME PAGE LAYOUT ----------------------------- */
-
-
-.leftsidebox{
-  height: 85vh;
-  width:20vw;
-  border-style: solid;
-  border-color: orange;
-  overflow-y: scroll;
-  overflow-x: scroll
-}
-
-.mainlefttitles {
-  display: flex;
-	flex-direction: column;
-	flex-wrap: nowrap;
-	justify-content: flex-start;
-	align-items: baseline;
-	align-content: stretch;
-  margin-top: 25px;
-  color: rgb(41, 187, 255);
-  
-}
-
-
-
-/* -----------------------------CSS SLIDE IN BY YOURS TRULY ----------------------*/
-
-
-.slide__textbox {
-  color: #b43d54;
-  line-height: 25px;
-  font-size: 1.1em;
-  letter-spacing: 1px;
-}
-
-@keyframes bg {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes slider {
-  0%   {top: 100%;}
-  100% {top: 20%;}
-}
-
-@-webkit-keyframes bg {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes slider {
-  0%   {top: 100%;}
-  100% {top: 20%;}
-}
-
-.slide__check {
-  display: none;
-}
-
-.slide__base,
-.slide__bg {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  opacity: 0;
-  cursor: zoom-out;
-  overflow:hidden;
-}
-
-.slide__base {
-  background-color: rgba(0, 0, 0, 0.5);
-  display: none;
-  position: absolute;
-  z-index: 10;
-}
-
-.slide__check:checked + .slide__base {
-  display: block;
-  animation-name: bg;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-  -webkit-animation-name: bg;
-  -webkit-animation-duration: 0.5s;
-  -webkit-animation-fill-mode: forwards;
-}
-
-.slide__inner {
-  position: absolute;
-  z-index: 10;
-  width: 70%;
-  height: 70%;
-  background-color: rgb(0, 0, 0);
-  top: 20%;
-  left: 25%;
-  display: block;
-  cursor: default;
-  border-style: outset;
-  border-color: silver;
-  border-radius: 33px;
-}
-
-.slide__check:checked + .slide__base .slide__inner {
-  animation-name: slider;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-  -webkit-animation-name: slider;
-  -webkit-animation-duration:1s;
-  -webkit-animation-fill-mode: forwards;
-  }
-
-.slide__textbox {
-  height: 95%;
-  width: 95%;
-  padding-left: 2.5%;
-  padding-right: 2.5%;
-  margin-top: 10px;
-  overflow: auto;
-  color: rgb(41, 187, 255);
-}
-
-.slide__calign {
-  float: right;
-  padding-right: 60px;
-  font-size: 50px;
-}
-
-.slide__close {
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  display: block;
-  position: absolute;
-  z-index: 10;
-  text-align: right;
-  cursor: pointer;
-  color: rgb(41, 187, 255);
-
+height: 86vh;
 }

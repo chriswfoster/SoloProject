@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import "./home.css"
-import { getAllPosts, getUserInfo } from "../../ducks/reducer"
+import { getAllPosts, getUserInfo } from "../ducks/reducer"
 import { connect } from "react-redux"
 import Poster from "./Poster"
 import HomeNav from "./HomeNav"
@@ -28,7 +28,7 @@ class Home extends Component {
   
 
     return (
-      <div className="bodybackground">
+      <div>
           <HomeNav />
           {/* main body */}
           
