@@ -199,8 +199,8 @@ class Poster extends Component {
                 }}
               >
                <div>
-                 <div>{dream.story_title} </div>
-        <div>Posted by: {dream.displayname}, <Moment subtract={{hours:6}} fromNow>{dream.post_date}</Moment>.</div>
+                 <div className="acmefont"><u>{dream.story_title}</u> </div>
+        <div className="nittifont">Posted by: {dream.displayname}, <Moment subtract={{hours:6}} fromNow>{dream.post_date}</Moment>.</div>
          <div>{dream.likes} Likes </div>
                 <div className="linespan"> </div>
                   </div>
