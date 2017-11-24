@@ -506,4 +506,42 @@ pre {
   .nittifont{
     font-family: 'nitti', sans-serif;
   }
+
+  .slideRight{
+    animation-name: sliderRight;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    -webkit-animation-name: sliderRight;
+    -webkit-animation-duration:1s;
+    -webkit-animation-fill-mode: forwards;
+    position: relative;
   
+  }
+  .slideLeft{
+    animation-name: sliderLeft;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    -webkit-animation-name: sliderLeft;
+    -webkit-animation-duration:1s;
+    -webkit-animation-fill-mode: forwards;
+    position: relative;
+    
+  }
+  
+
+  @keyframes sliderRight {
+    0%   {left: -100%;}
+    100% {left: 0%;}
+  }
+    @-webkit-keyframes sliderRight {
+    0%   {left: -100%;}
+    100% {left: 0%;}
+  }
+  @keyframes sliderLeft {
+    0%   {left: 100%;}
+    100% {left: 0%;}
+  }
+    @-webkit-keyframes sliderLeft {
+    0%   {left: 100%;}
+    100% {left: 0%;}
+  }

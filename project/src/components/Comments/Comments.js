@@ -30,17 +30,18 @@ constructor(props){
 // }
 
 componentDidMount(dreamid){
+ 
     axios.get(`/api/getallcomments/${this.props.display_post}`).then(response => {
-        console.log(response.data)
+      
         this.setState({allcomments: response.data})})
     // getAllComments(this.props.edit_me)
-     console.log(this.state.allcomments)
+ 
 }
 
 
 
-render(){
-    const {typeComment} = this.props
+render(props){
+    const {typeComment, dreamid} = this.props
     const commentlist = this.state.allcomments.length > 0 ? 
     this.state.allcomments.map((comment, i) => (
         <div key={i} className="centerposts">

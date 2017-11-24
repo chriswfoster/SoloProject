@@ -3,6 +3,7 @@ import React, { Component } from "react"
 import { getAllPosts, toDisplay } from "../../ducks/reducer"
 import { connect } from "react-redux"
 import Moment from 'react-moment'
+import Sidebar from './SideBar/Sidebar'
 import axios from 'axios'
 
 import Comments from '../Comments/Comments'
@@ -47,10 +48,10 @@ class Poster extends Component {
 
 
 
+
   render() {
     const {getAllComments, toDisplay} = this.props
-    console.log(this.props.allposts)
-    const list = this.props.allposts.map((dream, i) => (
+       const list = this.props.allposts.map((dream, i) => (
     
         <div key={i} className="mainlefttitles">
 
@@ -81,6 +82,9 @@ class Poster extends Component {
                       <label
                         htmlFor={`popup__${i}`}
                         className="storybuttons"
+                        onClick={() => {
+                          toDisplay(dream.post_id)
+                        }}
                       >
                         COMMENTS
                       </label>
@@ -137,83 +141,12 @@ class Poster extends Component {
               </div>
             </div>
 
-            <div>
-              <input
-                type="checkbox"
-                id={`popup__${i}`}
-                className="popup__check"
-              />
-              <div className="popup__base">
-                <label htmlFor={`popup__${i}`} className="popup__bg" />
-                <div className="popup__inner">
-                  <div className="popup__calign">
-                    <label htmlFor={`popup__${i}`} className="popup__close">
-                      +
-                    </label>
-                  </div>
-                  <div className="popup__textbox">
-                  <h3>Title: {dream.story_title}</h3>
-                  
-                  {this.props.display_post===dream.post_id ? <Comments dreamid={dream.post_id} /> : 'No comments here yet...'}
+            
 
+            <Sidebar dream={dream} i={i} dreamid={dream.post_id}/>
 
-
-                <div className="savebuttonalignment">
-                  <div>
-                    <label
-                      htmlFor={`popup__${i}`}
-                      className="savebutton"
-                      onClick={() => window.location.reload()}
-                    >
-                      CLOSE
-                    </label>
-                  </div>
-
-{!this.props.user.user_id ? (
-  ''
-) : (
-  <div>
-  <label 
-    className="savebutton"
-    onClick={() => this.postComment(dream.post_id) & window.location.reload()}
-  >
-    SAVE
-  </label>
-</div>)}
-
-                </div>
-
-
-
-                </div>
-                </div>
-              </div>
             </div>
-
-
-               <label
-                className="trigger"
-                htmlFor={`slide__${i}`}
-                onClick={() => {
-                  toDisplay(dream.post_id)
-                }}
-              >
-               <div>
-                 <div className="acmefont"><u>{dream.story_title}</u> </div>
-        <div className="nittifont">Posted by: {dream.displayname}, <Moment subtract={{hours:6}} fromNow>{dream.post_date}</Moment>.</div>
-         <div>{dream.likes} Likes </div>
-                <div className="linespan"> </div>
-                  </div>
-              </label>
-            </div>
-               
-         
-         
-         
-
-
-
-        </div>
+               </div>
     ))
     return (
       
@@ -223,6 +156,7 @@ class Poster extends Component {
         <div className="leftsidebox force-overflow" id="scrollbar">
         {list}
         </div>
+      
 
 
         </div>
