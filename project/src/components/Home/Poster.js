@@ -192,7 +192,7 @@ class Poster extends Component {
 
 
                <label
-                className="trigger sharebutton"
+                className="trigger"
                 htmlFor={`slide__${i}`}
                 onClick={() => {
                   toDisplay(dream.post_id)
@@ -202,6 +202,7 @@ class Poster extends Component {
                  <div>{dream.story_title} </div>
         <div>Posted by: {dream.displayname}, <Moment subtract={{hours:6}} fromNow>{dream.post_date}</Moment>.</div>
          <div>{dream.likes} Likes </div>
+                <div className="linespan"> </div>
                   </div>
               </label>
             </div>
@@ -219,7 +220,7 @@ class Poster extends Component {
         <div>
 
 
-        <div className="leftsidebox">
+        <div className="leftsidebox force-overflow" id="scrollbar">
         {list}
         </div>
 
