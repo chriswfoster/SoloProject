@@ -75,9 +75,9 @@ componentWillReceiveProps(){
                 }}
               >
                <div className="slideRight" style={{'animationDuration': `${i / 2 +.5}s`}}>
-                 <div className="acmefont"><u>{dream.story_title}</u> </div>
+               <div className="animatelinespan"><div className="acmefont"><u>{dream.story_title}</u> </div>
         <div className="nittifont">Posted by: {dream.displayname}, <Moment subtract={{hours:6}} fromNow>{dream.post_date}</Moment>.</div>
-         <div>{dream.likes} Likes </div>
+         <div>{dream.likes} Likes </div></div>
                 <div className="linespan"> </div>
                   </div>
               </label> : 
@@ -90,9 +90,11 @@ componentWillReceiveProps(){
             }}
           >
            <div>
+               <div className="animatelinespan">
              <div className="acmefont"><u>{dream.story_title}</u> </div>
     <div className="nittifont">Posted by: {dream.displayname}, <Moment subtract={{hours:6}} fromNow>{dream.post_date}</Moment>.</div>
      <div>{dream.likes} Likes </div>
+     </div>
             <div className="linespan"> </div>
               </div>
           </label>}

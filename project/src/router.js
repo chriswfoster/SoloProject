@@ -9,7 +9,7 @@ import Yourpage from './components/Yourpage/Yourpage'
 import Comments from './components/Comments/Comments'
 import store from './store'
 import Sidebar from './components/Home/SideBar/Sidebar'
-import Oldhome from './OldHomeBackup/Home.js'
+
 
 export default(
 <Provider store={store}>
@@ -18,7 +18,6 @@ export default(
 <Route path="/newpost" component={Newpost}/>
 <Route path="/yourpage" component={Yourpage}/>
 <Route path="/comments" component={Comments}/> 
-<Route path="/OldHome" component={Oldhome}/>
 <Route path="/Sidebar" component={Sidebar}/>
     </Switch>
 </Provider>
