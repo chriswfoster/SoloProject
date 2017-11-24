@@ -74,9 +74,6 @@ class Poster extends Component {
                     <h3>Title: {dream.story_title}</h3>
                     
                     {dream.story_text}
-
-
-
                   <div className="wrapstorybuttons">
                    
                       <label
@@ -96,12 +93,8 @@ class Poster extends Component {
                INFLUENCE
                </label>
 
-               
                     </div>
-                 
-
-
-
+                
                   </div>
                 </div>
               </div>
