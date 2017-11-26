@@ -50,11 +50,11 @@ this.createPost = this.createPost.bind(this)
             <div className ="bodybackground">
 
 
-            <div className="navz">
+            <div className="newpostnavz">
         <div className="yourdreamfont">
             <p>What happened,<br></br> {this.props.user.nickname}? </p>
         </div>
-         <Link className="dreamnotesfont" to="/"> DREAM NOTES </Link>
+         <Link className="newpostdreamnotesfont" to="/"> DREAM NOTES </Link>
       <div className="filler">
           </div>
         </div>

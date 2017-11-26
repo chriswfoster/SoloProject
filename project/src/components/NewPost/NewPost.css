@@ -13,14 +13,14 @@
   @import url('https://fonts.googleapis.com/css?family=Cabin+Sketch:700');
   @import url('https://fonts.googleapis.com/css?family=Covered+By+Your+Grace');
   
-  .navz {
+  .newpostnavz {
     height: 120px;
     background-image: url(../Home/banner.jpg);
     background-repeat: no-repeat;
     background-size: 2000px;
     background-position-y: -500px;
     background-position-x: -7px;
-    color: rgb(200, 185, 253);
+    color: rgb(41, 187, 255);
     width: 100vw;
     top: 0px;
     left: 0px;
@@ -35,11 +35,11 @@
   align-content: stretch;
   }
   
-  .dreamnotesfont{
+  .newpostdreamnotesfont{
     font-family: 'Cabin Sketch', cursive;
     font-size: 40px;
     text-decoration: none;
-    color: rgb(200, 185, 253);
+    color: rgb(74, 195, 252);
   }
   
   .yourdreamfont{
