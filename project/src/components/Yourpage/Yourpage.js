@@ -94,20 +94,20 @@ class Yourpage extends Component {
               <input
                 type="checkbox"
                 id={`popup__${i}`}
-                className="popup__check"
+                className="yourpopup__check"
               />
-              <div className="popup__base">
-                <label htmlFor={`popup__${i}`} className="popup__bg" />
-                <div className="popup__inner">
-                  <div className="popup__calign">
-                    <label htmlFor={`popup__${i}`} className="popup__close">
+              <div className="yourpopup__base">
+                <label htmlFor={`popup__${i}`} className="yourpopup__bg" />
+                <div className="yourpopup__inner">
+                  <div className="yourpopup__calign">
+                    <label htmlFor={`popup__${i}`} className="yourpopup__close">
                       +
                     </label>
                   </div>
-                  <div className="popup__textbox">
+                  <div className="yourpopup__textbox">
                     <h3>Title: {dream.story_title}</h3>
                     <textarea
-                      className="poptextboxes"
+                      className="yourpoptextboxes"
                       onChange={e => typeStory(e.target.value)}
                       defaultValue={dream.story_text}
                     />
@@ -132,7 +132,7 @@ class Yourpage extends Component {
                 </div>
               </div>
               <label
-                className="trigger sharebutton"
+                className="yourtrigger yoursharebutton"
                 htmlFor={`popup__${i}`}
                 onClick={() => typeStory(dream.story_text)}
               >
@@ -144,20 +144,20 @@ class Yourpage extends Component {
               <input
                 type="checkbox"
                 id={`popup2__${i}`}
-                className="popup__check"
+                className="yourpopup__check"
               />
-              <div className="popup__base">
-                <label htmlFor={`popup2__${i}`} className="popup__bg" />
-                <div className="popup__inner">
-                  <div className="popup__calign">
-                    <label htmlFor={`popup2__${i}`} className="popup__close">
+              <div className="yourpopup__base">
+                <label htmlFor={`popup2__${i}`} className="yourpopup__bg" />
+                <div className="yourpopup__inner">
+                  <div className="yourpopup__calign">
+                    <label htmlFor={`popup2__${i}`} className="yourpopup__close">
                       +
                     </label>
                   </div>
-                  <div className="popup__textbox">
+                  <div className="yourpopup__textbox">
                     <h3>Title: {dream.story_title}</h3>
                     <textarea
-                      className="poptextboxes2"
+                      className="yourpoptextboxes2"
                       onChange={e => typeAid(e.target.value)}
                       defaultValue={dream.influence}
                     />
@@ -168,7 +168,7 @@ class Yourpage extends Component {
                       <p className="yoursavebutton">SAVE DREAM/SLEEP AID</p>
                     </div>
                     <textarea
-                      className="poptextboxes3"
+                      className="yourpoptextboxes3"
                       onChange={e => typeInfluence(e.target.value)}
                       defaultValue={dream.back_story}
                     />
@@ -194,7 +194,7 @@ class Yourpage extends Component {
               </div>
 
               <label
-                className="trigger yoursharebutton"
+                className="yourtrigger yoursharebutton"
                 htmlFor={`popup2__${i}`}
                 onClick={() =>
                   typeInfluence(dream.back_story) && typeAid(dream.influence)}

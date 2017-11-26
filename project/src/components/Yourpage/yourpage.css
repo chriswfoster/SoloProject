@@ -123,12 +123,12 @@ yourscrollfix{
 
 /* ----------   EDIT POPUP BOX --------------       */
 
-.trigger {
+.yourtrigger {
   text-transform: uppercase;
   display: block;
 }
 
-.popup__textbox {
+.yourpopup__textbox {
   color: #b43d54;
   line-height: 25px;
   font-size: 1.1em;
@@ -179,12 +179,12 @@ yourscrollfix{
   }
 }
 
-.popup__check {
+.yourpopup__check {
   display: none;
 }
 
-.popup__base,
-.popup__bg {
+.yourpopup__base,
+.yourpopup__bg {
   position: fixed;
   top: 0;
   right: 0;
@@ -194,14 +194,14 @@ yourscrollfix{
   cursor: zoom-out;
 }
 
-.popup__base {
+.yourpopup__base {
   background-color: rgba(0, 0, 0, 0.5);
   display: none;
   position: absolute;
   z-index: 10;
 }
 
-.popup__check:checked + .popup__base {
+.yourpopup__check:checked + .yourpopup__base {
   display: block;
   animation-name: bg;
   animation-duration: 0.5s;
@@ -211,7 +211,7 @@ yourscrollfix{
   -webkit-animation-fill-mode: forwards;
 }
 
-.popup__inner {
+.yourpopup__inner {
   position: absolute;
   z-index: 10;
   width: 70%;
@@ -223,7 +223,7 @@ yourscrollfix{
   cursor: default;
 }
 
-.popup__check:checked + .popup__base .popup__inner {
+.yourpopup__check:checked + .yourpopup__base .yourpopup__inner {
   animation-name: inner;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
@@ -235,7 +235,7 @@ yourscrollfix{
   border-radius: 33px;
 }
 
-.popup__textbox {
+.yourpopup__textbox {
   height: 95%;
   width: 95%;
   padding-left: 2.5%;
@@ -245,13 +245,13 @@ yourscrollfix{
   color: rgb(41, 187, 255);
 }
 
-.popup__calign {
+.yourpopup__calign {
   float: right;
   padding-right: 60px;
   font-size: 50px;
 }
 
-.popup__close {
+.yourpopup__close {
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -264,20 +264,20 @@ yourscrollfix{
   color: rgb(41, 187, 255);
 }
 
-.poptextboxes {
+.yourpoptextboxes {
   background-color: black;
   color: white;
   height: 75%;
   width: 100%;
 }
 
-.poptextboxes2 {
+.yourpoptextboxes2 {
   background-color: black;
   color: white;
   height: 25%;
   width: 100%;
 }
-.poptextboxes3 {
+.yourpoptextboxes3 {
   background-color: black;
   color: white;
   height: 35%;
