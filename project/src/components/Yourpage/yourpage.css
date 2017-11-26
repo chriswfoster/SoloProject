@@ -10,7 +10,57 @@
 @import url("https://fonts.googleapis.com/css?family=Cabin+Sketch:700");
 @import url("https://fonts.googleapis.com/css?family=Covered+By+Your+Grace");
 
-.navz {
+.yourdreamfont {
+  font-family: "Covered By Your Grace", sans-sarif;
+  font-size: 30px;
+}
+
+.yourcenterposts {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: stretch;
+  margin-top: 25px;
+  color: white;
+}
+
+.yourwrapsharebuttons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: stretch;
+}
+
+.yourpostboxes {
+  background-color: rgb(53, 53, 53);
+  width: 60vw;
+  height: auto;
+  color: rgb(41, 187, 255);
+  border-radius: 15px;
+  padding: 5px;
+  box-shadow: 10px 10px 55px rgb(41, 187, 255);
+}
+
+.yoursharebutton {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border-radius: 553px;
+  width: auto;
+  padding: 15px;
+  cursor: pointer;
+  text-decoration-color: white;
+  border: solid;
+}
+
+.yoursharebutton :hover {
+  box-shadow: 15px 15px 55px rgb(41, 187, 255);
+}
+
+.yournavz {
   height: 120px;
   background-image: url(../Home/banner.jpg);
   background-repeat: no-repeat;
@@ -32,19 +82,19 @@
   align-content: stretch;
 }
 
-.dreamnotesfont {
+
+.yourpagedreamnotesfont {
   font-family: "Cabin Sketch", cursive;
   font-size: 40px;
   text-decoration: none;
   color: rgb(200, 185, 253);
 }
 
-.yourdreamfont {
-  font-family: "Covered By Your Grace", sans-sarif;
-  font-size: 30px;
+yourscrollfix{
+  overflow-y: scroll;
 }
 
-.bodybackground {
+.yourbackground {
   background-image: url(../Home/background.jpg);
   background-repeat: no-repeat;
   background-size: 100vw 100vh;
@@ -52,11 +102,7 @@
   height: 100vh;
 }
 
-.filler {
-  width: 200px;
-}
-
-.newpost {
+.yournewpost {
   background-color: rgb(0, 0, 0);
   border-radius: 553px;
   width: 90px;
@@ -65,7 +111,7 @@
   cursor: pointer;
   border-style: solid;
 }
-.newpost:hover {
+.yournewpost:hover {
   background-color: black;
   border-radius: 553px;
   width: 90px;
@@ -74,60 +120,11 @@
   box-shadow: 10px 10px 55px rgb(41, 187, 255);
 }
 
-.whitetext {
-  color: white;
-}
-
-.centerposts {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: space-around;
-  align-items: center;
-  align-content: stretch;
-  margin-top: 25px;
-  color: white;
-}
-
-.postboxes {
-  background-color: rgb(53, 53, 53);
-  width: 60vw;
-  height: auto;
-  color: rgb(41, 187, 255);
-  border-radius: 15px;
-  padding: 5px;
-  box-shadow: 10px 10px 55px rgb(41, 187, 255);
-}
-
-.wrapsharebuttons {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  align-content: stretch;
-}
-
-.sharebutton {
-  background-color: rgb(0, 0, 0);
-  color: white;
-  border-radius: 553px;
-  width: auto;
-  padding: 15px;
-  cursor: pointer;
-  text-decoration-color: white;
-  border: solid;
-}
-.sharebutton :hover {
-  box-shadow: 15px 15px 55px rgb(41, 187, 255);
-}
-
 
 /* ----------   EDIT POPUP BOX --------------       */
 
 .trigger {
   text-transform: uppercase;
-
   display: block;
 }
 
@@ -287,7 +284,7 @@
   width: 100%;
 }
 
-.savebuttonstory {
+.yoursavebuttonstory {
   color: white;
   background-color: black;
   border-style: solid;
@@ -297,7 +294,7 @@
   margin-bottom: 10px;
 }
 
-.savebutton {
+.yoursavebutton {
   color: white;
   background-color: black;
   border-style: solid;
@@ -316,7 +313,7 @@ pre {
   word-wrap: break-word;
 }
 
-.savebuttonalignment {
+.yoursavebuttonalignment {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

@@ -83,11 +83,11 @@ class Yourpage extends Component {
     const { typeStory, typeAid, typeInfluence } = this.props
     console.log(this.props)
     const list = this.props.allyourposts.map((dream, i) => (
-      <div key={i} className="centerposts">
+      <div key={i} className="yourcenterposts">
         <div>"{dream.story_title}" posted on <Moment format="MM/DD/YYYY" subtract={{hours:6}}>{dream.post_date}</Moment></div>
-        <div className="postboxes">
+        <div className="yourpostboxes">
           <pre>{dream.story_text}</pre>
-          <div className="wrapsharebuttons">
+          <div className="yourwrapsharebuttons">
             
 
             <div>
@@ -111,18 +111,17 @@ class Yourpage extends Component {
                       onChange={e => typeStory(e.target.value)}
                       defaultValue={dream.story_text}
                     />
-                    <div className="savebuttonalignment">
+                    <div className="yoursavebuttonalignment">
                       <div
-                        className="savebuttonstory"
+                        className="yoursavebuttonstory"
                         onClick={() => this.editStory(dream.post_id)}
-                        value="Refresh Page"
                       >
                         {" "}
                         Save{" "}
                       </div>
                       <label
                         htmlFor={`popup__${i}`}
-                        className="savebutton"
+                        className="yoursavebutton"
                         onClick={() => window.location.reload()}
                       >
                         {" "}
@@ -163,19 +162,19 @@ class Yourpage extends Component {
                       defaultValue={dream.influence}
                     />
                     <div
-                      className="savebuttonalignment"
+                      className="yoursavebuttonalignment"
                       onClick={() => this.editInfluence(dream.post_id)}
                     >
-                      <p className="savebutton">SAVE DREAM/SLEEP AID</p>
+                      <p className="yoursavebutton">SAVE DREAM/SLEEP AID</p>
                     </div>
                     <textarea
                       className="poptextboxes3"
                       onChange={e => typeInfluence(e.target.value)}
                       defaultValue={dream.back_story}
                     />
-                    <div className="savebuttonalignment">
+                    <div className="yoursavebuttonalignment">
                       <div
-                        className="savebutton"
+                        className="yoursavebutton"
                         onClick={() => this.editBackstory(dream.post_id)}
                       >
                         SAVE BACKSTORY
@@ -184,7 +183,7 @@ class Yourpage extends Component {
                     <div>
                       <label
                         htmlFor={`popup2__${i}`}
-                        className="savebutton"
+                        className="yoursavebutton"
                         onClick={() => window.location.reload()}
                       >
                         CLOSE
@@ -195,7 +194,7 @@ class Yourpage extends Component {
               </div>
 
               <label
-                className="trigger sharebutton"
+                className="trigger yoursharebutton"
                 htmlFor={`popup2__${i}`}
                 onClick={() =>
                   typeInfluence(dream.back_story) && typeAid(dream.influence)}
@@ -209,7 +208,7 @@ class Yourpage extends Component {
     ))
     return (
       <div>
-        <div className="navz">
+        <div className="yournavz">
           <div className="yourdreamfont">
 
 {!this.props.user.user_id ? (
@@ -221,11 +220,11 @@ class Yourpage extends Component {
 )}
 
           </div>
-          <Link className="dreamnotesfont" to="/">
+          <Link className="yourpagedreamnotesfont" to="/">
             {" "}
             DREAM NOTES{" "}
           </Link>
-          <div className="newpost">
+          <div className="yournewpost">
             <Link
               to="/newpost"
               style={{ textDecoration: "none", color: "white" }}
@@ -234,9 +233,9 @@ class Yourpage extends Component {
             </Link>
           </div>
         </div>
-        <div className="bodybackground">
+        <div className="yourbackground">
           <div />
-          <div>{list}</div>
+          <div className="yourscrollfix">{list}</div>
         </div>
         <button onClick={this.blah} />
       </div>
