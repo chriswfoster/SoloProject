@@ -206,7 +206,7 @@ class Yourpage extends Component {
     ))
     return (
       <div classname="yourbackground">
-       
+       <Yourpagenav/>
        <div className="yourscrollfix">{list}</div>
       </div>
     )

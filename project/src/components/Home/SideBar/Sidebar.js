@@ -7,9 +7,7 @@ import Comments from '../../Comments/Comments'
 
 import '../home.css'
  class Sidebar extends Component{
-    constructor(props){
-        super(props)
-    }
+    
 
 componentWillReceiveProps(){
     
@@ -67,7 +65,7 @@ componentWillReceiveProps(){
             </div>
  
             
-            {i % 2 == 0 ? <label
+            {i % 2 === 0 ? <label
                 
                 htmlFor={`slide__${i}`}
                 onClick={() => {
