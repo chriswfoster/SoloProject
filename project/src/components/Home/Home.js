@@ -30,13 +30,8 @@ class Home extends Component {
     return (
       <div className="bodybackground">
           <HomeNav />
-          {/* main body */}
-          
-          
-            <Poster />
-          
-          
-      </div>
+        <Poster />
+          </div>
     )
   }
 }

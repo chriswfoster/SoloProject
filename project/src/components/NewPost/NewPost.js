@@ -58,11 +58,7 @@ this.createPost = this.createPost.bind(this)
       <div className="filler">
           </div>
         </div>
-
-        
-
-            <div className="flexorganizer">
-
+<div className="flexorganizer">
 
 <div className="spantext">
     <span>Title the dream:</span><br></br>

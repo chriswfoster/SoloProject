@@ -474,9 +474,14 @@ pre {
   width: auto;
   background-color: grey;
 }
+
+.animatelinespan{
+  background-color: rgba(0,0,0,0.80);
+  padding-top:5px;
+}
 .animatelinespan:hover + .linespan{
    
-  background-color:red;
+  background-color:rgb(255, 66, 217);
 }
 
 .mainlefttitles {
@@ -486,7 +491,7 @@ pre {
 	justify-content: flex-start;
 	align-items: baseline;
   align-content: stretch;
-  margin-top: 25px;
+  margin-top: 5px;
   margin-left: 7px;
   color: rgb(41, 187, 255);
   }

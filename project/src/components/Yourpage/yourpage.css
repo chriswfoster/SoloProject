@@ -90,7 +90,7 @@
   color: rgb(200, 185, 253);
 }
 
-yourscrollfix{
+.yourscrollfix{
   overflow-y: scroll;
   height: 800px;
 }
