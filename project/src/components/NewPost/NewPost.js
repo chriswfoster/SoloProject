@@ -47,6 +47,12 @@ this.createPost = this.createPost.bind(this)
         console.log(this.props)
         return(
 
+
+
+
+
+
+            
             <div className ="bodybackground">
 
 

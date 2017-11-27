@@ -208,6 +208,19 @@ class Yourpage extends Component {
     return (
       <div className="yourbackground">
        <Yourpagenav/>
+
+
+       <div className="yournewpost">
+   <Link
+     to="/newpost"
+     style={{ textDecoration: "none", color: "white" }}
+   >
+     NEW POST
+   </Link>
+ </div>
+
+
+ 
        <Navbutton/>
        <div className="yourscrollfix">{list}</div>
       </div>
