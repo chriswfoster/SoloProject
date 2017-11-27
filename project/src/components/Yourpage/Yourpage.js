@@ -10,15 +10,14 @@ import {
 } from "../../ducks/reducer"
 import { Link } from "react-router-dom"
 import axios from "axios"
-import Moment from 'react-moment'
-import Yourpagenav from './Yourpagenav/Yourpagenav'
-import Navbutton from '../Home/Navbutton/Navbutton'
+import Moment from "react-moment"
+import Yourpagenav from "./Yourpagenav/Yourpagenav"
+import Navbutton from "../Home/Navbutton/Navbutton"
+import NewPost from '../NewPost/NewPost'
 
 class Yourpage extends Component {
   constructor(props) {
     super(props)
-
-
   }
 
   componentDidMount() {
@@ -77,18 +76,21 @@ class Yourpage extends Component {
       })
   }
 
-
   render() {
     const { typeStory, typeAid, typeInfluence } = this.props
     console.log(this.props)
     const list = this.props.allyourposts.map((dream, i) => (
       <div key={i} className="yourcenterposts">
-        <div>"{dream.story_title}" posted on <Moment format="MM/DD/YYYY" subtract={{hours:6}}>{dream.post_date}</Moment></div>
+        <div>
+          "{dream.story_title}" posted on{" "}
+          <Moment format="MM/DD/YYYY" subtract={{ hours: 6 }}>
+            {dream.post_date}
+          </Moment>
+        </div>
         <div className="yourpostboxes">
           <pre>{dream.story_text}</pre>
           <div className="yourwrapsharebuttons">
-            
-
+            {/*        BEGINNING OF EDIT BUTTON        */}
             <div>
               <input
                 type="checkbox"
@@ -138,7 +140,9 @@ class Yourpage extends Component {
                 EDIT
               </label>
             </div>
+            {/*----------- END OF EDIT BUTTON  ---------- */}
 
+            {/* -----------START OF INFLUENCE BUTTON-------- */}
             <div>
               <input
                 type="checkbox"
@@ -149,7 +153,10 @@ class Yourpage extends Component {
                 <label htmlFor={`popup2__${i}`} className="yourpopup__bg" />
                 <div className="yourpopup__inner">
                   <div className="yourpopup__calign">
-                    <label htmlFor={`popup2__${i}`} className="yourpopup__close">
+                    <label
+                      htmlFor={`popup2__${i}`}
+                      className="yourpopup__close"
+                    >
                       +
                     </label>
                   </div>
@@ -196,33 +203,25 @@ class Yourpage extends Component {
                 className="yourtrigger yoursharebutton"
                 htmlFor={`popup2__${i}`}
                 onClick={() =>
-                  typeInfluence(dream.back_story) && typeAid(dream.influence)}
+                  typeInfluence(dream.back_story) && typeAid(dream.influence)
+                }
               >
                 INFLUENCE
               </label>
             </div>
+            {/*          END OF INFLUENCE BUTTON         */}
           </div>
         </div>
       </div>
     ))
     return (
       <div className="yourbackground">
-       <Yourpagenav/>
+        <Yourpagenav />
 
+        <NewPost />
 
-       <div className="yournewpost">
-   <Link
-     to="/newpost"
-     style={{ textDecoration: "none", color: "white" }}
-   >
-     NEW POST
-   </Link>
- </div>
-
-
- 
-       <Navbutton/>
-       <div className="yourscrollfix">{list}</div>
+        <Navbutton />
+        <div className="yourscrollfix">{list}</div>
       </div>
     )
   }

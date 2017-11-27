@@ -49,8 +49,8 @@
   }
   
   
-  .bodybackground{
-    background-image: url(../Home/background.jpg);
+  .newpostbackground{
+    background-color: black;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;

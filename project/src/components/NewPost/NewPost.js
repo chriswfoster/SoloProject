@@ -49,22 +49,22 @@ this.createPost = this.createPost.bind(this)
 
 
 
+            <div className ="newpostbackground">
+
+         
+<label className="yournewpost" htmlFor={`popup3`}>
+          <Link
+            to="/newpost"
+            style={{ textDecoration: "none", color: "white" }}
+          >
+            NEW POST
+          </Link>
+        </label>
 
 
 
-            
-            <div className ="bodybackground">
 
-
-            <div className="newpostnavz">
-        <div className="yourdreamfont">
-            <p>What happened,<br></br> {this.props.user.nickname}? </p>
-        </div>
-         <Link className="newpostdreamnotesfont" to="/"> DREAM NOTES </Link>
-      <div className="filler">
-          </div>
-        </div>
-<div className="flexorganizer">
+        <div className="flexorganizer">
 
 <div className="spantext">
     <span>Title the dream:</span><br></br>
@@ -95,8 +95,18 @@ this.createPost = this.createPost.bind(this)
 
 </div>
 
-         
-         
+
+
+
+
+
+
+
+
+
+
+
+
           </div>
 
         )
