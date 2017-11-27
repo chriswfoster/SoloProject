@@ -6,7 +6,7 @@ import Moment from 'react-moment'
 import Comments from '../../Comments/Comments'
 
 import '../home.css'
- class Sidebar extends Component{
+ class Mostliked extends Component{
  
     
 
@@ -14,6 +14,7 @@ import '../home.css'
         return(
 
             <div>
+                
                 </div>
 
         )

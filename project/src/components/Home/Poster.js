@@ -4,6 +4,7 @@ import { getAllPosts, toDisplay } from "../../ducks/reducer"
 import { connect } from "react-redux"
 import Moment from 'react-moment'
 import Sidebar from './SideBar/Sidebar'
+import Mostliked from './Mostliked/Mostliked'
 import axios from 'axios'
 
 import Comments from '../Comments/Comments'
@@ -149,7 +150,7 @@ class Poster extends Component {
         <div className="leftsidebox force-overflow" id="scrollbar">
         {list}
         </div>
-      
+      <Mostliked />
 
 
         </div>
