@@ -12,6 +12,7 @@ import { Link } from "react-router-dom"
 import axios from "axios"
 import Moment from 'react-moment'
 import Yourpagenav from './Yourpagenav/Yourpagenav'
+import Navbutton from '../Home/Navbutton/Navbutton'
 
 class Yourpage extends Component {
   constructor(props) {
@@ -207,6 +208,7 @@ class Yourpage extends Component {
     return (
       <div className="yourbackground">
        <Yourpagenav/>
+       <Navbutton/>
        <div className="yourscrollfix">{list}</div>
       </div>
     )

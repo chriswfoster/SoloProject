@@ -4,6 +4,7 @@ import { getAllPosts, getUserInfo } from "../../ducks/reducer"
 import { connect } from "react-redux"
 import Poster from "./Poster"
 import HomeNav from "./HomeNav"
+import Navbutton from './Navbutton/Navbutton'
 
 class Home extends Component {
   constructor(props) {
@@ -31,6 +32,7 @@ class Home extends Component {
       <div className="bodybackground">
           <HomeNav />
         <Poster />
+        <Navbutton />
           </div>
     )
   }
