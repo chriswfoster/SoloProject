@@ -524,8 +524,7 @@ pre {
     -webkit-animation-duration:1s;
     -webkit-animation-fill-mode: forwards;
     position: relative;
-  
-  }
+    }
   .slideLeft{
     animation-name: sliderLeft;
     animation-duration: 1s;
@@ -534,8 +533,7 @@ pre {
     -webkit-animation-duration:1s;
     -webkit-animation-fill-mode: forwards;
     position: relative;
-    
-  }
+      }
   
 
   @keyframes sliderRight {
