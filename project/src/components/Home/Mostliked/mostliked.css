@@ -89,21 +89,62 @@
 
 
 
-  .slideRight{
-    animation-name: sliderRight;
-    animation-duration: 1s;
+  .fader{
+    animation-name: fader;
+    animation-duration: 5s;
     animation-fill-mode: forwards;
-    -webkit-animation-name: sliderRight;
-    -webkit-animation-duration:1s;
+    -webkit-animation-name: fader;
+    -webkit-animation-duration:5s;
     -webkit-animation-fill-mode: forwards;
-    position: relative;
     }
 
-  @keyframes sliderRight {
-    0%   {opacity: 0;}
-    100% {opacity: 1;}
+  @keyframes fader {
+    from  {opacity: 0;}
+    to {opacity: 1;}
   }
-    @-webkit-keyframes sliderRight {
-        0%   {opacity: 0;}
-        100% {opacity: 1;}
+    @-webkit-keyframes fader {
+    from   {opacity: 0;}
+    to {opacity: 1;}
     }
+
+    .fader__close {
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        display: block;
+        position: absolute;
+        z-index: 3;
+    
+        cursor: pointer;
+        color: rgba(255, 66, 217, 0.596);
+      }
+      .fader__calign {
+        right: 0%;
+        margin-top: 5px;
+        margin-right: 15px;
+        font-size: 50px;
+      }
+      .liked__inner:hidden{
+          display: none;
+      }
+
+      .hideit { 
+        animation-name: faderr;
+        animation-duration: 3s;
+        animation-fill-mode: forwards;
+        -webkit-animation-name: faderr;
+        -webkit-animation-duration:3s;
+        -webkit-animation-fill-mode: forwards;
+     }
+
+     @keyframes faderr {
+        from  {opacity: 1;}
+        to {opacity: 0;}
+      }
+        @-webkit-keyframes faderr {
+        from   {opacity: 1;}
+        to {opacity: 0;}
+        }
+
+    
