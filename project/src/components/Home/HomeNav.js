@@ -38,7 +38,7 @@ class Home extends Component {
                 </button>
               </div>
             ) : (
-              <p onClick={this.handleLogout}>LOGOUT</p>
+              <p onClick={this.handleLogout} className="loginbutton">LOGOUT</p>
             )}
           </div>
         </div>

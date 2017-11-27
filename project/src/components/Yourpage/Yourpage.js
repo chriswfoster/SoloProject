@@ -11,12 +11,13 @@ import {
 import { Link } from "react-router-dom"
 import axios from "axios"
 import Moment from 'react-moment'
+import Yourpagenav from './Yourpagenav/Yourpagenav'
 
 class Yourpage extends Component {
   constructor(props) {
     super(props)
 
-    this.blah = this.blah.bind(this)
+
   }
 
   componentDidMount() {
@@ -75,9 +76,6 @@ class Yourpage extends Component {
       })
   }
 
-  blah() {
-    console.log(this.props)
-  }
 
   render() {
     const { typeStory, typeAid, typeInfluence } = this.props
@@ -207,37 +205,9 @@ class Yourpage extends Component {
       </div>
     ))
     return (
-      <div>
-        <div className="yournavz">
-          <div className="yourdreamfont">
-
-{!this.props.user.user_id ? (
-  ''
-) : (
-  <u>
-              {this.props.user.nickname}'s <br />PAGE
-            </u>
-)}
-
-          </div>
-          <Link className="yourpagedreamnotesfont" to="/">
-            {" "}
-            DREAM NOTES{" "}
-          </Link>
-          <div className="yournewpost">
-            <Link
-              to="/newpost"
-              style={{ textDecoration: "none", color: "white" }}
-            >
-              NEW POST
-            </Link>
-          </div>
-        </div>
-        <div className="yourbackground">
-          <div />
-          <div className="yourscrollfix">{list}</div>
-        </div>
-        <button onClick={this.blah} />
+      <div classname="yourbackground">
+       
+       <div className="yourscrollfix">{list}</div>
       </div>
     )
   }

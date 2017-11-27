@@ -62,11 +62,11 @@
 
 .yournavz {
   height: 120px;
-  background-image: url(../Home/banner.jpg);
+  background-image: url(../Home/retro.jpg);
   background-repeat: no-repeat;
   background-size: 2000px;
   background-position-y: 0px;
-  background-position-x: -7px;
+  background-position-x: -100px;
   color: rgb(200, 185, 253);
   width: 100vw;
   top: 0px;
@@ -92,6 +92,7 @@
 
 yourscrollfix{
   overflow-y: scroll;
+  height: 800px;
 }
 
 .yourbackground {

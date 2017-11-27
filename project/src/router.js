@@ -10,7 +10,6 @@ import Comments from './components/Comments/Comments'
 import store from './store'
 import Sidebar from './components/Home/SideBar/Sidebar'
 
-
 export default(
 <Provider store={store}>
 <Switch>
@@ -19,6 +18,7 @@ export default(
 <Route path="/yourpage" component={Yourpage}/>
 <Route path="/comments" component={Comments}/> 
 <Route path="/Sidebar" component={Sidebar}/>
+
     </Switch>
 </Provider>
 )
