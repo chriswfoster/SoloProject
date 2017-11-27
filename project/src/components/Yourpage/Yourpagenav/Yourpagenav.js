@@ -38,8 +38,7 @@ render(){
 
  </div>
  <Link className="yourpagedreamnotesfont" to="/">
-   {" "}
-   DREAM NOTES{" "}
+   DREAM NOTES
  </Link>
  <div className="yournewpost">
    <Link
