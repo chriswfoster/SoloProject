@@ -13,7 +13,7 @@ import axios from "axios"
 import Moment from "react-moment"
 import Yourpagenav from "./Yourpagenav/Yourpagenav"
 import Navbutton from "../Home/Navbutton/Navbutton"
-import NewPost from '../NewPost/NewPost'
+import NewPost from "../NewPost/NewPost"
 
 class Yourpage extends Component {
   constructor(props) {
@@ -81,15 +81,38 @@ class Yourpage extends Component {
     console.log(this.props)
     const list = this.props.allyourposts.map((dream, i) => (
       <div key={i} className="yourcenterposts">
-        <div>
-          "{dream.story_title}" posted on{" "}
-          <Moment format="MM/DD/YYYY" subtract={{ hours: 6 }}>
-            {dream.post_date}
-          </Moment>
-        </div>
         <div className="yourpostboxes">
+          <div
+            className={this.props.theme.font.concat(" ", "yourpagetitleflex")}
+          >
+            <div
+              className={this.props.theme.fancytitleline.concat(
+                " ",
+                "yourpagetitleline"
+              )}
+            />
+            "{dream.story_title}"
+            <div
+              className={this.props.theme.fancytitleline.concat(
+                " ",
+                "yourpagetitleline"
+              )}
+            />
+          </div>
+
           <pre>{dream.story_text}</pre>
+
           <div className="yourwrapsharebuttons">
+            <div
+              className={this.props.theme.button.concat(
+                " ",
+                this.props.theme.font
+              )}
+              onClick={() => this.storyToShare(this.props.allyourposts.post_id)}
+            >
+              SHARE
+            </div>
+
             {/*        BEGINNING OF EDIT BUTTON        */}
             <div>
               <input
@@ -100,29 +123,44 @@ class Yourpage extends Component {
               <div className="yourpopup__base">
                 <label htmlFor={`popup__${i}`} className="yourpopup__bg" />
                 <div className="yourpopup__inner">
-                  <div className="yourpopup__calign">
-                    <label htmlFor={`popup__${i}`} className="yourpopup__close">
+                  <div className={this.props.theme.closexborder}>
+                    <label
+                      htmlFor={`popup__${i}`}
+                      className={this.props.theme.closex}
+                    >
                       +
                     </label>
                   </div>
                   <div className="yourpopup__textbox">
-                    <h3>Title: {dream.story_title}</h3>
+                    <center>
+                      <h3 className={this.props.theme.font}>
+                        TITLE : "{dream.story_title}"{" "}
+                      </h3>
+                    </center>
                     <textarea
-                      className="yourpoptextboxes"
+                      className={this.props.theme.inputboxes.concat(
+                        " ",
+                        "yourpoptextboxes"
+                      )}
                       onChange={e => typeStory(e.target.value)}
                       defaultValue={dream.story_text}
                     />
                     <div className="yoursavebuttonalignment">
                       <div
-                        className="yoursavebuttonstory"
+                        className={this.props.theme.button.concat(
+                          " ",
+                          this.props.theme.font
+                        )}
                         onClick={() => this.editStory(dream.post_id)}
                       >
-                        {" "}
-                        Save{" "}
+                        SAVE
                       </div>
                       <label
                         htmlFor={`popup__${i}`}
-                        className="yoursavebutton"
+                        className={this.props.theme.button.concat(
+                          " ",
+                          this.props.theme.font
+                        )}
                         onClick={() => window.location.reload()}
                       >
                         {" "}
@@ -133,11 +171,18 @@ class Yourpage extends Component {
                 </div>
               </div>
               <label
-                className="yourtrigger yoursharebutton"
+                className="yourtrigger"
                 htmlFor={`popup__${i}`}
                 onClick={() => typeStory(dream.story_text)}
               >
-                EDIT
+                <div
+                  className={this.props.theme.button.concat(
+                    " ",
+                    this.props.theme.font
+                  )}
+                >
+                  EDIT
+                </div>
               </label>
             </div>
             {/*----------- END OF EDIT BUTTON  ---------- */}
@@ -152,18 +197,25 @@ class Yourpage extends Component {
               <div className="yourpopup__base">
                 <label htmlFor={`popup2__${i}`} className="yourpopup__bg" />
                 <div className="yourpopup__inner">
-                  <div className="yourpopup__calign">
+                  <div className={this.props.theme.closexborder}>
                     <label
                       htmlFor={`popup2__${i}`}
-                      className="yourpopup__close"
+                      className={this.props.theme.closex}
                     >
                       +
                     </label>
                   </div>
+
+                  <h3 className={this.props.theme.font}>
+                    TITLE : "{dream.story_title}"
+                  </h3>
+
                   <div className="yourpopup__textbox">
-                    <h3>Title: {dream.story_title}</h3>
                     <textarea
-                      className="yourpoptextboxes2"
+                      className={this.props.theme.inputboxes.concat(
+                        " ",
+                        "yourpoptextboxes2"
+                      )}
                       onChange={e => typeAid(e.target.value)}
                       defaultValue={dream.influence}
                     />
@@ -171,16 +223,29 @@ class Yourpage extends Component {
                       className="yoursavebuttonalignment"
                       onClick={() => this.editInfluence(dream.post_id)}
                     >
-                      <p className="yoursavebutton">SAVE DREAM/SLEEP AID</p>
+                      <p
+                        className={this.props.theme.button.concat(
+                          " ",
+                          this.props.theme.font
+                        )}
+                      >
+                        SAVE DREAM/SLEEP AID
+                      </p>
                     </div>
                     <textarea
-                      className="yourpoptextboxes3"
+                      className={this.props.theme.inputboxes.concat(
+                        " ",
+                        "yourpoptextboxes3"
+                      )}
                       onChange={e => typeInfluence(e.target.value)}
                       defaultValue={dream.back_story}
                     />
                     <div className="yoursavebuttonalignment">
                       <div
-                        className="yoursavebutton"
+                        className={this.props.theme.button.concat(
+                          " ",
+                          this.props.theme.font
+                        )}
                         onClick={() => this.editBackstory(dream.post_id)}
                       >
                         SAVE BACKSTORY
@@ -189,7 +254,7 @@ class Yourpage extends Component {
                     <div>
                       <label
                         htmlFor={`popup2__${i}`}
-                        className="yoursavebutton"
+                        className={this.props.theme.button}
                         onClick={() => window.location.reload()}
                       >
                         CLOSE
@@ -200,7 +265,10 @@ class Yourpage extends Component {
               </div>
 
               <label
-                className="yourtrigger yoursharebutton"
+                className={this.props.theme.button.concat(
+                  " ",
+                  this.props.theme.font
+                )}
                 htmlFor={`popup2__${i}`}
                 onClick={() =>
                   typeInfluence(dream.back_story) && typeAid(dream.influence)
@@ -211,6 +279,12 @@ class Yourpage extends Component {
             </div>
             {/*          END OF INFLUENCE BUTTON         */}
           </div>
+          <p className="yourpagedatepos">
+            Posted on:&nbsp;
+            <Moment format="MM/DD/YYYY" subtract={{ hours: 6 }}>
+              {dream.post_date}
+            </Moment>
+          </p>
         </div>
       </div>
     ))

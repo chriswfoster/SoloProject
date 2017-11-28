@@ -23,6 +23,83 @@
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@import url("https://fonts.googleapis.com/css?family=Orbitron");
+
+/*  ---------------- GLOBAL RETRO CSS ----------------   */
+
+.global_retro_font {
+  font-family: "Orbitron", sans-serif;
+  color: rgb(74, 201, 206);
+  letter-spacing: 2px;
+}
+.global_retro_button {
+  padding: 10px 10px 8px 10px;
+  color: rgb(74, 201, 206);
+  letter-spacing: 2px;
+  border-style: outset;
+  border-width: 2px;
+  border-color: rgb(255, 94, 223);
+  width: auto;
+  height: auto;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0);
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+.global_retro_x_circle {
+  margin-top: 2%;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  z-index: 6;
+  float: right;
+  border-style: solid;
+  border-color: rgb(255, 94, 223);
+  border-radius: 50%;
+  border-width: 5px;
+  height: 40px;
+  width: 40px;
+  font-size: 50px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+}
+.global_retro_x {
+  right: 15%;
+  top: -35%;
+  position: absolute;
+  cursor: pointer;
+  color: rgb(74, 201, 206);
+}
+.global_retro_inputboxes {
+  border-style: inset;
+  border-color: rgb(255, 94, 223);
+  border-width: 2px;
+  background-color: rgba(0, 0, 0, 0);
+  color: rgb(74, 201, 206);
+}
+.global_retro_popupboxes {
+  background-color: rgb(35, 17, 36);
+  border-style: outset;
+  border-color: rgb(255, 94, 223);
+  border-width: 2px;
+}
+.global_retro_fancy_title_line {
+  background-color: rgb(74, 201, 206);
+}
+.global_retro_yournewpost_button {
+  border-style: outset;
+  background-color: rgb(35, 17, 36);
+  color: rgb(74, 201, 206);
+  border-color: rgb(255, 94, 223);
+  font-family: "Orbitron", sans-serif;
+  font-size: 13px;
 }

@@ -16,7 +16,7 @@ class NewPost extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      slider: "newpostbackground"
+      slider: this.props.theme.popupboxes.concat(' ', "newpostbackground newpostbackgroundhider")
     }
 
     this.createPost = this.createPost.bind(this)
@@ -44,9 +44,9 @@ class NewPost extends Component {
   }
 
   slideInFunction() {
-    this.state.slider === "newpostbackground"
-      ? this.setState({ slider: "newpostbackground sliderIn" })
-      : this.setState({ slider: "newpostbackground" })
+    this.state.slider === this.props.theme.popupboxes.concat(' ', "newpostbackground newpostbackgroundhider")
+      ? this.setState({ slider: this.props.theme.popupboxes.concat(' ', "newpostbackground sliderIn") })
+      : this.setState({ slider: this.props.theme.popupboxes.concat(' ', "newpostbackground newpostbackgroundhider") })
   }
 
   render() {
@@ -54,68 +54,74 @@ class NewPost extends Component {
     console.log(this.props)
     return (
       <div>
+          
+          <div>
+          <img className="spiralspinz" src={require('./gotcha.svg')}/>
         <label
-          className="yournewpost"
+          className={this.props.theme.yournewpostbutton.concat(' ', this.props.theme.font, ' ', "yournewpost")}
           to="/newpost"
-          style={{ textDecoration: "none", color: "white" }}
+          style={{ textDecoration: "none", color: "rgb(93, 190, 194)" }}
           onClick={() => this.slideInFunction()}
-        >
+        > 
           NEW POST
         </label>
+        </div>
         {/*  -------   NEW POST BUTTON ABOVE  ------   */}
 
         <div className={this.state.slider}>
+
+        <div className={this.props.theme.closexborder} onClick={() => this.slideInFunction()}><span className={this.props.theme.closex}><b>+</b> </span></div>
+
           <div className="newpostflexorganizer">
-              <p className="newposttitletext">NEW POST</p>
+            <div className="newposttitleflex">
+              <div className={this.props.theme.fancytitleline.concat(' ', "newposttitleline")} />
+              <p className={this.props.theme.font.concat(' ', "newpostdreamnotesfont")}>NEW POST</p>
+              <div className={this.props.theme.fancytitleline.concat(' ', "newposttitleline")} />            </div>
+
             <div className="spantext">
-              <span className="yourdreamfont">TITLE DREAM:</span>
+              <span className={this.props.theme.font}>TITLE DREAM:</span>
               <br />
               <input
-                className="titletext"
+                className={this.props.theme.inputboxes.concat(' ', "titletext")}
                 onChange={e => typeTitle(e.target.value)}
               />
             </div>
 
             <div className="spantext">
-              <span className="yourdreamfont"> DESCRIBE THE DREAM: </span> <br/>
+              <span className={this.props.theme.font}> DESCRIBE THE DREAM: </span>{" "}
+              <br />
               <textarea
-                className="storytext"
+                className={this.props.theme.inputboxes.concat(' ', "storytext")}
                 onChange={e => typeStory(e.target.value)}
               />
             </div>
 
-<div className="organizeinfluenceboxes">
-            <div className="influencespandivs">
-              <span className="yourdreamfont">SLEEP OR DREAM AID:</span>
-              <br />
-              <textarea
-                className="influencetext"
-                onChange={e => typeAid(e.target.value)}
-              />
+            <div className="organizeinfluenceboxes">
+              <div className="influencespandivs">
+                <span className={this.props.theme.font}>SLEEP OR DREAM AID:</span>
+                <br />
+                <textarea
+                  className={this.props.theme.inputboxes.concat(' ', "influencetext")}
+                  onChange={e => typeAid(e.target.value)}
+                />
+              </div>
+
+              <div className="influencespandivs">
+                <span className={this.props.theme.font}>REAL LIFE INFLUENCE:</span>
+                <br />
+                <textarea
+                  className={this.props.theme.inputboxes.concat(' ', "influencetext")}
+                  onChange={e => typeInfluence(e.target.value)}
+                />
+              </div>
             </div>
 
-            <div className="influencespandivs">
-              <span className="yourdreamfont">
-                
-                REAL LIFE INFLUENCE:
-              </span>
-              <br />
-              <textarea
-                className="influencetext"
-                onChange={e => typeInfluence(e.target.value)}
-              />
-            </div>
-</div>
-
-            
-
-            <div onClick={this.createPost} className="spantext">
+            <div onClick={this.createPost} className={this.props.theme.button}>
               CREATE POST
             </div>
-        </div>
- 
- {/*  ---------- END OF CENTER PIECE ----  */}
+          </div>
 
+          {/*  ---------- END OF CENTER PIECE ----  */}
         </div>
       </div>
     )

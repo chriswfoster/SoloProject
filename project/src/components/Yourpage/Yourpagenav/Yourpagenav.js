@@ -40,14 +40,7 @@ render(){
  <Link className="yourpagedreamnotesfont" to="/">
    DREAM NOTES
  </Link>
- <div className="yournewpost">
-   <Link
-     to="/newpost"
-     style={{ textDecoration: "none", color: "white" }}
-   >
-     NEW POST
-   </Link>
- </div>
+ 
 </div>
     )
 }

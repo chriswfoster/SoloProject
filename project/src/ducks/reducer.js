@@ -27,7 +27,20 @@ const initialState = {
   story_text: "",
   influence: "",
   back_story: "",
-  display_post: {}
+  display_post: {},
+  theme: {
+    font: "global_retro_font",
+    button: "global_retro_button",
+    closexborder: "global_retro_x_circle",
+    closex: "global_retro_x",
+    inputboxes:"global_retro_inputboxes",
+    popupboxes:"global_retro_popupboxes",
+    fancytitleline:"global_retro_fancy_title_line",
+    yournewpostbutton:"global_retro_yournewpost_button",
+    
+
+
+  }
   //or can give it null as a starter value
 }
 
