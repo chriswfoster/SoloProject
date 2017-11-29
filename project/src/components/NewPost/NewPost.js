@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import { Link } from "react-router-dom"
+
 import { connect } from "react-redux"
 import {
   getUserInfo,
@@ -56,7 +56,7 @@ class NewPost extends Component {
       <div>
           
           <div>
-          <img className="spiralspinz" src={require('./gotcha.svg')}/>
+          <img className="spiralspinz" src={require('./gotcha.svg')} alt="New Post"/>
         <label
           className={this.props.theme.yournewpostbutton.concat(' ', this.props.theme.font, ' ', "yournewpost")}
           to="/newpost"

@@ -1,14 +1,7 @@
 import React, { Component } from "react"
 import { connect } from "react-redux"
 import "./yourpage.css"
-import {
-  getUserInfo,
-  getAllYourPosts,
-  typeStory,
-  typeInfluence,
-  typeAid
-} from "../../ducks/reducer"
-import { Link } from "react-router-dom"
+import { getUserInfo, getAllYourPosts, typeStory } from "../../ducks/reducer"
 import axios from "axios"
 import Moment from "react-moment"
 import Homenav from "../Home/HomeNav"
@@ -43,14 +36,13 @@ class Yourpage extends Component {
       })
   }
 
-
-
   render() {
-    const { typeAid, typeInfluence } = this.props
     console.log(this.props)
     const list = this.props.allyourposts.map((dream, i) => (
       <div key={i} className="yourcenterposts">
-        <div className={this.props.theme.popupboxes.concat(' ', "yourpostboxes")}>
+        <div
+          className={this.props.theme.popupboxes.concat(" ", "yourpostboxes")}
+        >
           <div
             className={this.props.theme.font.concat(" ", "yourpagetitleflex")}
           >
@@ -71,7 +63,7 @@ class Yourpage extends Component {
 
           <pre className={this.props.theme.font}>{dream.story_text}</pre>
 
-          <p className={this.props.theme.font.concat(' ', "yourpagedatepos")}>
+          <p className={this.props.theme.font.concat(" ", "yourpagedatepos")}>
             <u>
               Posted on:&nbsp;
               <Moment format="MM/DD/YYYY" subtract={{ hours: 6 }}>
@@ -93,11 +85,9 @@ class Yourpage extends Component {
 
             {/*        BEGINNING OF EDIT BUTTON        */}
             <Editpage dream={dream} i={i} />
-           
-             
+
             {/* -----------BEGINNING OF INFLUENCE BUTTON-------- */}
-            <Influencepage dream={dream} i={i}/>
-       
+            <Influencepage dream={dream} i={i} />
           </div>
         </div>
       </div>
@@ -119,7 +109,5 @@ const mapStateToProps = state => state
 export default connect(mapStateToProps, {
   getUserInfo,
   getAllYourPosts,
-  typeStory,
-  typeInfluence,
-  typeAid
+  typeStory
 })(Yourpage)

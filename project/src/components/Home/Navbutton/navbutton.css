@@ -1,9 +1,7 @@
 .navbuttoncircle {
   width: 70px;
   height: 70px;
-  background-color: rgb(255, 94, 223);
-  color: white;
-  border-radius: 50%;
+
   position: absolute;
   right: 2%;
   bottom: 2%;
@@ -23,11 +21,9 @@
   right: 2%;
   bottom: 2%;
   position: absolute;
-  border-radius: 50%;
   background-repeat: no-repeat;
   background-attachment: sticky;
   background-position-y: 100px;
-  background-color: rgb(255, 94, 223);
   cursor: pointer;
   width: 70px;
   height: 70px;
@@ -45,11 +41,9 @@
   bottom: 2%;
   cursor: pointer;
   position: absolute;
-  border-radius: 50%;
   background-repeat: no-repeat;
   background-attachment: sticky;
   background-position-y: 100px;
-  background-color: rgb(255, 94, 223);
   width: 70px;
   height: 70px;
 }
@@ -60,6 +54,44 @@
   position: absolute;
   right: 20%;
   bottom: 20%;
+}
+
+.navbuttondarkicon {
+  right: 2%;
+  bottom: 2%;
+  cursor: pointer;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-attachment: sticky;
+  background-position-y: 100px;
+  width: 70px;
+  height: 70px;
+}
+.navbuttondarkicon img {
+  height: 60px;
+  width: 60px;
+  position: absolute;
+  right: 7%;
+  bottom: 7%;
+}
+
+.navbuttonretroicon {
+  right: 2%;
+  bottom: 2%;
+  cursor: pointer;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-attachment: sticky;
+  background-position-y: 100px;
+  width: 70px;
+  height: 70px;
+}
+.navbuttonretroicon img {
+  height: 60px;
+  width: 60px;
+  position: absolute;
+  right: 7%;
+  bottom: 7%;
 }
 
 .navbuttonbouncer {
@@ -127,6 +159,39 @@
   -webkit-animation-fill-mode: forwards;
 }
 
+.navbuttonmovedark {
+  animation-name: movedark;
+  animation-duration: 0.5;
+  animation-fill-mode: forwards;
+  -webkit-animation-name: movedark;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+}
+.navbuttonmovedarkreverse {
+  animation-name: movedarkreverse;
+  animation-duration: 0.5;
+  animation-fill-mode: forwards;
+  -webkit-animation-name: movedarkreverse;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+}
+
+.navbuttonmoveretro {
+  animation-name: moveretro;
+  animation-duration: 0.5;
+  animation-fill-mode: forwards;
+  -webkit-animation-name: moveretro;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+}
+.navbuttonmoveretroreverse {
+  animation-name: moveretroreverse;
+  animation-duration: 0.5;
+  animation-fill-mode: forwards;
+  -webkit-animation-name: moveretroreverse;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+}
 @keyframes moveit {
   0% {
     bottom: 2%;
@@ -256,5 +321,73 @@
   }
   100% {
     right: 2%;
+  }
+}
+
+@keyframes movedark {
+  0% {
+    bottom: 2%;
+  }
+  100% {
+    bottom: 11%;
+  }
+}
+@-webkit-keyframes movedark {
+  0% {
+    bottom: 2%;
+  }
+  100% {
+    bottom: 11%;
+  }
+}
+
+@keyframes movedarkreverse {
+  0% {
+    bottom: 11%;
+  }
+  100% {
+    bottom: 2%;
+  }
+}
+@-webkit-keyframes movedarkreverse {
+  0% {
+    bottom: 11%;
+  }
+  100% {
+    bottom: 2%;
+  }
+}
+
+@keyframes moveretro {
+  0% {
+    bottom: 2%;
+  }
+  100% {
+    bottom: 22%;
+  }
+}
+@-webkit-keyframes moveretro {
+  0% {
+    bottom: 2%;
+  }
+  100% {
+    bottom: 22%;
+  }
+}
+
+@keyframes moveretroreverse {
+  0% {
+    bottom: 22%;
+  }
+  100% {
+    bottom: 2%;
+  }
+}
+@-webkit-keyframes moveretroreverse {
+  0% {
+    bottom: 22%;
+  }
+  100% {
+    bottom: 2%;
   }
 }

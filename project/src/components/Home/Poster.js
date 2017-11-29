@@ -2,12 +2,12 @@ import React, { Component } from "react"
 
 import { getAllPosts, toDisplay } from "../../ducks/reducer"
 import { connect } from "react-redux"
-import Moment from "react-moment"
+
 import Sidebar from "./SideBar/Sidebar"
 import Mostliked from "./Mostliked/Mostliked"
 import axios from "axios"
 
-import Comments from "../Comments/Comments"
+
 import "./home.css"
 
 class Poster extends Component {
@@ -46,7 +46,7 @@ class Poster extends Component {
   }
 
   render() {
-    const { getAllComments, toDisplay } = this.props
+    const {toDisplay } = this.props
     const list = this.props.allposts.map((dream, i) => (
       <div key={i} className={this.props.theme.sidebartext.concat(' ' , "mainlefttitles")}>
         <div className="wrapsharebuttons">

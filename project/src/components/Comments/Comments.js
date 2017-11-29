@@ -24,7 +24,7 @@ class Comments extends Component {
   }
 
   render(props) {
-    const { typeComment, dreamid } = this.props
+    const { typeComment} = this.props
     const commentlist =
       this.state.allcomments.length > 0 ? (
         this.state.allcomments.map((comment, i) => (

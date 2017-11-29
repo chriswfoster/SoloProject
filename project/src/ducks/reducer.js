@@ -3,7 +3,6 @@ import axios from "axios"
 const REQ_USER = "REQ_USER"
 const GET_ALL_YOUR_POSTS = "GET_ALL_YOUR_POSTS"
 
-
 const GET_ALL = "GET_ALL"
 const TYPE_TITLE = "TYPE_TITLE"
 const TYPE_DREAMAID = "TYPE_DREAMAID"
@@ -11,7 +10,8 @@ const TYPE_LIFE = "TYPE_LIFE"
 const TYPE_STORY = "TYPE_STORY"
 const DISPLAY_POST = "DISPLAY_POST"
 const TYPE_COMMENT = "TYPE_COMMENT"
-
+const DARK_THEME = "DARK_THEME"
+const RETRO_THEME = "RETRO_THEME"
 
 //Initial State
 
@@ -37,14 +37,16 @@ const initialState = {
     button: "global_retro_button",
     loginbuttons: "global_retro_loginbuttons",
     closexborder: "global_retro_x_circle",
-    inputboxes:"global_retro_inputboxes",
-    popupboxes:"global_retro_popupboxes",
-    fancytitleline:"global_retro_fancy_title_line",
-    yournewpostbutton:"global_retro_yournewpost_button",
+    inputboxes: "global_retro_inputboxes",
+    popupboxes: "global_retro_popupboxes",
+    fancytitleline: "global_retro_fancy_title_line",
+    yournewpostbutton: "global_retro_yournewpost_button",
     animatelinespan: "global_retro_animatelinespan",
-    
-
-
+    plusbutton: "global_retro_plusbutton",
+    homebutton: "global_retro_homebutton",
+    yourbutton: "global_retro_yourbutton",
+    darkbutton: "global_retro_darkbutton",
+    retrobutton: "global_retro_retrobutton"
   }
   //or can give it null as a starter value
 }
@@ -60,7 +62,7 @@ export default function reducer(state = initialState, action) {
         isLoading: false,
         user: action.payload
       })
-  
+
     case GET_ALL + "_PENDING": //pending tag is applied by redux promise middleware
       return Object.assign({}, state, { isLoading: true })
     case GET_ALL + "_FULFILLED":
@@ -75,8 +77,17 @@ export default function reducer(state = initialState, action) {
         isLoading: false,
         allyourposts: action.payload
       })
-      
-      
+    case DARK_THEME:
+      return (
+        console.log("working") &&
+        Object.assign({}, state, { theme: action.payload })
+      )
+    case RETRO_THEME:
+      return (
+        console.log("working") &&
+        Object.assign({}, state, { theme: action.payload })
+      )
+
     case TYPE_TITLE:
       return Object.assign({}, state, { type_title: action.payload })
     case TYPE_DREAMAID:
@@ -121,8 +132,6 @@ export function getAllPosts() {
   }
 }
 
-
-
 export function typeTitle(title) {
   return {
     type: TYPE_TITLE,
@@ -159,10 +168,62 @@ export function toDisplay(postid) {
   }
 }
 
-export function typeComment(comment){
+export function typeComment(comment) {
   console.log(comment)
-  return{
+  return {
     type: TYPE_COMMENT,
     payload: comment
+  }
+}
+
+export function darkTheme() {
+  return {
+    type: DARK_THEME,
+    payload: {
+      background: "global_dark_bodybackground",
+      navz: "global_dark_navz",
+      font: "global_dark_font",
+      sidebartext: "global_dark_sidebar",
+      titletext: "global_dark_title_text",
+      button: "global_dark_button",
+      loginbuttons: "global_dark_loginbuttons",
+      closexborder: "global_dark_x_circle",
+      inputboxes: "global_dark_inputboxes",
+      popupboxes: "global_dark_popupboxes",
+      fancytitleline: "global_dark_fancy_title_line",
+      yournewpostbutton: "global_dark_yournewpost_button",
+      animatelinespan: "global_dark_animatelinespan",
+      plusbutton: "global_dark_plusbutton",
+      homebutton: "global_dark_homebutton",
+      yourbutton: "global_dark_yourbutton",
+      darkbutton: "global_dark_darkbutton",
+      retrobutton: "global_dark_retrobutton"
+    }
+  }
+}
+
+export function retroTheme() {
+  return {
+    type: RETRO_THEME,
+    payload: {
+      background: "global_retro_bodybackground",
+      navz: "global_retro_navz",
+      font: "global_retro_font",
+      sidebartext: "global_retro_pinktext",
+      titletext: "global_retro_title_text",
+      button: "global_retro_button",
+      loginbuttons: "global_retro_loginbuttons",
+      closexborder: "global_retro_x_circle",
+      inputboxes: "global_retro_inputboxes",
+      popupboxes: "global_retro_popupboxes",
+      fancytitleline: "global_retro_fancy_title_line",
+      yournewpostbutton: "global_retro_yournewpost_button",
+      animatelinespan: "global_retro_animatelinespan",
+      plusbutton: "global_retro_plusbutton",
+      homebutton: "global_retro_homebutton",
+      yourbutton: "global_retro_yourbutton",
+      darkbutton: "global_retro_darkbutton",
+      retrobutton: "global_retro_retrobutton"
+    }
   }
 }

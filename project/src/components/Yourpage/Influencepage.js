@@ -8,9 +8,8 @@ import {
   typeInfluence,
   typeAid
 } from "../../ducks/reducer"
-import { Link } from "react-router-dom"
 import axios from "axios"
-import Moment from "react-moment"
+
 
 class Influencepage extends Component {
   constructor(props) {
