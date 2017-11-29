@@ -30,20 +30,31 @@ class Comments extends Component {
         this.state.allcomments.map((comment, i) => (
           <div key={i} className="centerposts">
             <div className={this.props.theme.font}>
-              {" "}
-              Comment by: {comment.nickname}{" "}
+              Comment by: {comment.nickname}{", "}
               <Moment subtract={{ hours: 6 }} fromNow>
                 {comment.comment_date}
               </Moment>{" "}
             </div>
-            <div
-              className={this.props.theme.inputboxes.concat(
-                " ",
-                "commentboxes"
+            <div className="commentboxes">
+              {i % 2 === 0 ? (
+                <div
+                  className={this.props.theme.inputboxes.concat(
+                    " ",
+                    "commentalignleft"
+                  )}
+                >
+                  {comment.comment_text}
+                </div>
+              ) : (
+                <div
+                  className={this.props.theme.inputboxes.concat(
+                    " ",
+                    "commentalignright"
+                  )}
+                >
+                  {comment.comment_text}
+                </div>
               )}
-            >
-              {" "}
-              {comment.comment_text}{" "}
             </div>
           </div>
         ))

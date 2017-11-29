@@ -40,7 +40,25 @@
 }
 
 .commentboxes {
-  width: 60vw;
+  width: 50vw;
+  height: auto;
+  border-radius: 15px;
+  padding: 5px;
+}
+.commentalignleft {
+  float: left;
+  text-align: center;
+  width: auto;
+  max-width: 50%;
+  height: auto;
+  border-radius: 15px;
+  padding: 5px;
+}
+.commentalignright {
+  float: right;
+  text-align: center;
+  width: auto;
+  max-width: 50%;
   height: auto;
   border-radius: 15px;
   padding: 5px;
@@ -73,13 +91,6 @@
   text-transform: uppercase;
 
   display: block;
-}
-
-.popup__textbox {
-  color: #b43d54;
-  line-height: 25px;
-  font-size: 1.1em;
-  letter-spacing: 1px;
 }
 
 /* Start popup css */
@@ -170,15 +181,6 @@
   cursor: default;
 }
 
-.popup__textbox {
-  height: 80%;
-  width: 95%;
-  padding-left: 2.5%;
-  padding-right: 2.5%;
-  margin-top: 10px;
-  overflow: auto;
-}
-
 .popup__calign {
   float: right;
   padding-right: 60px;
@@ -195,20 +197,6 @@
   z-index: 10;
   text-align: right;
   cursor: pointer;
-}
-
-.poptextboxes {
-  height: 75%;
-  width: 100%;
-}
-
-.poptextboxes2 {
-  height: 25%;
-  width: 100%;
-}
-.poptextboxes3 {
-  height: 35%;
-  width: 100%;
 }
 
 .savebuttonstory {
@@ -236,23 +224,13 @@ pre {
   word-wrap: break-word;
 }
 
-.savebuttonalignment {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  align-items: flex-end;
-  align-content: stretch;
-  margin-top: 10px;
-}
-
 .whitetext {
   color: white;
 }
 
 .postboxes {
   margin-top: 5px;
-  width: 75%;
+  width: 85%;
   min-height: 150px;
   height: auto;
   padding: 5px;

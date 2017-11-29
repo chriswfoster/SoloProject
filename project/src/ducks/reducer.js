@@ -30,6 +30,7 @@ const initialState = {
   display_post: {},
   theme: {
     font: "global_retro_font",
+    titletext: "global_retro_title_text",
     button: "global_retro_button",
     loginbuttons: "global_retro_loginbuttons",
     closexborder: "global_retro_x_circle",

@@ -41,11 +41,10 @@ class Sidebar extends Component {
                 className={this.props.theme.closexborder}
               />
               <div className="popup__textbox">
-                <center>
-                  <h3 className={this.props.theme.font}>
-                    Title: {dream.story_title}
-                  </h3>
-                </center>
+                <h3 className={this.props.theme.titletext}>
+                  TITLE: <u>{dream.story_title}</u>
+                </h3>
+
                 {this.props.display_post === dreamid ? (
                   <Comments dreamid={dreamid} />
                 ) : (

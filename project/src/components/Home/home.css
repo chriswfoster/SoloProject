@@ -24,9 +24,7 @@
 }
 
 .dreamnotesfont {
-
   font-size: 60px;
-
 }
 
 .loginbuttons {
@@ -39,7 +37,7 @@
   align-content: stretch;
 }
 .loginbutton {
-margin-right: 5px;
+  margin-right: 5px;
 }
 
 .bodybackground {
@@ -68,8 +66,6 @@ margin-right: 5px;
 
 /*  ---------- HERE IS THE POPUP CSS ----------*/
 
-
-
 .wrapstorybuttons {
   display: flex;
   flex-direction: row;
@@ -78,7 +74,16 @@ margin-right: 5px;
   align-items: center;
   align-content: stretch;
 }
-
+.savebuttonalignment {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: flex-end;
+  align-content: stretch;
+  margin-top: 2%;
+  margin-right: 12%;
+}
 .sharebutton {
   background-color: rgb(0, 0, 0);
   color: white;
@@ -91,13 +96,6 @@ margin-right: 5px;
 }
 .sharebutton :hover {
   box-shadow: 15px 15px 55px rgb(41, 187, 255);
-}
-
-.popup__textbox {
-  color: #b43d54;
-  line-height: 25px;
-  font-size: 1.1em;
-  letter-spacing: 1px;
 }
 
 /* Start popup css */
@@ -196,15 +194,13 @@ margin-right: 5px;
   -webkit-animation-duration: 0.5s;
   -webkit-animation-fill-mode: forwards;
 }
-
 .popup__textbox {
-  height: 95%;
-  width: 95%;
-  padding-left: 2.5%;
-  padding-right: 2.5%;
-  margin-top: 10px;
+  height: 80%;
+  width: 80%;
+  padding-left: 10%;
+  padding-right: 10%;
+  margin-top: 10%;
   overflow: auto;
-  color: rgb(74, 201, 206);
 }
 
 .popup__calign {
@@ -227,23 +223,26 @@ margin-right: 5px;
 }
 
 .poptextboxes {
-  background-color: black;
-  color: white;
   height: 75%;
-  width: 100%;
+  width: 80%;
+  margin-right: 10%;
+  margin-left: 10%;
 }
 
 .poptextboxes2 {
-  background-color: black;
-  color: white;
   height: 25%;
-  width: 100%;
+  width: 80%;
+  padding: 5px;
+  margin-right: 10%;
+  margin-left: 10%;
 }
 .poptextboxes3 {
-  background-color: black;
-  color: white;
   height: 35%;
-  width: 100%;
+  width: 80%;
+  padding: 5px;
+  margin-right: 10%;
+  margin-left: 10%;
+  margin-bottom: 3%;
 }
 
 .savebuttonstory {
@@ -282,13 +281,6 @@ pre {
 /* ----------------------------- NEW HOME PAGE LAYOUT ----------------------------- */
 
 /* -----------------------------CSS SLIDE IN BY YOURS TRULY ----------------------*/
-
-.slide__textbox {
-  color: #b43d54;
-  line-height: 25px;
-  font-size: 1.1em;
-  letter-spacing: 1px;
-}
 
 @keyframes bg {
   from {
@@ -382,11 +374,12 @@ pre {
 
 .slide__textbox {
   height: 80%;
-  width: 95%;
-  padding-left: 2.5%;
-  padding-right: 2.5%;
+  width: 90%;
+  padding-left: 5%;
+  padding-right: 5%;
   margin-top: 10px;
   overflow: auto;
+  line-height: 25px;
 }
 
 .slide__calign {
@@ -405,7 +398,6 @@ pre {
   z-index: 10;
   text-align: right;
   cursor: pointer;
-  color: rgb(74, 201, 206);
 }
 
 /* -----------------------------LEFT SIDE BOX AND SCROLL BAR ----------------------*/

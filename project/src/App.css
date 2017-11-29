@@ -110,3 +110,12 @@
   background-color: rgb(35, 17, 36);
   font-family: "Orbitron", sans-serif;
 }
+.global_retro_title_text {
+  font-family: "Orbitron", sans-serif;
+  max-width: 85%;
+  margin-left: 7.5%;
+  margin-right: 7.5%;
+  text-align: center;
+  letter-spacing: 2px;
+  color: rgb(74, 201, 206);
+}
