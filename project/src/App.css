@@ -60,25 +60,19 @@
   margin-bottom: 2%;
   z-index: 6;
   float: right;
-  border-style: solid;
-  border-color: rgb(255, 94, 223);
+   background-repeat: no-repeat;
   border-radius: 50%;
-  border-width: 5px;
-  height: 40px;
-  width: 40px;
+  height: 30px;
+  width: 30px;
   font-size: 50px;
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   -o-transform: rotate(45deg);
+  background-image: url('./components/Home/fixedx.png');
+  background-size: 100% 100%;
 }
-.global_retro_x {
-  right: 15%;
-  top: -35%;
-  position: absolute;
-  cursor: pointer;
-  color: rgb(74, 201, 206);
-}
+
 .global_retro_inputboxes {
   border-style: inset;
   border-color: rgb(255, 94, 223);

@@ -29,7 +29,7 @@ this.setState({plusbutton: "navbuttoncircle navbuttonrollerreverse", homebutton:
         return(
             <div onClick={() => this.expander()}>
 
-                <div className={this.state.plusbutton}><h1> + </h1></div>
+                <div className={this.state.plusbutton}><img src={require('./whiteplus.png')}/></div>
                 <Link to="/" className={this.state.homebutton}> <img src={require('./home_icon.png')}/></Link>
                 <Link to="/yourpage" className={this.state.yourpagebutton}> <img src={require('./yourpage_icon.png')}/> </Link>
                 </div>

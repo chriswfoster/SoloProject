@@ -70,7 +70,7 @@ class NewPost extends Component {
 
         <div className={this.state.slider}>
 
-        <div className={this.props.theme.closexborder} onClick={() => this.slideInFunction()}><span className={this.props.theme.closex}><b>+</b> </span></div>
+        <div className={this.props.theme.closexborder} onClick={() => this.slideInFunction()}></div>
 
           <div className="newpostflexorganizer">
             <div className="newposttitleflex">

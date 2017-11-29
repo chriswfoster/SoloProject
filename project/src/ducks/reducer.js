@@ -32,7 +32,6 @@ const initialState = {
     font: "global_retro_font",
     button: "global_retro_button",
     closexborder: "global_retro_x_circle",
-    closex: "global_retro_x",
     inputboxes:"global_retro_inputboxes",
     popupboxes:"global_retro_popupboxes",
     fancytitleline:"global_retro_fancy_title_line",

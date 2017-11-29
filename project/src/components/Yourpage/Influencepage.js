@@ -72,14 +72,14 @@ class Influencepage extends Component {
             className="yourpopup__bg"
           />
           <div className={this.state.influencepopup}>
-            <div className={this.props.theme.closexborder}>
+           
               <label
                 onClick={() => this.popInfluence(i)}
-                className={this.props.theme.closex}
+                className={this.props.theme.closexborder}
               >
-                +
+             
               </label>
-            </div>
+      
 
             <h3 className={this.props.theme.font}>
               TITLE : "{dream.story_title}"

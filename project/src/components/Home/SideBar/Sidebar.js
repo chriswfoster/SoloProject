@@ -18,11 +18,9 @@ class Sidebar extends Component {
           <div className="popup__base">
             <label htmlFor={`popup__${i}`} className="popup__bg" />
             <div className={this.props.theme.popupboxes.concat(' ', "popup__inner")}>
-              <div className={this.props.theme.closexborder}>
-                <label htmlFor={`popup__${i}`} className={this.props.theme.closex}>
-                  +
-                </label>
-              </div>
+              <label htmlFor={`popup__${i}`} className={this.props.theme.closexborder}>
+               
+              </label>
               <div className="popup__textbox">
                 <h3 className={this.props.theme.font}>Title: {dream.story_title}</h3>
                 {this.props.display_post === dreamid ? (

@@ -5,6 +5,8 @@ import { connect } from "react-redux"
 import Moment from 'react-moment'
 import Comments from '../../Comments/Comments'
 
+import '../fixedx.png'
+
 import './mostliked.css'
  class Mostliked extends Component{
     constructor(){
@@ -31,9 +33,9 @@ import './mostliked.css'
        testz == dream.likes ?
         <div className={this.state.display} div key={i}>
         
-        <div className={this.props.theme.closexborder}>
-        <label  className={this.props.theme.closex} onClick={() => this.hiderfunction()}>
-                      +
+        <div >
+        <label  className={this.props.theme.closexborder} onClick={() => this.hiderfunction()}>
+    
                     </label>
         </div>
 

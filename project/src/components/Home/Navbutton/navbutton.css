@@ -11,10 +11,12 @@
   z-index: 4;
 }
 
-.navbuttoncircle h1 {
-  bottom: -3%;
-  right: 37%;
+.navbuttoncircle img {
+  height: 45px;
+  width: 45px;
   position: absolute;
+  right: 18%;
+  bottom: 18%;
 }
 
 .navbuttonhomeicon {
@@ -37,6 +39,8 @@
   right: 20%;
   bottom: 20%;
 }
+
+
 
 .navbuttonyourpageicon {
   right: 2%;

@@ -66,11 +66,9 @@ class Poster extends Component {
               <div className="slide__base">
                 <label htmlFor={`slide__${i}`} className="slide__bg" />
                 <div className={this.props.theme.popupboxes.concat(' ', "slide__inner")}>
-                  <div className={this.props.theme.closexborder}>
-                    <label htmlFor={`slide__${i}`} className={this.props.theme.closex}>
-                      +
-                    </label>
-                  </div>
+                  <label htmlFor={`slide__${i}`} className={this.props.theme.closexborder}>
+                    
+                  </label>
                   <div className={this.props.theme.font.concat(' ', "slide__textbox")}>
                     <h3>Title: {dream.story_title}</h3>
                     
@@ -109,11 +107,9 @@ class Poster extends Component {
               <div className="popup__base">
                 <label htmlFor={`popup2__${i}`} className="popup__bg" />
                 <div className={this.props.theme.popupboxes.concat(' ' , "popup__inner")}>
-                  <div className={this.props.theme.closexborder}>
-                    <label htmlFor={`popup2__${i}`} className={this.props.theme.closex}>
-                      +
-                    </label>
-                  </div>
+                  <label htmlFor={`popup2__${i}`} className={this.props.theme.closexborder}>
+                    
+                  </label>
                   <div className="popup__textbox">
                     <h3>Title: {dream.story_title}</h3>
                     <pre className="poptextboxes2">

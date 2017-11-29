@@ -55,14 +55,14 @@ class Editpage extends Component {
         <div className={this.state.baseclass}>
           <label onClick={() => this.popEdit(i)} className="yourpopup__bg" />
           <div  className={this.state.editpopup}>
-            <div className={this.props.theme.closexborder}>
+    
               <label
                 onClick={() => this.popEdit(i)}
-                className={this.props.theme.closex}
+                className={this.props.theme.closexborder}
               >
-                +
+          
               </label>
-            </div>
+           
             <div className="yourpopup__textbox">
               <center>
                 <h3 className={this.props.theme.font}>
