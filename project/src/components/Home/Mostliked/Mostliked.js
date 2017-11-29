@@ -31,10 +31,12 @@ import './mostliked.css'
        testz == dream.likes ?
         <div className={this.state.display} div key={i}>
         
-        <label  className="fader__close fader__calign" onClick={() => this.hiderfunction()}>
+        <div className={this.props.theme.closexborder}>
+        <label  className={this.props.theme.closex} onClick={() => this.hiderfunction()}>
                       +
                     </label>
-        
+        </div>
+
         <center><h1 className="likednittifont"> MOST LIKED RECENT POST! </h1></center>
         <h3><u>{dream.story_title}</u></h3>
         

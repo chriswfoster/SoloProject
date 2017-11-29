@@ -40,7 +40,7 @@
 }
 .loginbutton {
   background-color: rgb(39, 39, 39);
-  border-radius: 530px;
+
   margin-bottom: 10px;
   padding: 7px;
   color: white;
@@ -67,7 +67,6 @@
   height: auto;
 }
 
-
 .maxheight {
   height: 100vh;
 }
@@ -76,16 +75,6 @@
 
 
 
-.postboxes {
-  background-color: rgb(53, 53, 53);
-  width: 60vw;
-  height: auto;
-  color: rgb(41, 187, 255);
-  border-radius: 15px;
-  padding: 5px;
-  box-shadow: 10px 10px 55px rgb(41, 187, 255);
-}
-
 .wrapstorybuttons {
   display: flex;
   flex-direction: row;
@@ -93,13 +82,12 @@
   justify-content: space-around;
   align-items: center;
   align-content: stretch;
-  
 }
 
 .sharebutton {
   background-color: rgb(0, 0, 0);
   color: white;
-  border-radius: 553px;
+
   width: auto;
   padding: 15px;
   cursor: pointer;
@@ -109,8 +97,6 @@
 .sharebutton :hover {
   box-shadow: 15px 15px 55px rgb(41, 187, 255);
 }
-
-
 
 .popup__textbox {
   color: #b43d54;
@@ -200,7 +186,7 @@
   z-index: 10;
   width: 70%;
   height: 70%;
-  background-color: rgb(0, 0, 0);
+
   top: 15%;
   left: 15%;
   display: block;
@@ -214,9 +200,6 @@
   -webkit-animation-name: inner;
   -webkit-animation-duration: 0.5s;
   -webkit-animation-fill-mode: forwards;
-  border-style: outset;
-  border-color: silver;
-  border-radius: 33px;
 }
 
 .popup__textbox {
@@ -297,23 +280,13 @@ pre {
   word-wrap: break-word;
 }
 
-.whitetext{
+.whitetext {
   color: white;
 }
 
-
-
-
 /* ----------------------------- NEW HOME PAGE LAYOUT ----------------------------- */
 
-
-
-
-
-
-
 /* -----------------------------CSS SLIDE IN BY YOURS TRULY ----------------------*/
-
 
 .slide__textbox {
   color: #b43d54;
@@ -332,8 +305,12 @@ pre {
 }
 
 @keyframes slider {
-  0%   {top: 100%;}
-  100% {top: 20%;}
+  0% {
+    top: 100%;
+  }
+  100% {
+    top: 20%;
+  }
 }
 
 @-webkit-keyframes bg {
@@ -346,8 +323,12 @@ pre {
 }
 
 @-webkit-keyframes slider {
-  0%   {top: 100%;}
-  100% {top: 20%;}
+  0% {
+    top: 100%;
+  }
+  100% {
+    top: 20%;
+  }
 }
 
 .slide__check {
@@ -363,7 +344,7 @@ pre {
   left: 0;
   opacity: 0;
   cursor: zoom-out;
-  overflow:hidden;
+  overflow: hidden;
 }
 
 .slide__base {
@@ -388,14 +369,11 @@ pre {
   z-index: 10;
   width: 70%;
   height: 70%;
-  background-color: rgb(0, 0, 0);
+
   top: 20%;
   left: 25%;
   display: block;
   cursor: default;
-  border-style: outset;
-  border-color: silver;
-  border-radius: 33px;
 }
 
 .slide__check:checked + .slide__base .slide__inner {
@@ -403,18 +381,17 @@ pre {
   animation-duration: 1s;
   animation-fill-mode: forwards;
   -webkit-animation-name: slider;
-  -webkit-animation-duration:1s;
+  -webkit-animation-duration: 1s;
   -webkit-animation-fill-mode: forwards;
-  }
+}
 
 .slide__textbox {
-  height: 95%;
+  height: 80%;
   width: 95%;
   padding-left: 2.5%;
   padding-right: 2.5%;
   margin-top: 10px;
   overflow: auto;
-  color: rgb(41, 187, 255);
 }
 
 .slide__calign {
@@ -436,120 +413,132 @@ pre {
   color: rgb(41, 187, 255);
 }
 
-
 /* -----------------------------LEFT SIDE BOX AND SCROLL BAR ----------------------*/
 
-
-.force-overflow{
-	min-height: 450px;
+.force-overflow {
+  min-height: 450px;
 }
-#scrollbar::-webkit-scrollbar-track{
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	border-radius: 10px;
-	background-color: black;
-}
-
-#scrollbar::-webkit-scrollbar{
-	width: 12px;
-	background-color: black;
-}
-#scrollbar::-webkit-scrollbar-corner{
+#scrollbar::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
   background-color: black;
 }
 
-#scrollbar::-webkit-scrollbar-thumb{
-	border-radius: 10px;
-	-webkit-box-shadow: inset 0 0 6px rgba(41, 187, 255, 0.8);
-	background-color: rgb(0, 0, 0);
+#scrollbar::-webkit-scrollbar {
+  width: 12px;
+  background-color: black;
+}
+#scrollbar::-webkit-scrollbar-corner {
+  background-color: black;
 }
 
-.leftsidebox{
+#scrollbar::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(41, 187, 255, 0.8);
+  background-color: rgb(0, 0, 0);
+}
+
+.leftsidebox {
   height: 85vh;
-  width:20vw;
+  width: 20vw;
   overflow-y: scroll;
-  overflow-x: scroll
+  overflow-x: scroll;
 }
 
-.linespan{
+.linespan {
   height: 2px;
   width: auto;
   background-color: grey;
 }
 
-.animatelinespan{
-  background-color: rgba(0,0,0,0.80);
-  padding-top:5px;
+.animatelinespan {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding-top: 5px;
 }
-.animatelinespan:hover + .linespan{
-   
-  background-color:rgb(255, 66, 217);
+.animatelinespan:hover + .linespan {
+  background-color: rgb(255, 66, 217);
 }
 
 .mainlefttitles {
   display: flex;
-	flex-direction: column;
-	flex-wrap: nowrap;
-	justify-content: flex-start;
-	align-items: baseline;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: baseline;
   align-content: stretch;
   margin-top: 5px;
   margin-left: 7px;
   color: rgb(41, 187, 255);
-  }
+}
 
-  @import url("https://fonts.googleapis.com/css?family=Acme");
-  .acmefont{
-    cursor: pointer;
-  font-family: 'Acme', sans-serif;
+@import url("https://fonts.googleapis.com/css?family=Acme");
+.acmefont {
+  cursor: pointer;
+  font-family: "Acme", sans-serif;
   font-size: 23px;
-  }
+}
 
-  @font-face {
-    font-family: 'nitti';
-    src: url('./Nitti_Font/nitti-webfont.eot');
-    src: url('./Nitti_Font/nitti-webfont.eot?#iefix') format('embedded-opentype'),
-         url('./Nitti_Font/nitti-webfont.woff') format('woff'),
-         url('./Nitti_Font/nitti-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
-  .nittifont{
-    font-family: 'nitti', sans-serif;
-  }
+@font-face {
+  font-family: "nitti";
+  src: url("./Nitti_Font/nitti-webfont.eot");
+  src: url("./Nitti_Font/nitti-webfont.eot?#iefix") format("embedded-opentype"),
+    url("./Nitti_Font/nitti-webfont.woff") format("woff"),
+    url("./Nitti_Font/nitti-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+.nittifont {
+  font-family: "nitti", sans-serif;
+}
 
-  .slideRight{
-    animation-name: sliderRight;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    -webkit-animation-name: sliderRight;
-    -webkit-animation-duration:1s;
-    -webkit-animation-fill-mode: forwards;
-    position: relative;
-    }
-  .slideLeft{
-    animation-name: sliderLeft;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    -webkit-animation-name: sliderLeft;
-    -webkit-animation-duration:1s;
-    -webkit-animation-fill-mode: forwards;
-    position: relative;
-      }
-  
+.slideRight {
+  animation-name: sliderRight;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  -webkit-animation-name: sliderRight;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+  position: relative;
+}
+.slideLeft {
+  animation-name: sliderLeft;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  -webkit-animation-name: sliderLeft;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+  position: relative;
+}
 
-  @keyframes sliderRight {
-    0%   {left: -100%;}
-    100% {left: 0%;}
+@keyframes sliderRight {
+  0% {
+    left: -100%;
   }
-    @-webkit-keyframes sliderRight {
-    0%   {left: -100%;}
-    100% {left: 0%;}
+  100% {
+    left: 0%;
   }
-  @keyframes sliderLeft {
-    0%   {left: 100%;}
-    100% {left: 0%;}
+}
+@-webkit-keyframes sliderRight {
+  0% {
+    left: -100%;
   }
-    @-webkit-keyframes sliderLeft {
-    0%   {left: 100%;}
-    100% {left: 0%;}
+  100% {
+    left: 0%;
   }
+}
+@keyframes sliderLeft {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+@-webkit-keyframes sliderLeft {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: 0%;
+  }
+}

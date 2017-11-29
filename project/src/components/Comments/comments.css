@@ -1,12 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Cabin+Sketch:700");
 
-
 .dreamnotesfont {
   font-family: "Cabin Sketch", cursive;
   font-size: 60px;
-  
 }
-
 
 .bodybackground {
   background-image: url(../Home/background.jpg);
@@ -27,7 +24,6 @@
   height: auto;
 }
 
-
 .maxheight {
   height: 100vh;
 }
@@ -41,18 +37,13 @@
   justify-content: space-around;
   align-items: center;
   align-content: stretch;
-
-  color: white;
 }
 
 .commentboxes {
-  background-color: rgb(53, 53, 53);
   width: 60vw;
   height: auto;
-  color: rgb(41, 187, 255);
   border-radius: 15px;
   padding: 5px;
-  box-shadow: 10px 10px 55px rgb(41, 187, 255);
 }
 
 .wrapsharebuttons {
@@ -179,26 +170,13 @@
   cursor: default;
 }
 
-.popup__check:checked + .popup__base .popup__inner {
-  animation-name: inner;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-  -webkit-animation-name: inner;
-  -webkit-animation-duration: 0.5s;
-  -webkit-animation-fill-mode: forwards;
-  border-style: outset;
-  border-color: silver;
-  border-radius: 33px;
-}
-
 .popup__textbox {
-  height: 95%;
+  height: 80%;
   width: 95%;
   padding-left: 2.5%;
   padding-right: 2.5%;
   margin-top: 10px;
   overflow: auto;
-  color: rgb(41, 187, 255);
 }
 
 .popup__calign {
@@ -217,35 +195,24 @@
   z-index: 10;
   text-align: right;
   cursor: pointer;
-  color: rgb(41, 187, 255);
 }
 
 .poptextboxes {
-  background-color: black;
-  color: white;
   height: 75%;
   width: 100%;
 }
 
 .poptextboxes2 {
-  background-color: black;
-  color: white;
   height: 25%;
   width: 100%;
 }
 .poptextboxes3 {
-  background-color: black;
-  color: white;
   height: 35%;
   width: 100%;
 }
 
 .savebuttonstory {
-  color: white;
-  background-color: black;
-  border-style: solid;
   padding: 5px;
-  width: auto;
   cursor: pointer;
   margin-bottom: 10px;
 }
@@ -279,20 +246,14 @@ pre {
   margin-top: 10px;
 }
 
-.whitetext{
+.whitetext {
   color: white;
 }
 
 .postboxes {
-  background-color: rgb(53, 53, 53);
-  width: 75vw;
+  margin-top: 5px;
+  width: 75%;
   min-height: 150px;
   height: auto;
-  color: rgb(41, 187, 255);
-  border-radius: 15px;
   padding: 5px;
-  box-shadow: 10px 10px 55px rgb(129, 129, 129);
 }
-
-
-

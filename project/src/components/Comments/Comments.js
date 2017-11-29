@@ -45,23 +45,23 @@ render(props){
     const commentlist = this.state.allcomments.length > 0 ? 
     this.state.allcomments.map((comment, i) => (
         <div key={i} className="centerposts">
-            <div> Comment by: {comment.nickname} <Moment subtract={{hours:6}} fromNow>{comment.comment_date}</Moment> </div>
-           <div className="commentboxes"> {comment.comment_text} </div>
+            <div className={this.props.theme.font}> Comment by: {comment.nickname} <Moment subtract={{hours:6}} fromNow>{comment.comment_date}</Moment> </div>
+           <div className={this.props.theme.inputboxes.concat(' ', "commentboxes")}> {comment.comment_text} </div>
             </div> 
-    )) : <div>'No comments here'</div>
+    )) : <div className={this.props.theme.font}>'NO COMMENTS HERE'</div>
     return(
         <div>
             {commentlist}
             <div className="centerposts">
 
 {!this.props.user.user_id ? (
-    <div className="loginbuttons">
-      <button onClick={this.handleLogin} className="loginbutton">
+    <div>
+      <button onClick={this.handleLogin} className={this.props.theme.button}>
         LOGIN TO COMMENT
       </button>
     </div>
   ) : (
-    <textarea className="postboxes" defaultValue="Type your comment" onChange={(e) => typeComment(e.target.value)}>
+    <textarea className={this.props.theme.inputboxes.concat(' ', "postboxes")} defaultValue="Type your comment" onChange={(e) => typeComment(e.target.value)}>
     </textarea>
   )}
 

@@ -32,6 +32,7 @@
   justify-content: space-around;
   align-items: center;
   align-content: stretch;
+  
 }
 
 .yourpostboxes {
@@ -67,9 +68,8 @@
 }
 
 .yourpagedatepos {
-  float: bottom;
-  position: sticky;
-  margin-bottom: -5px;
+  font-size: 11px;
+  margin-bottom: -2%;
 }
 
 .yourpagetitleline {
@@ -156,19 +156,12 @@
   }
 }
 
-.yourpopup__check {
+.yourpopup__hide {
   display: none;
 }
 
 .yourpopup__base,
 .yourpopup__bg {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  opacity: 0;
-  cursor: zoom-out;
 }
 
 .yourpopup__base {
@@ -178,7 +171,18 @@
   z-index: 10;
 }
 
-.yourpopup__check:checked + .yourpopup__base {
+.basereveal {
+  position: absolute;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  cursor: zoom-out;
+
+  background-color: rgba(35, 17, 36, 0.795);
+  cursor: zoom-out;
   display: block;
   animation-name: bg;
   animation-duration: 0.5s;
@@ -190,17 +194,14 @@
 
 .yourpopup__inner {
   position: absolute;
-  z-index: 10;
-  width: 70%;
-  height: 70%;
+  z-index: 11;
+  width: 90%;
+  height: 90%;
   background-color: rgb(35, 17, 36);
-  top: 15%;
-  left: 15%;
+  top: 5%;
+  left: 5%;
   display: block;
   cursor: default;
-}
-
-.yourpopup__check:checked + .yourpopup__base .yourpopup__inner {
   animation-name: inner;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
@@ -226,9 +227,6 @@
   height: 60%;
   width: 100%;
 }
-
-
-
 .yourpoptextboxes2 {
   height: 25%;
   width: 100%;
@@ -238,16 +236,7 @@
   width: 100%;
 }
 
-.yoursavebuttonstory {
-  color: rgb(74, 201, 206);
-  background-color: rgba(0, 0, 0, 0);
-  border-color: rgb(255, 94, 223);
-  border-style: outset;
-  padding: 5px;
-  width: auto;
-  cursor: pointer;
-  margin-bottom: 10px;
-}
+
 
 pre {
   white-space: pre-wrap; /* Since CSS 2.1 */

@@ -17,14 +17,14 @@ class Sidebar extends Component {
           <input type="checkbox" id={`popup__${i}`} className="popup__check" />
           <div className="popup__base">
             <label htmlFor={`popup__${i}`} className="popup__bg" />
-            <div className="popup__inner">
-              <div className="popup__calign">
-                <label htmlFor={`popup__${i}`} className="popup__close">
+            <div className={this.props.theme.popupboxes.concat(' ', "popup__inner")}>
+              <div className={this.props.theme.closexborder}>
+                <label htmlFor={`popup__${i}`} className={this.props.theme.closex}>
                   +
                 </label>
               </div>
               <div className="popup__textbox">
-                <h3>Title: {dream.story_title}</h3>
+                <h3 className={this.props.theme.font}>Title: {dream.story_title}</h3>
                 {this.props.display_post === dreamid ? (
                   <Comments dreamid={dreamid} />
                 ) : (
@@ -34,7 +34,7 @@ class Sidebar extends Component {
                   <div>
                     <label
                       htmlFor={`popup__${i}`}
-                      className="savebutton"
+                      className={this.props.theme.button.concat(' ', this.props.theme.font)}
                       onClick={() => window.location.reload()}
                     >
                       CLOSE
@@ -45,7 +45,7 @@ class Sidebar extends Component {
                   ) : (
                     <div>
                       <label
-                        className="savebutton"
+                        className={this.props.theme.button.concat(' ', this.props.theme.font)}
                         onClick={() =>
                           this.postComment(dream.post_id) &
                           window.location.reload()
