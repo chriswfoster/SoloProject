@@ -46,26 +46,7 @@
   box-shadow: 10px 10px 55px rgb(74, 201, 206);
 }
 
-.yournavz {
-  height: 120px;
-  background-image: url(../Home/retro.jpg);
-  background-repeat: no-repeat;
-  background-size: 100%;
-  color: rgb(74, 201, 206);
-  width: 100vw;
-  top: 0px;
-  left: 0px;
-  position: static;
-  border-width: 6px;
-  border-bottom-style: outset;
-  border-color: rgb(255, 94, 223);
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  align-content: stretch;
-}
+
 
 .yourpagedatepos {
   font-size: 11px;

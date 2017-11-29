@@ -71,8 +71,9 @@ class Poster extends Component {
                     TITLE: <u>{dream.story_title}</u>
                   </h3>
                 </div>
-
+<div className={this.props.theme.inputboxes}>
                 {dream.story_text}
+     </div>
                 <div className="wrapstorybuttons">
                   <div className={this.props.theme.button}>LIKE</div>
 
@@ -142,7 +143,6 @@ class Poster extends Component {
                   </pre>
                   <div>
                     <center>
-                      {" "}
                       <label
                         htmlFor={`popup2__${i}`}
                         className={this.props.theme.button}

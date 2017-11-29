@@ -1,10 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Cabin+Sketch:700");
 
 .navz {
-  height: 120px;
+  height: 1%;
   background-image: url(retro.jpg);
   background-repeat: no-repeat;
-  background-size: 110vw;
   background-position-y: 0px;
   background-position-x: -7px;
   color: rgb(74, 201, 206);
@@ -67,6 +66,7 @@
 /*  ---------- HERE IS THE POPUP CSS ----------*/
 
 .wrapstorybuttons {
+  padding-top: 3%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -199,7 +199,7 @@
   width: 80%;
   padding-left: 10%;
   padding-right: 10%;
-  margin-top: 10%;
+  margin-top: 1%;
   overflow: auto;
 }
 
@@ -374,10 +374,10 @@ pre {
 
 .slide__textbox {
   height: 80%;
-  width: 90%;
-  padding-left: 5%;
-  padding-right: 5%;
-  margin-top: 10px;
+  width: 80%;
+  padding-left: 10%;
+  padding-right: 10%;
+  margin-top: 1%;
   overflow: auto;
   line-height: 25px;
 }
@@ -426,7 +426,7 @@ pre {
 }
 
 .leftsidebox {
-  height: 85vh;
+  height: 84vh;
   width: 20vw;
   overflow-y: scroll;
   overflow-x: scroll;
