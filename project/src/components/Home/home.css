@@ -7,7 +7,7 @@
   background-size: 110vw;
   background-position-y: 0px;
   background-position-x: -7px;
-  color: rgb(41, 187, 255);
+  color: rgb(74, 201, 206);
   width: 100vw;
   top: 0px;
   left: 0px;
@@ -204,7 +204,7 @@ margin-right: 5px;
   padding-right: 2.5%;
   margin-top: 10px;
   overflow: auto;
-  color: rgb(41, 187, 255);
+  color: rgb(74, 201, 206);
 }
 
 .popup__calign {
@@ -223,7 +223,7 @@ margin-right: 5px;
   z-index: 10;
   text-align: right;
   cursor: pointer;
-  color: rgb(41, 187, 255);
+  color: rgb(74, 201, 206);
 }
 
 .poptextboxes {
@@ -405,7 +405,7 @@ pre {
   z-index: 10;
   text-align: right;
   cursor: pointer;
-  color: rgb(41, 187, 255);
+  color: rgb(74, 201, 206);
 }
 
 /* -----------------------------LEFT SIDE BOX AND SCROLL BAR ----------------------*/
@@ -451,7 +451,7 @@ pre {
   padding-top: 5px;
 }
 .animatelinespan:hover + .linespan {
-  background-color: rgb(255, 66, 217);
+  background-color: rgb(255, 84, 255);
 }
 
 .mainlefttitles {
@@ -463,7 +463,7 @@ pre {
   align-content: stretch;
   margin-top: 5px;
   margin-left: 7px;
-  color: rgb(41, 187, 255);
+  color: rgb(255, 84, 255);
 }
 
 @import url("https://fonts.googleapis.com/css?family=Acme");

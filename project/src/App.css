@@ -45,7 +45,7 @@
   letter-spacing: 2px;
   border-style: outset;
   border-width: 2px;
-  border-color: rgb(255, 94, 223);
+  border-color: rgb(255, 84, 255);
   width: auto;
   height: auto;
   font-size: 15px;
@@ -73,7 +73,7 @@
 
 .global_retro_inputboxes {
   border-style: inset;
-  border-color: rgb(255, 94, 223);
+  border-color: rgb(255, 84, 255);
   border-width: 2px;
   background-color: rgba(0, 0, 0, 0);
   color: rgb(74, 201, 206);
@@ -82,7 +82,7 @@
 .global_retro_popupboxes {
   background-color: rgb(35, 17, 36);
   border-style: outset;
-  border-color: rgb(255, 94, 223);
+  border-color: rgb(255, 84, 255);
   border-width: 2px;
 }
 .global_retro_fancy_title_line {
@@ -92,7 +92,7 @@
   border-style: outset;
   background-color: rgb(35, 17, 36);
   color: rgb(74, 201, 206);
-  border-color: rgb(255, 94, 223);
+  border-color: rgb(255, 84, 255);
   font-family: "Orbitron", sans-serif;
   font-size: 13px;
 }
@@ -102,7 +102,7 @@
   letter-spacing: 2px;
   border-style: outset;
   border-width: 2px;
-  border-color: rgb(255, 94, 223);
+  border-color: rgb(255, 84, 255);
   width: auto;
   height: auto;
   font-size: 15px;

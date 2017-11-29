@@ -77,14 +77,13 @@ class Influencepage extends Component {
                 onClick={() => this.popInfluence(i)}
                 className={this.props.theme.closexborder}
               >
-             
               </label>
       
-
+<center>
             <h3 className={this.props.theme.font}>
               TITLE : "{dream.story_title}"
             </h3>
-
+</center>
             <div className="yourpopup__textbox">
               <textarea
                 className={this.props.theme.inputboxes.concat(

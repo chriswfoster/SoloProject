@@ -71,7 +71,7 @@ class Sidebar extends Component {
               style={{ animationDuration: `${i / 2 + 0.5}s` }}
             >
               <div className="animatelinespan">
-                <div className="acmefont">
+                <div className={this.props.theme.font}>
                   <u>{dream.story_title}</u>{" "}
                 </div>
                 <div className="nittifont">
@@ -96,7 +96,7 @@ class Sidebar extends Component {
           >
             <div>
               <div className="animatelinespan">
-                <div className="acmefont">
+                <div className={this.props.theme.font}>
                   <u>{dream.story_title}</u>{" "}
                 </div>
                 <div className="nittifont">
