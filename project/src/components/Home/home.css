@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Cabin+Sketch:700");
 
 .navz {
-  height: 1%;
+  height: 16vh;
   background-image: url(retro.jpg);
   background-repeat: no-repeat;
+  background-size: 110vw;
   background-position-y: 0px;
   background-position-x: -7px;
   color: rgb(74, 201, 206);
@@ -11,7 +12,7 @@
   top: 0px;
   left: 0px;
   position: static;
-  border-width: 6px;
+  border-width: 1px;
   border-bottom-style: outset;
   border-color: grey;
   display: flex;
@@ -20,6 +21,7 @@
   justify-content: space-between;
   align-items: center;
   align-content: stretch;
+  margin-bottom: -1px;
 }
 
 .dreamnotesfont {
@@ -427,24 +429,13 @@ pre {
 
 .leftsidebox {
   height: 84vh;
-  width: 20vw;
+  width: 18vw;
   overflow-y: scroll;
   overflow-x: scroll;
 }
 
-.linespan {
-  height: 2px;
-  width: auto;
-  background-color: grey;
-}
 
-.animatelinespan {
-  background-color: rgba(0, 0, 0, 0.8);
-  padding-top: 5px;
-}
-.animatelinespan:hover + .linespan {
-  background-color: rgb(255, 84, 255);
-}
+
 
 .mainlefttitles {
   display: flex;
@@ -455,7 +446,7 @@ pre {
   align-content: stretch;
   margin-top: 5px;
   margin-left: 7px;
-  color: rgb(255, 84, 255);
+  width: 17vw;
 }
 
 @import url("https://fonts.googleapis.com/css?family=Acme");

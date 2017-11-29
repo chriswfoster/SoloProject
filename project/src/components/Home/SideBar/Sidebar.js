@@ -98,7 +98,7 @@ class Sidebar extends Component {
               className="slideRight"
               style={{ animationDuration: `${i / 2 + 0.5}s` }}
             >
-              <div className="animatelinespan">
+              <div className={this.props.theme.animatelinespan}>
                 <div className={this.props.theme.font}>
                   <u>{dream.story_title}</u>{" "}
                 </div>
@@ -123,7 +123,7 @@ class Sidebar extends Component {
             }}
           >
             <div>
-              <div className="animatelinespan">
+              <div className={this.props.theme.animatelinespan}>
                 <div className={this.props.theme.font}>
                   <u>{dream.story_title}</u>{" "}
                 </div>

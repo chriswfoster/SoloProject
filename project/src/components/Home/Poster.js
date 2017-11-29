@@ -48,7 +48,7 @@ class Poster extends Component {
   render() {
     const { getAllComments, toDisplay } = this.props
     const list = this.props.allposts.map((dream, i) => (
-      <div key={i} className="mainlefttitles">
+      <div key={i} className={this.props.theme.sidebartext.concat(' ' , "mainlefttitles")}>
         <div className="wrapsharebuttons">
           <input type="checkbox" id={`slide__${i}`} className="slide__check" />
           <div className="slide__base">

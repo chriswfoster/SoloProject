@@ -122,3 +122,19 @@
   letter-spacing: 2px;
   color: rgb(74, 201, 206);
 }
+.global_retro_animatelinespan{
+  background-color: rgba(0, 0, 0, 0.8);
+  padding-top: 5px;
+}
+.global_retro_animatelinespan:hover + .linespan {
+  background-color: rgb(255, 84, 255);
+}
+.linespan {
+  height: 2px;
+  width: auto;
+  background-color: grey;
+}
+.global_retro_pinktext{
+  color: rgb(255, 84, 255);
+  
+}

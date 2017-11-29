@@ -43,13 +43,7 @@ class Yourpage extends Component {
       })
   }
 
-  myPopup(i) {
-    var popup = document.getElementById(`myPopup${i}`)
-    popup.classList.toggle("show")
-  }
 
-
-  popInfluence(i) {}
 
   render() {
     const { typeAid, typeInfluence } = this.props
