@@ -1,19 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Cabin+Sketch:700");
 
-.dreamnotesfont {
-  font-family: "Cabin Sketch", cursive;
-  font-size: 60px;
-}
-
-/* .bodybackground {
-  background-image: url(../Home/background.jpg);
-  background-repeat: no-repeat;
-  background-attachment: sticky;
-  width: 100vw;
-  height: 100vh;
-  background-color: black;
-} */
-
 .homeflex {
   display: flex;
   flex-direction: column;
@@ -71,20 +57,6 @@
   justify-content: space-around;
   align-items: center;
   align-content: stretch;
-}
-
-.sharebutton {
-  background-color: rgb(0, 0, 0);
-  color: white;
-  border-radius: 553px;
-  width: auto;
-  padding: 15px;
-  cursor: pointer;
-  text-decoration-color: white;
-  border: solid;
-}
-.sharebutton :hover {
-  box-shadow: 15px 15px 55px rgb(41, 187, 255);
 }
 
 .trigger {
@@ -199,33 +171,12 @@
   cursor: pointer;
 }
 
-.savebuttonstory {
-  padding: 5px;
-  cursor: pointer;
-  margin-bottom: 10px;
-}
-
-.savebutton {
-  color: white;
-  background-color: black;
-  border-style: solid;
-  padding: 5px;
-  width: auto;
-  cursor: pointer;
-  margin-bottom: 10px;
-  margin-top: -50px;
-}
-
 pre {
   white-space: pre-wrap; /* Since CSS 2.1 */
   white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
   white-space: -pre-wrap; /* Opera 4-6 */
   white-space: -o-pre-wrap; /* Opera 7 */
   word-wrap: break-word;
-}
-
-.whitetext {
-  color: white;
 }
 
 .postboxes {
