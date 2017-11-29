@@ -3,6 +3,7 @@ import React, { Component } from "react"
 import { getAllPosts, toDisplay } from "../../../ducks/reducer"
 import { connect } from "react-redux"
 
+
 import "../../../Retrothemecontents/fixedx.png"
 
 import "./mostliked.css"
@@ -21,6 +22,7 @@ class Mostliked extends Component {
   }
 
   render() {
+ 
     const testz = Math.max.apply(
       Math,
       this.props.allposts.map((dream, i) => dream.likes)
@@ -28,7 +30,7 @@ class Mostliked extends Component {
 
     const evenfinder = this.props.allposts.map(
       (dream, i) =>
-        testz === dream.likes ? (
+      testz == dream.likes ? (
           <div className={this.state.display} div key={i}>
             <div>
               <label

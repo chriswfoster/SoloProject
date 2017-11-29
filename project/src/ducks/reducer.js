@@ -79,12 +79,11 @@ export default function reducer(state = initialState, action) {
       })
     case DARK_THEME:
       return (
-        console.log("working") &&
         Object.assign({}, state, { theme: action.payload })
       )
     case RETRO_THEME:
       return (
-        console.log("working") &&
+
         Object.assign({}, state, { theme: action.payload })
       )
 
