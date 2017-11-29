@@ -51,8 +51,6 @@
   font-size: 15px;
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0);
- 
-
 }
 .global_retro_x_circle {
   margin-top: 2%;
@@ -60,7 +58,7 @@
   margin-bottom: 2%;
   z-index: 6;
   float: right;
-   background-repeat: no-repeat;
+  background-repeat: no-repeat;
   border-radius: 50%;
   height: 30px;
   width: 30px;
@@ -69,7 +67,7 @@
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   -o-transform: rotate(45deg);
-  background-image: url('./components/Home/fixedx.png');
+  background-image: url("./components/Home/fixedx.png");
   background-size: 100% 100%;
 }
 
@@ -97,4 +95,18 @@
   border-color: rgb(255, 94, 223);
   font-family: "Orbitron", sans-serif;
   font-size: 13px;
+}
+.global_retro_loginbuttons {
+  padding: 10px 10px 8px 10px;
+  color: rgb(74, 201, 206);
+  letter-spacing: 2px;
+  border-style: outset;
+  border-width: 2px;
+  border-color: rgb(255, 94, 223);
+  width: auto;
+  height: auto;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: rgb(35, 17, 36);
+  font-family: "Orbitron", sans-serif;
 }

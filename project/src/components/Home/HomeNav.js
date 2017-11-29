@@ -26,19 +26,19 @@ class Home extends Component {
     return (
       <div>
         <div className="navz ">
-          <p className="dreamnotesfont"> DREAM NOTES </p>
+          <p className={this.props.theme.font.concat(' ', "dreamnotesfont")}> DREAM NOTES </p>
           <div>
             {!this.props.user.user_id ? (
               <div className="loginbuttons">
-                <button onClick={this.handleLogin} className="loginbutton">
+                <button onClick={this.handleLogin} className={this.props.theme.loginbuttons}>
                   LOGIN
                 </button>
-                <button onClick={this.handleLogin} className="loginbutton">
+                <button onClick={this.handleLogin} className={this.props.theme.loginbuttons}>
                   REGISTER
                 </button>
               </div>
             ) : (
-              <p onClick={this.handleLogout} className="loginbutton">LOGOUT</p>
+              <p onClick={this.handleLogout} className={this.props.theme.loginbuttons.concat(' ', "loginbutton")}>LOGOUT</p>
             )}
           </div>
         </div>

@@ -31,6 +31,7 @@ const initialState = {
   theme: {
     font: "global_retro_font",
     button: "global_retro_button",
+    loginbuttons: "global_retro_loginbuttons",
     closexborder: "global_retro_x_circle",
     inputboxes:"global_retro_inputboxes",
     popupboxes:"global_retro_popupboxes",
