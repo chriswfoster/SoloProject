@@ -29,7 +29,7 @@ class Home extends Component {
   
 
     return (
-      <div className="bodybackground">
+      <div className={this.props.theme.background}>
           <HomeNav />
         <Poster />
         <Navbutton />

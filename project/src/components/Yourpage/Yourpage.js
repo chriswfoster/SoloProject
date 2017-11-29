@@ -50,7 +50,7 @@ class Yourpage extends Component {
     console.log(this.props)
     const list = this.props.allyourposts.map((dream, i) => (
       <div key={i} className="yourcenterposts">
-        <div className="yourpostboxes">
+        <div className={this.props.theme.popupboxes.concat(' ', "yourpostboxes")}>
           <div
             className={this.props.theme.font.concat(" ", "yourpagetitleflex")}
           >
@@ -69,9 +69,9 @@ class Yourpage extends Component {
             />
           </div>
 
-          <pre>{dream.story_text}</pre>
+          <pre className={this.props.theme.font}>{dream.story_text}</pre>
 
-          <p className="yourpagedatepos">
+          <p className={this.props.theme.font.concat(' ', "yourpagedatepos")}>
             <u>
               Posted on:&nbsp;
               <Moment format="MM/DD/YYYY" subtract={{ hours: 6 }}>
@@ -103,7 +103,7 @@ class Yourpage extends Component {
       </div>
     ))
     return (
-      <div className="yourbackground">
+      <div className={this.props.theme.background}>
         <Homenav />
 
         <NewPost />

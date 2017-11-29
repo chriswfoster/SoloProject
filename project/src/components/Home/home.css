@@ -41,15 +41,6 @@
   margin-right: 5px;
 }
 
-.bodybackground {
-  background-image: url(background.jpg);
-  background-repeat: no-repeat;
-  background-attachment: sticky;
-  background-position-y: 100px;
-  width: 100vw;
-  height: 100vh;
-  background-color: black;
-}
 
 .homeflex {
   display: flex;

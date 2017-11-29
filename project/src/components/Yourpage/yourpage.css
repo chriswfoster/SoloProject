@@ -32,21 +32,13 @@
   justify-content: flex-end;
   align-items: center;
   align-content: stretch;
-  
 }
 
 .yourpostboxes {
-  background-color: rgb(35, 17, 36);
   width: 60vw;
   height: auto;
-  color: rgb(74, 201, 206);
   padding: 5px;
-  border-style: inset;
-  border-color: rgb(255, 94, 223);
-  box-shadow: 10px 10px 55px rgb(74, 201, 206);
 }
-
-
 
 .yourpagedatepos {
   font-size: 11px;
@@ -75,18 +67,7 @@
   height: 80%;
 }
 
-.yourbackground {
-  background-image: url(../Home/background.jpg);
-  background-repeat: no-repeat;
-  background-attachment: sticky;
-  width: 100vw;
-  height: 100vh;
-  background-color: black;
-}
-
 /* ----------   EDIT POPUP BOX --------------       */
-
-
 
 /* Start popup css */
 
@@ -156,7 +137,6 @@
   left: 0;
   opacity: 0;
   cursor: zoom-out;
-
   background-color: rgba(35, 17, 36, 0.795);
   cursor: zoom-out;
   display: block;
@@ -173,7 +153,6 @@
   z-index: 11;
   width: 90%;
   height: 90%;
-  background-color: rgb(35, 17, 36);
   top: 5%;
   left: 5%;
   display: block;
@@ -184,9 +163,6 @@
   -webkit-animation-name: inner;
   -webkit-animation-duration: 0.5s;
   -webkit-animation-fill-mode: forwards;
-  border-style: outset;
-  border-color: rgb(255, 94, 223);
-  border-width: 2px;
 }
 
 .yourpopup__textbox {
@@ -196,7 +172,6 @@
   padding-right: 2.5%;
   margin-top: 10px;
   overflow: auto;
-  color: rgb(74, 201, 206);
 }
 
 .yourpoptextboxes {
@@ -211,8 +186,6 @@
   height: 25%;
   width: 100%;
 }
-
-
 
 pre {
   white-space: pre-wrap; /* Since CSS 2.1 */

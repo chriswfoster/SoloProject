@@ -29,6 +29,7 @@ const initialState = {
   back_story: "",
   display_post: {},
   theme: {
+    background: "global_retro_bodybackground",
     font: "global_retro_font",
     sidebartext: "global_retro_pinktext",
     titletext: "global_retro_title_text",

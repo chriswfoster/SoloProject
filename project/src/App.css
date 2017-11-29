@@ -71,6 +71,17 @@
   background-size: 100% 100%;
 }
 
+/*  ------- RETRO BEGINNING  ---------  */
+.global_retro_bodybackground {
+  background-image: url(./components/Home/background.jpg);
+  background-repeat: no-repeat;
+  background-attachment: sticky;
+  background-position-y: 100px;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+}
+
 .global_retro_inputboxes {
   border-style: inset;
   border-color: rgb(255, 84, 255);
@@ -122,7 +133,7 @@
   letter-spacing: 2px;
   color: rgb(74, 201, 206);
 }
-.global_retro_animatelinespan{
+.global_retro_animatelinespan {
   background-color: rgba(0, 0, 0, 0.8);
   padding-top: 5px;
 }
@@ -134,7 +145,81 @@
   width: auto;
   background-color: grey;
 }
-.global_retro_pinktext{
+.global_retro_pinktext {
   color: rgb(255, 84, 255);
-  
+}
+
+/*  ------------  RETRO ENDING -------------- */
+
+.global_dark_bodybackground {
+  background-image: url();
+  background-repeat: no-repeat;
+  background-attachment: sticky;
+  background-position-y: 100px;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+}
+
+.global_dark_inputboxes {
+  border-style: inset;
+  border-color: rgb(255, 84, 255);
+  border-width: 2px;
+  padding-left: 3px;
+  padding-right: 2px;
+  background-color: rgba(0, 0, 0, 0);
+  color: rgb(74, 201, 206);
+  z-index: 5;
+}
+.global_dark_popupboxes {
+  background-color: rgb(35, 17, 36);
+  border-style: outset;
+  border-color: rgb(255, 84, 255);
+  border-width: 2px;
+}
+.global_dark_fancy_title_line {
+  background-color: rgb(74, 201, 206);
+}
+.global_dark_yournewpost_button {
+  border-style: outset;
+  background-color: rgb(35, 17, 36);
+  color: rgb(74, 201, 206);
+  border-color: rgb(255, 84, 255);
+  font-family: "Orbitron", sans-serif;
+  font-size: 13px;
+}
+.global_dark_loginbuttons {
+  padding: 10px 10px 8px 10px;
+  color: rgb(74, 201, 206);
+  letter-spacing: 2px;
+  border-style: outset;
+  border-width: 2px;
+  border-color: rgb(255, 84, 255);
+  width: auto;
+  height: auto;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: rgb(35, 17, 36);
+  font-family: "Orbitron", sans-serif;
+}
+.global_dark_title_text {
+  font-family: "Orbitron", sans-serif;
+  max-width: 80%;
+  margin-top: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: center;
+  letter-spacing: 2px;
+  color: rgb(74, 201, 206);
+}
+.global_dark_animatelinespan {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding-top: 5px;
+}
+.global_dark_animatelinespan:hover + .linespan {
+  background-color: rgb(255, 84, 255);
+}
+
+.global_dark_pinktext {
+  color: rgb(255, 84, 255);
 }
