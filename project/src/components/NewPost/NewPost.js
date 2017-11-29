@@ -116,7 +116,7 @@ class NewPost extends Component {
               </div>
             </div>
 
-            <div onClick={this.createPost} className={this.props.theme.button}>
+            <div onClick={this.createPost} className={this.props.theme.button.concat(' ', "spantext")}>
               CREATE POST
             </div>
           </div>

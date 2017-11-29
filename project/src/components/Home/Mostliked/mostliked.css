@@ -2,10 +2,10 @@
     position: absolute;
     z-index: 3;
     width: 50%;
-    height: 50%;
+    height: 65%;
     background-color: rgba(0, 0, 0, 0.815);
     color: grey;
-    top: 30%;
+    top: 25%;
     left: 35%;
     display: block;
     cursor: default;

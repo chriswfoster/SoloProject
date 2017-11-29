@@ -40,8 +40,6 @@
   bottom: 20%;
 }
 
-
-
 .navbuttonyourpageicon {
   right: 2%;
   bottom: 2%;
@@ -200,7 +198,7 @@
     right: 2%;
   }
   100% {
-    right: 6%;
+    right: 7%;
   }
 }
 @-webkit-keyframes movehome {
@@ -208,12 +206,12 @@
     right: 2%;
   }
   100% {
-    right: 6%;
+    right: 7%;
   }
 }
 @keyframes movehomereverse {
   0% {
-    right: 6%;
+    right: 7%;
   }
   100% {
     right: 2%;
@@ -221,7 +219,7 @@
 }
 @-webkit-keyframes movehomereverse {
   0% {
-    right: 6%;
+    right: 7%;
   }
   100% {
     right: 2%;
@@ -233,7 +231,7 @@
     right: 2%;
   }
   100% {
-    right: 10%;
+    right: 12%;
   }
 }
 @-webkit-keyframes moveyourpage {
@@ -241,12 +239,12 @@
     right: 2%;
   }
   100% {
-    right: 10%;
+    right: 12%;
   }
 }
 @keyframes moveyourpagereverse {
   0% {
-    right: 10%;
+    right: 12%;
   }
   100% {
     right: 2%;
@@ -254,7 +252,7 @@
 }
 @-webkit-keyframes moveyourpagereverse {
   0% {
-    right: 10%;
+    right: 12%;
   }
   100% {
     right: 2%;
