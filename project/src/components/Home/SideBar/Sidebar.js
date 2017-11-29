@@ -4,10 +4,23 @@ import { getAllPosts, toDisplay } from "../../../ducks/reducer"
 import { connect } from "react-redux"
 import Moment from "react-moment"
 import Comments from "../../Comments/Comments"
+import axios from "axios"
 
 import "../home.css"
 class Sidebar extends Component {
   componentWillReceiveProps() {}
+
+  postComment(postid) {
+    axios
+      .post("/api/postcomment", {
+        comment_text: this.props.type_comment,
+        user_id: this.props.user.user_id,
+        post_id: postid
+      })
+      .then(response => {
+        return response.data
+      })
+  }
 
   render(props) {
     const { i, dream, dreamid } = this.props
@@ -17,12 +30,22 @@ class Sidebar extends Component {
           <input type="checkbox" id={`popup__${i}`} className="popup__check" />
           <div className="popup__base">
             <label htmlFor={`popup__${i}`} className="popup__bg" />
-            <div className={this.props.theme.popupboxes.concat(' ', "popup__inner")}>
-              <label htmlFor={`popup__${i}`} className={this.props.theme.closexborder}>
-               
-              </label>
+            <div
+              className={this.props.theme.popupboxes.concat(
+                " ",
+                "popup__inner"
+              )}
+            >
+              <label
+                htmlFor={`popup__${i}`}
+                className={this.props.theme.closexborder}
+              />
               <div className="popup__textbox">
-                <h3 className={this.props.theme.font}>Title: {dream.story_title}</h3>
+                <center>
+                  <h3 className={this.props.theme.font}>
+                    Title: {dream.story_title}
+                  </h3>
+                </center>
                 {this.props.display_post === dreamid ? (
                   <Comments dreamid={dreamid} />
                 ) : (
@@ -32,7 +55,10 @@ class Sidebar extends Component {
                   <div>
                     <label
                       htmlFor={`popup__${i}`}
-                      className={this.props.theme.button.concat(' ', this.props.theme.font)}
+                      className={this.props.theme.button.concat(
+                        " ",
+                        this.props.theme.font
+                      )}
                       onClick={() => window.location.reload()}
                     >
                       CLOSE
@@ -43,7 +69,10 @@ class Sidebar extends Component {
                   ) : (
                     <div>
                       <label
-                        className={this.props.theme.button.concat(' ', this.props.theme.font)}
+                        className={this.props.theme.button.concat(
+                          " ",
+                          this.props.theme.font
+                        )}
                         onClick={() =>
                           this.postComment(dream.post_id) &
                           window.location.reload()
