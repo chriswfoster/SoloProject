@@ -25,7 +25,7 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <div className="navz ">
+        <div className={this.props.theme.navz.concat(' ' , "navz ")}>
           <p className={this.props.theme.font.concat(' ', "dreamnotesfont")}> DREAM NOTES </p>
           <div>
             {!this.props.user.user_id ? (

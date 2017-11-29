@@ -34,6 +34,8 @@
 
 /*  ---------------- GLOBAL RETRO CSS ----------------   */
 
+/*  ------- RETRO BEGINNING  ---------  */
+
 .global_retro_font {
   font-family: "Orbitron", sans-serif;
   color: rgb(74, 201, 206);
@@ -67,19 +69,30 @@
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   -o-transform: rotate(45deg);
-  background-image: url("./components/Home/fixedx.png");
+  background-image: url("./Retrothemecontents/fixedx.png");
   background-size: 100% 100%;
 }
 
-/*  ------- RETRO BEGINNING  ---------  */
+
 .global_retro_bodybackground {
-  background-image: url(./components/Home/background.jpg);
+  background-image: url(./Retrothemecontents/background.jpg);
   background-repeat: no-repeat;
   background-attachment: sticky;
   background-position-y: 100px;
   width: 100vw;
   height: 100vh;
   background-color: black;
+}
+.global_retro_navz {
+  background-image: url(./Retrothemecontents/retro.jpg);
+  background-repeat: no-repeat;
+  background-size: 110vw;
+  background-position-y: 0px;
+  background-position-x: -7px;
+  color: rgb(74, 201, 206);
+  width: 100vw;
+  top: 0px;
+  left: 0px;
 }
 
 .global_retro_inputboxes {
@@ -151,6 +164,44 @@
 
 /*  ------------  RETRO ENDING -------------- */
 
+
+.global_dark_font {
+  font-family: "Orbitron", sans-serif;
+  color: rgb(74, 201, 206);
+  letter-spacing: 2px;
+}
+.global_dark_button {
+  padding: 10px 10px 8px 10px;
+  color: rgb(74, 201, 206);
+  letter-spacing: 2px;
+  border-style: outset;
+  border-width: 2px;
+  border-color: rgb(255, 84, 255);
+  width: auto;
+  height: auto;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0);
+}
+.global_dark_x_circle {
+  margin-top: 2%;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  z-index: 6;
+  float: right;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  font-size: 50px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  background-image: url("./Retrothemecontents/fixedx.png");
+  background-size: 100% 100%;
+}
+
 .global_dark_bodybackground {
   background-image: url();
   background-repeat: no-repeat;
@@ -160,7 +211,8 @@
   height: 100vh;
   background-color: black;
 }
-
+.global_dark_navz {
+}
 .global_dark_inputboxes {
   border-style: inset;
   border-color: rgb(255, 84, 255);

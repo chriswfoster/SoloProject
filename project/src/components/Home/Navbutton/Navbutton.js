@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 
 import { connect } from "react-redux"
 
-import {homeicon} from './home_icon.png'
+import {homeicon} from '../../../Retrothemecontents/home_icon.png'
 
 import './navbutton.css'
  class Navbutton extends Component{
@@ -29,9 +29,9 @@ this.setState({plusbutton: "navbuttoncircle navbuttonrollerreverse", homebutton:
         return(
             <div onClick={() => this.expander()}>
 
-                <div className={this.state.plusbutton}><img src={require('./whiteplus.png')}/></div>
-                <Link to="/" className={this.state.homebutton}> <img src={require('./home_icon.png')}/></Link>
-                <Link to="/yourpage" className={this.state.yourpagebutton}> <img src={require('./yourpage_icon.png')}/> </Link>
+                <div className={this.state.plusbutton}><img src={require('../../../Retrothemecontents/whiteplus.png')}/></div>
+                <Link to="/" className={this.state.homebutton}> <img src={require('../../../Retrothemecontents/home_icon.png')}/></Link>
+                <Link to="/yourpage" className={this.state.yourpagebutton}> <img src={require('../../../Retrothemecontents/yourpage_icon.png')}/> </Link>
                 </div>
         )
     }

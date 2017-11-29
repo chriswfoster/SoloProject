@@ -2,15 +2,6 @@
 
 .navz {
   height: 16vh;
-  background-image: url(retro.jpg);
-  background-repeat: no-repeat;
-  background-size: 110vw;
-  background-position-y: 0px;
-  background-position-x: -7px;
-  color: rgb(74, 201, 206);
-  width: 100vw;
-  top: 0px;
-  left: 0px;
   position: static;
   border-width: 1px;
   border-bottom-style: outset;

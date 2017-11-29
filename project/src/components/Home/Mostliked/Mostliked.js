@@ -5,7 +5,7 @@ import { connect } from "react-redux"
 import Moment from 'react-moment'
 import Comments from '../../Comments/Comments'
 
-import '../fixedx.png'
+import '../../../Retrothemecontents/fixedx.png'
 
 import './mostliked.css'
  class Mostliked extends Component{
