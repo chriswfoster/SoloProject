@@ -77,7 +77,7 @@ class Poster extends Component {
                    
                       <label
                         htmlFor={`popup__${i}`}
-                        className="storybuttons"
+                        className={this.props.theme.button}
                         onClick={() => {
                           toDisplay(dream.post_id)
                         }}
@@ -86,7 +86,7 @@ class Poster extends Component {
                       </label>
                    
                     <label
-                className="storybuttons"
+                className={this.props.theme.button}
                 htmlFor={`popup2__${i}`}
                 >
                INFLUENCE
