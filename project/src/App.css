@@ -121,6 +121,15 @@
   font-family: "Orbitron", sans-serif;
   font-size: 13px;
 }
+.global_retro_spiralspin_gif {
+  animation: spiralspin infinite 5s linear;
+  height: 150px;
+  width: 150px;
+  position: absolute;
+  top: 13.5%;
+  background-size: 100% 100%;
+  background-image: url(./Retrothemecontents/gotcha.svg);
+}
 .global_retro_loginbuttons {
   padding: 10px 10px 8px 10px;
   color: rgb(74, 201, 206);
@@ -350,7 +359,7 @@
   background-color: black;
 }
 .global_dark_navz {
-background-color: black;
+  background-color: black;
   background-repeat: no-repeat;
   background-size: 100vw;
   background-position-y: 80%;
@@ -382,10 +391,18 @@ background-color: black;
 }
 .global_dark_yournewpost_button {
   border-style: outset;
-  background-color: rgb(35, 17, 36);
-    border-color: rgb(163, 163, 163);
+  background-color: rgba(35, 17, 36, 0);
+  border-color: rgba(163, 163, 163, 0.473);
   font-family: "Orbitron", sans-serif;
   font-size: 13px;
+}
+.global_dark_eye_gif {
+  height: 150px;
+  width: 150px;
+  position: absolute;
+  top: 20%;
+  background-size: 100% 100%;
+  background-image: url(./Darkthemecontents/eyeballgif.gif);
 }
 .global_dark_loginbuttons {
   padding: 10px 10px 8px 10px;
@@ -416,7 +433,7 @@ background-color: black;
   padding-top: 5px;
 }
 .global_dark_animatelinespan:hover + .linespan {
-  background-color: rgb(255, 84, 255);
+  background-color: rgb(206, 206, 206);
 }
 .global_dark_sidebartext {
   color: rgb(85, 85, 85);

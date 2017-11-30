@@ -41,6 +41,7 @@ const initialState = {
     popupboxes: "global_retro_popupboxes",
     fancytitleline: "global_retro_fancy_title_line",
     yournewpostbutton: "global_retro_yournewpost_button",
+    newpostgif: "global_retro_spiralspin_gif",
     animatelinespan: "global_retro_animatelinespan",
     plusbutton: "global_retro_plusbutton",
     homebutton: "global_retro_homebutton",
@@ -78,14 +79,9 @@ export default function reducer(state = initialState, action) {
         allyourposts: action.payload
       })
     case DARK_THEME:
-      return (
-        Object.assign({}, state, { theme: action.payload })
-      )
+      return Object.assign({}, state, { theme: action.payload })
     case RETRO_THEME:
-      return (
-
-        Object.assign({}, state, { theme: action.payload })
-      )
+      return Object.assign({}, state, { theme: action.payload })
 
     case TYPE_TITLE:
       return Object.assign({}, state, { type_title: action.payload })
@@ -191,6 +187,7 @@ export function darkTheme() {
       popupboxes: "global_dark_popupboxes",
       fancytitleline: "global_dark_fancy_title_line",
       yournewpostbutton: "global_dark_yournewpost_button",
+      newpostgif: "global_dark_eye_gif",
       animatelinespan: "global_dark_animatelinespan",
       plusbutton: "global_dark_plusbutton",
       homebutton: "global_dark_homebutton",
@@ -217,6 +214,7 @@ export function retroTheme() {
       popupboxes: "global_retro_popupboxes",
       fancytitleline: "global_retro_fancy_title_line",
       yournewpostbutton: "global_retro_yournewpost_button",
+      newpostgif: "global_retro_spiralspin_gif",
       animatelinespan: "global_retro_animatelinespan",
       plusbutton: "global_retro_plusbutton",
       homebutton: "global_retro_homebutton",

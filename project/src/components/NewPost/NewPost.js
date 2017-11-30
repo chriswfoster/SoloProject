@@ -56,7 +56,7 @@ class NewPost extends Component {
       <div>
           
           <div>
-          <img className="spiralspinz" src={require('./gotcha.svg')} alt="New Post"/>
+          <div className={this.props.theme.newpostgif} alt="New Post"/>
         <div
           className={this.props.theme.yournewpostbutton.concat(' ', this.props.theme.font, ' ', "yournewpost")}
           onClick={() => this.slideInFunction()}
