@@ -182,7 +182,7 @@ export function darkTheme() {
       background: "global_dark_bodybackground",
       navz: "global_dark_navz",
       font: "global_dark_font",
-      sidebartext: "global_dark_sidebar",
+      sidebartext: "global_dark_sidebartext",
       titletext: "global_dark_title_text",
       button: "global_dark_button",
       loginbuttons: "global_dark_loginbuttons",

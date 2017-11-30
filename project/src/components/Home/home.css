@@ -78,9 +78,7 @@
   text-decoration-color: white;
   border: solid;
 }
-.sharebutton :hover {
-  box-shadow: 15px 15px 55px rgb(41, 187, 255);
-}
+
 
 /* Start popup css */
 
@@ -203,7 +201,6 @@
   z-index: 10;
   text-align: right;
   cursor: pointer;
-  color: rgb(74, 201, 206);
 }
 
 .poptextboxes {

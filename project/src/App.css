@@ -348,17 +348,18 @@
   background-repeat: no-repeat;
   background-attachment: sticky;
   background-position-y: 13vh;
-  background-size: 100vw;
+  background-position-x: 24%;
+  background-size: 110vw;
   min-width: 100vw;
   min-height: 100vh;
   background-color: black;
 }
 .global_dark_navz {
-  background-image: url(./Retrothemecontents/retro.jpg);
+background-color: black;
   background-repeat: no-repeat;
-  background-size: 110vw;
-  background-position-y: 0px;
-  background-position-x: -7px;
+  background-size: 100vw;
+  background-position-y: 80%;
+  background-position-x: 0px;
   color: rgb(85, 85, 85);
   width: 100vw;
   top: 0px;
@@ -382,12 +383,12 @@
   border-width: 2px;
 }
 .global_dark_fancy_title_line {
-  background-color: rgb(74, 201, 206);
+  background-color: rgb(163, 163, 163);
 }
 .global_dark_yournewpost_button {
   border-style: outset;
   background-color: rgb(35, 17, 36);
-  color: rgb(85, 85, 85);
+  color: rgb(255, 1, 1);
   border-color: rgb(163, 163, 163);
   font-family: "Orbitron", sans-serif;
   font-size: 13px;
@@ -424,7 +425,7 @@
   background-color: rgb(255, 84, 255);
 }
 .global_dark_sidebartext {
-  color: rgb(255, 84, 255);
+  color: rgb(85, 85, 85);
 }
 
 .global_dark_plusbutton {

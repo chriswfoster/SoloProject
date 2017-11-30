@@ -57,14 +57,14 @@ class NewPost extends Component {
           
           <div>
           <img className="spiralspinz" src={require('./gotcha.svg')} alt="New Post"/>
-        <label
+        <div
           className={this.props.theme.yournewpostbutton.concat(' ', this.props.theme.font, ' ', "yournewpost")}
-          to="/newpost"
+          
           style={{ textDecoration: "none", color: "rgb(93, 190, 194)" }}
           onClick={() => this.slideInFunction()}
         > 
           NEW POST
-        </label>
+        </div>
         </div>
         {/*  -------   NEW POST BUTTON ABOVE  ------   */}
 
