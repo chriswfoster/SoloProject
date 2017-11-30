@@ -73,7 +73,6 @@
   background-size: 100% 100%;
 }
 
-
 .global_retro_bodybackground {
   background-image: url(./Retrothemecontents/background.jpg);
   background-repeat: no-repeat;
@@ -161,30 +160,27 @@
 .global_retro_pinktext {
   color: rgb(255, 84, 255);
 }
-.global_retro_plusbutton{
+.global_retro_plusbutton {
   background-color: rgb(255, 94, 223);
   color: white;
   border-radius: 50%;
 }
 .global_retro_homebutton {
-background-color: rgb(255, 94, 223);
-border-radius: 50%;
-}
-.global_retro_yourbutton{
   background-color: rgb(255, 94, 223);
   border-radius: 50%;
 }
-.global_retro_darkbutton{
+.global_retro_yourbutton {
   background-color: rgb(255, 94, 223);
   border-radius: 50%;
 }
-.global_retro_retrobutton{
+.global_retro_darkbutton {
   background-color: rgb(255, 94, 223);
   border-radius: 50%;
 }
-
-
-
+.global_retro_retrobutton {
+  background-color: rgb(255, 94, 223);
+  border-radius: 50%;
+}
 
 /*  ------------  RETRO ENDING -------------- */
 
@@ -224,7 +220,6 @@ border-radius: 50%;
   background-image: url("./Retrothemecontents/fixedx.png");
   background-size: 100% 100%;
 }
-
 
 .global_pi_bodybackground {
   background-image: url(./Retrothemecontents/background.jpg);
@@ -311,15 +306,14 @@ border-radius: 50%;
 
 /*  ------------  PI ENDING  ---------   */
 
-
 .global_dark_font {
   font-family: "Orbitron", sans-serif;
-  color: white;
+  color: rgb(85, 85, 85);
   letter-spacing: 2px;
 }
 .global_dark_button {
   padding: 10px 10px 8px 10px;
-  color: rgb(74, 201, 206);
+  color: rgb(85, 85, 85);
   letter-spacing: 2px;
   border-style: outset;
   border-width: 2px;
@@ -349,14 +343,14 @@ border-radius: 50%;
   background-size: 100% 100%;
 }
 
-
 .global_dark_bodybackground {
   background-image: url(./Darkthemecontents/blackhole.gif);
   background-repeat: no-repeat;
   background-attachment: sticky;
-  background-position-y: 100px;
-  width: 100vw;
-  height: 100vh;
+  background-position-y: 13vh;
+  background-size: 100vw;
+  min-width: 100vw;
+  min-height: 100vh;
   background-color: black;
 }
 .global_dark_navz {
@@ -382,7 +376,7 @@ border-radius: 50%;
   z-index: 5;
 }
 .global_dark_popupboxes {
-  background-color: rgb(35, 17, 36);
+  background-color: rgb(0, 0, 0);
   border-style: outset;
   border-color: rgb(163, 163, 163);
   border-width: 2px;
@@ -433,24 +427,24 @@ border-radius: 50%;
   color: rgb(255, 84, 255);
 }
 
-.global_dark_plusbutton{
+.global_dark_plusbutton {
   background-color: rgb(85, 85, 85);
   color: white;
   border-radius: 50%;
 }
 .global_dark_homebutton {
-background-color: rgb(85, 85, 85);
-border-radius: 50%;
-}
-.global_dark_yourbutton{
   background-color: rgb(85, 85, 85);
   border-radius: 50%;
 }
-.global_dark_darkbutton{
+.global_dark_yourbutton {
   background-color: rgb(85, 85, 85);
   border-radius: 50%;
 }
-.global_dark_retrobutton{
+.global_dark_darkbutton {
+  background-color: rgb(85, 85, 85);
+  border-radius: 50%;
+}
+.global_dark_retrobutton {
   background-color: rgb(85, 85, 85);
   border-radius: 50%;
 }

@@ -363,7 +363,7 @@
     bottom: 2%;
   }
   100% {
-    bottom: 22%;
+    bottom: 20%;
   }
 }
 @-webkit-keyframes moveretro {
@@ -371,13 +371,13 @@
     bottom: 2%;
   }
   100% {
-    bottom: 22%;
+    bottom: 20%;
   }
 }
 
 @keyframes moveretroreverse {
   0% {
-    bottom: 22%;
+    bottom: 20%;
   }
   100% {
     bottom: 2%;
@@ -385,7 +385,7 @@
 }
 @-webkit-keyframes moveretroreverse {
   0% {
-    bottom: 22%;
+    bottom: 20%;
   }
   100% {
     bottom: 2%;

@@ -72,7 +72,7 @@ class Poster extends Component {
                   </h3>
                 </div>
 <div className={this.props.theme.inputboxes}>
-                {dream.story_text}
+               <pre> {dream.story_text}</pre>
      </div>
                 <div className="wrapstorybuttons">
                   <div className={this.props.theme.button}>LIKE</div>
