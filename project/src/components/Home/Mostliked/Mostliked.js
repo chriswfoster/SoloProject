@@ -3,7 +3,6 @@ import React, { Component } from "react"
 import { getAllPosts, toDisplay } from "../../../ducks/reducer"
 import { connect } from "react-redux"
 
-
 import "../../../Retrothemecontents/fixedx.png"
 
 import "./mostliked.css"
@@ -22,7 +21,6 @@ class Mostliked extends Component {
   }
 
   render() {
- 
     const testz = Math.max.apply(
       Math,
       this.props.allposts.map((dream, i) => dream.likes)
@@ -30,7 +28,7 @@ class Mostliked extends Component {
 
     const evenfinder = this.props.allposts.map(
       (dream, i) =>
-      testz == dream.likes ? (
+        testz == dream.likes ? (
           <div className={this.state.display} div key={i}>
             <div>
               <label
@@ -46,19 +44,30 @@ class Mostliked extends Component {
               <u>{dream.story_title}</u>
             </h3>
 
-            <div className="likedstorytext" id="likedscrollbar">
+            <div className={this.props.theme.inputboxes.concat(
+                  " ",
+                  "likedstorytext")} id="likedscrollbar">
               <pre>{dream.story_text}</pre>
             </div>
 
             <div className="likedinfluenceflex">
-              <div className="likedinfluence" id="likedscrollbar">
+              <div
+                className={this.props.theme.inputboxes.concat(
+                  " ",
+                  "likedinfluence"
+                )}
+                id="likedscrollbar"
+              >
                 <pre>
                   <u>DREAM AID:</u> <br />
                   {dream.influence}
                 </pre>
               </div>
 
-              <div className="likedinfluence" id="likedscrollbar">
+              <div className={this.props.theme.inputboxes.concat(
+                  " ",
+                  "likedinfluence"
+                )} id="likedscrollbar">
                 <pre>
                   <u>BACK STORY:</u> <br />
                   {dream.back_story}

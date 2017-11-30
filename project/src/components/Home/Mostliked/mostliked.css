@@ -38,11 +38,9 @@ pre {
 .likedstorytext {
   overflow: auto;
   height: 40%;
-  border-color: rgba(255, 66, 217, 0.425);
-  border-style: outset;
-  border-width: 2px;
+  opacity: .625;
   padding: 5px;
-  border-radius: 11px;
+
 }
 
 #likedscrollbar::-webkit-scrollbar-track {
@@ -78,12 +76,9 @@ pre {
 .likedinfluence {
   height: 100%;
   width: 45%;
-  border-color: rgba(255, 66, 217, 0.425);
-  border-style: outset;
-  border-width: 2px;
   padding: 5px;
-  border-radius: 11px;
   overflow: auto;
+  opacity: .625;
 }
 
 .fader {
