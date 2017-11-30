@@ -39,7 +39,9 @@ class Yourpage extends Component {
   render() {
     console.log(this.props)
     const list = this.props.allyourposts.map((dream, i) => (
-      <div key={i} className="yourcenterposts">
+      <div key={i} >
+        <div className="yourcenterposts yourscrollfix">
+        
         <div
           className={this.props.theme.popupboxes.concat(" ", "yourpostboxes")}
         >
@@ -90,6 +92,7 @@ class Yourpage extends Component {
             <Influencepage dream={dream} i={i} />
           </div>
         </div>
+      </div>
       </div>
     ))
     return (

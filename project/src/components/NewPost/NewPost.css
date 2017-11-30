@@ -19,14 +19,20 @@
   position: absolute;
   top: 13.5%;
 }
+.spinzheight{
+  height: 200px;
+  width: 300px;
+  float: left;
+  float: top;
+  position: absolute;
+}
 
 .yournewpost {
   width: auto;
   padding: 10px;
   cursor: pointer;
   position: absolute;
-  left: 1%;
-  top: 20%;
+
 }
 .yournewpost:hover {
   border-radius: 553px;

@@ -55,7 +55,7 @@ class NewPost extends Component {
     return (
       <div>
           
-          <div>
+          <div className="spinzheight">
           <div className={this.props.theme.newpostgif} alt="New Post"/>
         <div
           className={this.props.theme.yournewpostbutton.concat(' ', this.props.theme.font, ' ', "yournewpost")}

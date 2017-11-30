@@ -12,7 +12,7 @@
   justify-content: space-between;
   align-items: center;
   align-content: stretch;
-  margin-bottom: -1px;
+  margin-bottom: -2px;
 }
 
 .dreamnotesfont {
@@ -31,7 +31,6 @@
 .loginbutton {
   margin-right: 5px;
 }
-
 
 .homeflex {
   display: flex;
@@ -78,7 +77,6 @@
   text-decoration-color: white;
   border: solid;
 }
-
 
 /* Start popup css */
 
@@ -412,9 +410,6 @@ pre {
   overflow-y: scroll;
   overflow-x: scroll;
 }
-
-
-
 
 .mainlefttitles {
   display: flex;
