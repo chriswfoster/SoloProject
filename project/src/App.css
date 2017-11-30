@@ -331,15 +331,10 @@
   z-index: 6;
   float: right;
   background-repeat: no-repeat;
-  border-radius: 50%;
   height: 30px;
   width: 30px;
-  font-size: 50px;
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  background-image: url("./Retrothemecontents/fixedx.png");
+  background-color: rgba(0, 0, 0, 0);
+  background-image: url("./Darkthemecontents/closex.png");
   background-size: 100% 100%;
 }
 
