@@ -59,8 +59,6 @@ class NewPost extends Component {
           <img className="spiralspinz" src={require('./gotcha.svg')} alt="New Post"/>
         <div
           className={this.props.theme.yournewpostbutton.concat(' ', this.props.theme.font, ' ', "yournewpost")}
-          
-          style={{ textDecoration: "none", color: "rgb(93, 190, 194)" }}
           onClick={() => this.slideInFunction()}
         > 
           NEW POST

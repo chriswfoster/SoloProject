@@ -388,8 +388,7 @@ background-color: black;
 .global_dark_yournewpost_button {
   border-style: outset;
   background-color: rgb(35, 17, 36);
-  color: rgb(255, 1, 1);
-  border-color: rgb(163, 163, 163);
+    border-color: rgb(163, 163, 163);
   font-family: "Orbitron", sans-serif;
   font-size: 13px;
 }
