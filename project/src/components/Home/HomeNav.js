@@ -16,10 +16,10 @@ class Home extends Component {
   }
 
   handleLogin() {
-    window.location.href = "http://thawing-falls-40258.herokuapp.com/login"
+    window.location.href = "http://localhost:3000/login"
   }
   handleLogout() {
-    window.location.href = "http://thawing-falls-40258.herokuapp.com/logout"
+    window.location.href = "http://localhost:3000/logout"
   }
 
   render() {
