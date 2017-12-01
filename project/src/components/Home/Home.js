@@ -4,14 +4,12 @@ import { getAllPosts, getUserInfo } from "../../ducks/reducer"
 import { connect } from "react-redux"
 import Poster from "./Poster"
 import HomeNav from "./HomeNav"
-import Navbutton from './Navbutton/Navbutton'
+import Navbutton from "./Navbutton/Navbutton"
 
 class Home extends Component {
   constructor(props) {
     super(props)
-    this.state = {
-    
-    }
+    this.state = {}
 
     this.handleLogin = this.handleLogin.bind(this)
   }
@@ -22,17 +20,16 @@ class Home extends Component {
   }
 
   handleLogin() {
-    window.location.href = "http://localhost:3001/login"
+    window.location.href = "http://localhost:80/login"
   }
 
   render() {
-  
     return (
       <div className={this.props.theme.background}>
-          <HomeNav />
+        <HomeNav />
         <Poster />
         <Navbutton />
-          </div>
+      </div>
     )
   }
 }

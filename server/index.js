@@ -26,7 +26,7 @@ const massiveConnection = massive(connectionString) // tell massive to make the 
   .catch(console.log) // then log the error if exists
 
 //3.
-const port = 3001
+const port = 80
 
 //4. add middlewares
 //this is the bodyparser json. Allows us to convert stuff to req.body. This json is only a method on the body-parser json.
@@ -93,13 +93,13 @@ passport.deserializeUser(function(obj, done) {
 app.get(
   "/login",
   passport.authenticate("auth0", {
-    successRedirect: "http://localhost:3000/yourpage" //this is the page they'll land on. Could make it their user page.
+    successRedirect: "http://localhost:80/yourpage" //this is the page they'll land on. Could make it their user page.
   })
 )
 //when sent here, you log out and return to /
 app.get("/logout", function(req, res) {
   req.logout()
-  res.redirect("http://localhost:3000/")
+  res.redirect("http://localhost:80/")
 })
 
 //will check if there's a req.user. If there wasn't, send 404, if there was, send back user.
@@ -118,7 +118,6 @@ app.get("/api/getallcomments/:id", controller.getAllComments)
 app.put("/api/editStory", controller.editStory)
 app.put("/api/editInfluence", controller.editInfluence)
 app.put("/api/editBackstory", controller.editBackstory)
-
 
 //5. Test to see if it's functioning properly. If server is live, should see "Success" on localhost/api/test
 //can test it in app.js within react too, in the componentDidMount feature
