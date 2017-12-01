@@ -26,7 +26,7 @@ const massiveConnection = massive(connectionString) // tell massive to make the 
   .catch(console.log) // then log the error if exists
 
 //3.
-const port = 80
+const port = 8080
 
 //4. add middlewares
 //this is the bodyparser json. Allows us to convert stuff to req.body. This json is only a method on the body-parser json.
