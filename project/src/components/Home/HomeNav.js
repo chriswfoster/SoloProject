@@ -16,29 +16,46 @@ class Home extends Component {
   }
 
   handleLogin() {
-    window.location.href = "http://localhost:3001/login"
+    window.location.href = "http://thawing-falls-40258.herokuapp.com/login"
   }
   handleLogout() {
-    window.location.href = "http://localhost:3001/logout"
+    window.location.href = "http://thawing-falls-40258.herokuapp.com/logout"
   }
 
   render() {
     return (
       <div>
-        <div className={this.props.theme.navz.concat(' ' , "navz ")}>
-          <p className={this.props.theme.font.concat(' ', "dreamnotesfont")}> DREAM NOTES </p>
+        <div className={this.props.theme.navz.concat(" ", "navz ")}>
+          <p className={this.props.theme.font.concat(" ", "dreamnotesfont")}>
+            {" "}
+            DREAM NOTES{" "}
+          </p>
           <div>
             {!this.props.user.user_id ? (
               <div className="loginbuttons">
-                <button onClick={this.handleLogin} className={this.props.theme.loginbuttons}>
+                <button
+                  onClick={this.handleLogin}
+                  className={this.props.theme.loginbuttons}
+                >
                   LOGIN
                 </button>
-                <button onClick={this.handleLogin} className={this.props.theme.loginbuttons}>
+                <button
+                  onClick={this.handleLogin}
+                  className={this.props.theme.loginbuttons}
+                >
                   REGISTER
                 </button>
               </div>
             ) : (
-              <p onClick={this.handleLogout} className={this.props.theme.loginbuttons.concat(' ', "loginbutton")}>LOGOUT</p>
+              <p
+                onClick={this.handleLogout}
+                className={this.props.theme.loginbuttons.concat(
+                  " ",
+                  "loginbutton"
+                )}
+              >
+                LOGOUT
+              </p>
             )}
           </div>
         </div>

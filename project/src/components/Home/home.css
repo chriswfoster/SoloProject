@@ -430,18 +430,7 @@ pre {
   font-size: 23px;
 }
 
-@font-face {
-  font-family: "nitti";
-  src: url("./Nitti_Font/nitti-webfont.eot");
-  src: url("./Nitti_Font/nitti-webfont.eot?#iefix") format("embedded-opentype"),
-    url("./Nitti_Font/nitti-webfont.woff") format("woff"),
-    url("./Nitti_Font/nitti-webfont.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-.nittifont {
-  font-family: "nitti", sans-serif;
-}
+
 
 .slideRight {
   animation-name: sliderRight;
