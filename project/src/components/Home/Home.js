@@ -20,7 +20,7 @@ class Home extends Component {
   }
 
   handleLogin() {
-    window.location.href = "http://localhost:8080/login"
+    window.location.href = "http://localhost:3000/login"
   }
 
   render() {
